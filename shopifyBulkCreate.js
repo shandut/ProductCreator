@@ -4,12 +4,13 @@ const fs = require('fs');
 const axios = require('axios');
 const FormData = require('form-data');
 const csvParse = require('csv-parse/sync');
+require('dotenv').config();
 const app = express();
 const PORT = 4000;
 
-const SHOP = "UPDATEshannon-2023-test.myshopify.com";
-const ACCESS_TOKEN = "<insert api and shop>";
-const API_VERSION = "2025-07";
+const SHOP = process.env.SHOPIFY_SHOP || "your-shop.myshopify.com";
+const ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN || "your-access-token";
+const API_VERSION = process.env.SHOPIFY_API_VERSION || "2025-07";
 
 const graphql_url = `https://${SHOP}/admin/api/${API_VERSION}/graphql.json`;
 const headers = {
