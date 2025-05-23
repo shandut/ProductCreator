@@ -245,4 +245,9 @@ class PriceController {
   }
 }
 
-module.exports = new PriceController(); 
+// Export an instance with properly bound methods
+const priceController = new PriceController();
+module.exports = {
+  updatePrices: priceController.updatePrices.bind(priceController),
+  updatePricesBulk: priceController.updatePricesBulk.bind(priceController)
+}; 
