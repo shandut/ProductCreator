@@ -1,0 +1,20 @@
+import './Header.out.css';
+
+var styles = {
+  "TitleWrapper": "Polaris-Page-Header__TitleWrapper_bejfn",
+  "TitleWrapperExpand": "Polaris-Page-Header__TitleWrapperExpand_1o92o",
+  "BreadcrumbWrapper": "Polaris-Page-Header__BreadcrumbWrapper_1tgwk",
+  "PaginationWrapper": "Polaris-Page-Header__PaginationWrapper_x52mr",
+  "PrimaryActionWrapper": "Polaris-Page-Header__PrimaryActionWrapper_w8or9",
+  "Row": "Polaris-Page-Header__Row_375v7",
+  "mobileView": "Polaris-Page-Header--mobileView_i07vm",
+  "RightAlign": "Polaris-Page-Header__RightAlign_1ok1p",
+  "noBreadcrumbs": "Polaris-Page-Header--noBreadcrumbs_bdstf",
+  "AdditionalMetaData": "Polaris-Page-Header__AdditionalMetaData_1isxr",
+  "Actions": "Polaris-Page-Header__Actions_17m67",
+  "longTitle": "Polaris-Page-Header--longTitle_18mg0",
+  "mediumTitle": "Polaris-Page-Header--mediumTitle_bfol6",
+  "isSingleRow": "Polaris-Page-Header--isSingleRow_172ur"
+};
+
+export { styles as default };

@@ -1,0 +1,13 @@
+import './Toast.out.css';
+
+var styles = {
+  "Toast": "Polaris-Frame-Toast_30jlx",
+  "Action": "Polaris-Frame-Toast__Action_r96cs",
+  "error": "Polaris-Frame-Toast--error_37uk1",
+  "CloseButton": "Polaris-Frame-Toast__CloseButton_bl13t",
+  "LeadingIcon": "Polaris-Frame-Toast__LeadingIcon_1a867",
+  "toneMagic": "Polaris-Frame-Toast--toneMagic_tqodm",
+  "WithActionOnComponent": "Polaris-Frame-Toast__WithActionOnComponent_4ppc7"
+};
+
+export { styles as default };

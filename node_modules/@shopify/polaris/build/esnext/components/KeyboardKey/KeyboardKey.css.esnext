@@ -1,0 +1,8 @@
+import './KeyboardKey.out.css';
+
+var styles = {
+  "KeyboardKey": "Polaris-KeyboardKey_zumik",
+  "small": "Polaris-KeyboardKey--small_2v637"
+};
+
+export { styles as default };

@@ -1,0 +1,81 @@
+import React, { forwardRef, useRef } from 'react';
+import { Transition } from 'react-transition-group';
+import { classNames } from '../../utilities/css.esnext';
+import styles from './SelectAllActions.css.esnext';
+import { UnstyledButton } from '../UnstyledButton/UnstyledButton.esnext';
+import { Text } from '../Text/Text.esnext';
+import { Box } from '../Box/Box.esnext';
+import { InlineStack } from '../InlineStack/InlineStack.esnext';
+import { CheckableButton } from '../CheckableButton/CheckableButton.esnext';
+
+/**
+ * @deprecated Use `BulkActions` instead.
+ */
+const SelectAllActions = /*#__PURE__*/forwardRef(function SelectAllActions({
+  label,
+  selectMode,
+  paginatedSelectAllText,
+  paginatedSelectAllAction,
+  disabled,
+  isSticky,
+  hasPagination,
+  accessibilityLabel,
+  selected,
+  onToggleAll
+}, ref) {
+  const nodeRef = useRef(null);
+  const paginatedSelectAllMarkup = paginatedSelectAllAction ? /*#__PURE__*/React.createElement(UnstyledButton, {
+    className: styles.AllAction,
+    onClick: paginatedSelectAllAction.onAction,
+    size: "slim",
+    disabled: disabled
+  }, /*#__PURE__*/React.createElement(Text, {
+    as: "span",
+    variant: "bodySm",
+    fontWeight: "medium"
+  }, paginatedSelectAllAction.content)) : null;
+  const hasTextAndAction = paginatedSelectAllText && paginatedSelectAllAction;
+  const ariaLive = hasTextAndAction ? 'polite' : undefined;
+  const checkableButtonProps = {
+    accessibilityLabel,
+    label: hasTextAndAction ? paginatedSelectAllText : label,
+    selected,
+    onToggleAll,
+    disabled,
+    ariaLive,
+    ref
+  };
+  const checkableButtonMarkup = accessibilityLabel && onToggleAll ? /*#__PURE__*/React.createElement(CheckableButton, checkableButtonProps) : null;
+  const markup = /*#__PURE__*/React.createElement(Transition, {
+    timeout: 0,
+    in: selectMode,
+    key: "markup",
+    nodeRef: nodeRef
+  }, status => {
+    const wrapperClasses = classNames(styles.SelectAllActions, hasPagination && styles['SelectAllActions-hasPagination'], !isSticky && styles['SelectAllActions-not-sticky'], status && styles[`SelectAllActions-${status}`]);
+    return /*#__PURE__*/React.createElement("div", {
+      className: wrapperClasses,
+      ref: nodeRef
+    }, /*#__PURE__*/React.createElement(Box, {
+      background: "bg-surface-secondary",
+      borderBlockStartWidth: "025",
+      borderColor: "border",
+      width: "100%",
+      paddingBlockStart: "300",
+      paddingBlockEnd: "300",
+      paddingInlineStart: "300",
+      paddingInlineEnd: "400"
+    }, /*#__PURE__*/React.createElement(InlineStack, {
+      gap: "200",
+      align: "start",
+      blockAlign: "center"
+    }, checkableButtonMarkup, /*#__PURE__*/React.createElement(Text, {
+      as: "span",
+      variant: "bodySm",
+      fontWeight: "medium"
+    }, hasTextAndAction ? paginatedSelectAllText : label), paginatedSelectAllMarkup)));
+  });
+  return markup;
+});
+
+export { SelectAllActions };

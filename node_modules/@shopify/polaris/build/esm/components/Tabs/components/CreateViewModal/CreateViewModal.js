@@ -1,0 +1,86 @@
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { useIsTouchDevice } from '../../../../utilities/use-is-touch-device.js';
+import { focusFirstFocusableNode } from '../../../../utilities/focus.js';
+import { useI18n } from '../../../../utilities/i18n/hooks.js';
+import { Modal } from '../../../Modal/Modal.js';
+import { Form } from '../../../Form/Form.js';
+import { FormLayout } from '../../../FormLayout/FormLayout.js';
+import { TextField } from '../../../TextField/TextField.js';
+
+const MAX_VIEW_NAME_LENGTH = 40;
+function CreateViewModal({
+  activator,
+  open,
+  onClose,
+  onClickPrimaryAction,
+  onClickSecondaryAction,
+  viewNames
+}) {
+  const i18n = useI18n();
+  const [value, setValue] = useState('');
+  const [loading, setLoading] = useState(false);
+  const container = useRef(null);
+  const isTouchDevice = useIsTouchDevice();
+  const hasSameNameError = viewNames.some(viewName => viewName.trim().toLowerCase() === value.trim().toLowerCase());
+  const isPrimaryActionDisabled = !value || hasSameNameError || loading || value.length > MAX_VIEW_NAME_LENGTH;
+  useEffect(() => {
+    if (!container.current || isTouchDevice) return;
+    if (open) {
+      focusFirstFocusableNode(container.current);
+      const timeout = setTimeout(() => {
+        if (!container.current) return;
+        focusFirstFocusableNode(container.current);
+      }, 50);
+      return () => clearTimeout(timeout);
+    }
+  }, [open, isTouchDevice]);
+  const handleChange = useCallback(newValue => {
+    setValue(newValue);
+  }, []);
+  async function handlePrimaryAction() {
+    if (hasSameNameError || isPrimaryActionDisabled) {
+      return;
+    }
+    setLoading(true);
+    await onClickPrimaryAction(value);
+    setLoading(false);
+    setValue('');
+    onClose();
+  }
+  function handleSecondaryAction() {
+    onClickSecondaryAction?.();
+    setValue('');
+    onClose();
+  }
+  return /*#__PURE__*/React.createElement(Modal, {
+    activator: activator,
+    open: open,
+    onClose: onClose,
+    title: i18n.translate('Polaris.Tabs.CreateViewModal.title'),
+    primaryAction: {
+      content: i18n.translate('Polaris.Tabs.CreateViewModal.create'),
+      onAction: handlePrimaryAction,
+      disabled: isPrimaryActionDisabled
+    },
+    secondaryActions: [{
+      content: i18n.translate('Polaris.Tabs.CreateViewModal.cancel'),
+      onAction: handleSecondaryAction
+    }]
+  }, /*#__PURE__*/React.createElement(Modal.Section, null, /*#__PURE__*/React.createElement(Form, {
+    onSubmit: handlePrimaryAction
+  }, /*#__PURE__*/React.createElement(FormLayout, null, /*#__PURE__*/React.createElement("div", {
+    ref: container
+  }, /*#__PURE__*/React.createElement(TextField, {
+    label: i18n.translate('Polaris.Tabs.CreateViewModal.label'),
+    value: value,
+    onChange: handleChange,
+    autoComplete: "off",
+    maxLength: MAX_VIEW_NAME_LENGTH,
+    showCharacterCount: true,
+    error: hasSameNameError ? i18n.translate('Polaris.Tabs.CreateViewModal.errors.sameName', {
+      name: value
+    }) : undefined
+  }))))));
+}
+
+export { CreateViewModal };

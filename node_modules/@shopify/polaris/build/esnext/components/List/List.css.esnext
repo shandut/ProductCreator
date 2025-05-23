@@ -1,0 +1,10 @@
+import './List.out.css';
+
+var styles = {
+  "List": "Polaris-List_yj3nl",
+  "typeNumber": "Polaris-List--typeNumber_bbvwn",
+  "Item": "Polaris-List__Item_yiyol",
+  "spacingLoose": "Polaris-List--spacingLoose_yte7q"
+};
+
+export { styles as default };

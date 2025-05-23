@@ -1,0 +1,13 @@
+import { useContext } from 'react';
+import { MissingAppProviderError } from '../errors.esnext';
+import { StickyManagerContext } from './context.esnext';
+
+function useStickyManager() {
+  const stickyManager = useContext(StickyManagerContext);
+  if (!stickyManager) {
+    throw new MissingAppProviderError('No StickyManager was provided.');
+  }
+  return stickyManager;
+}
+
+export { useStickyManager };

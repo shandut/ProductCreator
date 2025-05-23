@@ -1,0 +1,7 @@
+import './InlineStack.out.css';
+
+var styles = {
+  "InlineStack": "Polaris-InlineStack_bc7jt"
+};
+
+export { styles as default };

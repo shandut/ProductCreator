@@ -1,0 +1,13 @@
+import './Labelled.out.css';
+
+var styles = {
+  "hidden": "Polaris-Labelled--hidden_riqie",
+  "LabelWrapper": "Polaris-Labelled__LabelWrapper_bf6ys",
+  "disabled": "Polaris-Labelled--disabled_hcuh9",
+  "HelpText": "Polaris-Labelled__HelpText_8qj1a",
+  "readOnly": "Polaris-Labelled--readOnly_vi6ia",
+  "Error": "Polaris-Labelled__Error_37uk0",
+  "Action": "Polaris-Labelled__Action_r96cs"
+};
+
+export { styles as default };

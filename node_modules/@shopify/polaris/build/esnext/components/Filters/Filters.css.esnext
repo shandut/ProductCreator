@@ -1,0 +1,17 @@
+import './Filters.out.css';
+
+var styles = {
+  "Container": "Polaris-Filters__Container_13mbo",
+  "SearchField": "Polaris-Filters__SearchField_ek145",
+  "FiltersWrapper": "Polaris-Filters__FiltersWrapper_13e37",
+  "hideQueryField": "Polaris-Filters--hideQueryField_642pq",
+  "FiltersInner": "Polaris-Filters__FiltersInner_8towq",
+  "AddFilter": "Polaris-Filters__AddFilter_fze3c",
+  "FiltersWrapperWithAddButton": "Polaris-Filters__FiltersWrapperWithAddButton_1l0jb",
+  "AddFilterActivatorMultiple": "Polaris-Filters__AddFilterActivatorMultiple_1s5qq",
+  "FiltersStickyArea": "Polaris-Filters__FiltersStickyArea_1e5rp",
+  "ClearAll": "Polaris-Filters__ClearAll_dhdej",
+  "MultiplePinnedFilterClearAll": "Polaris-Filters__MultiplePinnedFilterClearAll_gp8qw"
+};
+
+export { styles as default };

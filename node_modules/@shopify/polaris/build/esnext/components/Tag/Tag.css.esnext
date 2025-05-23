@@ -1,0 +1,17 @@
+import './Tag.out.css';
+
+var styles = {
+  "Tag": "Polaris-Tag_375hg",
+  "disabled": "Polaris-Tag--disabled_hcuh9",
+  "clickable": "Polaris-Tag--clickable_1prth",
+  "linkable": "Polaris-Tag--linkable_1fdmd",
+  "removable": "Polaris-Tag--removable_1q527",
+  "Button": "Polaris-Tag__Button_r99lw",
+  "Link": "Polaris-Tag__Link_yj5sy",
+  "segmented": "Polaris-Tag--segmented_150jh",
+  "Text": "Polaris-Tag__Text_yj3uv",
+  "sizeLarge": "Polaris-Tag--sizeLarge_61dxo",
+  "overlay": "Polaris-Tag--overlay_ib7rj"
+};
+
+export { styles as default };

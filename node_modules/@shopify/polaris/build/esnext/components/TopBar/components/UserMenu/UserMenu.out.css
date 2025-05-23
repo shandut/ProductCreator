@@ -1,0 +1,10 @@
+.Polaris-TopBar-UserMenu__Details_1bdkj{
+  max-width:10rem;
+  margin-right:0;
+  padding:0 var(--p-space-200) 0 0.625rem;
+}
+@media (max-width: 47.9975em){
+  .Polaris-TopBar-UserMenu__Details_1bdkj{
+    display:none;
+}
+  }

@@ -1,0 +1,10 @@
+import './Label.out.css';
+
+var styles = {
+  "Label": "Polaris-Label_2vd36",
+  "hidden": "Polaris-Label--hidden_riqie",
+  "Text": "Polaris-Label__Text_yj3uv",
+  "RequiredIndicator": "Polaris-Label__RequiredIndicator_1homk"
+};
+
+export { styles as default };

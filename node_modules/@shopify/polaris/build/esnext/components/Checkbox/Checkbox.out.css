@@ -1,0 +1,255 @@
+.Polaris-Checkbox_1d6zr{
+  position:relative;
+  margin:var(--p-space-025);
+}
+
+.Polaris-Checkbox__ChoiceLabel_16hp3 .Polaris-Checkbox__Backdrop_1x2i2{
+  border-width:0;
+  box-shadow:inset 0 0 0 var(--p-border-width-0165) var(--p-color-input-border);
+  transition:border-color var(--p-motion-duration-100) var(--p-motion-ease-out), border-width var(--p-motion-duration-100) var(--p-motion-ease-out), box-shadow var(--p-motion-duration-100) var(--p-motion-ease-out);
+  transform:translate3d(0, 0, 0);
+}
+
+.Polaris-Checkbox__ChoiceLabel_16hp3:hover .Polaris-Checkbox__Backdrop_1x2i2{
+  border-color:var(--p-color-input-border-hover);
+  box-shadow:inset 0 0 0 var(--p-border-width-0165) var(--p-color-input-border-hover);
+  background-color:var(--p-color-input-bg-surface-hover);
+}
+
+.Polaris-Checkbox__ChoiceLabel_16hp3:active .Polaris-Checkbox__Backdrop_1x2i2,
+.Polaris-Checkbox__ChoiceLabel_16hp3:checked .Polaris-Checkbox__Backdrop_1x2i2{
+  border-color:var(--p-color-bg-fill-brand);
+  border-width:0;
+  box-shadow:inset 0 0 0 var(--p-space-050) var(--p-color-bg-fill-brand);
+}
+
+.Polaris-Checkbox__Input_30ock{
+  position:absolute;
+  z-index:var(--p-z-index-1);
+  width:100%;
+  height:100%;
+  opacity:0;
+  margin:0;
+}
+
+.Polaris-Checkbox__Input_30ock:focus-visible + .Polaris-Checkbox__Backdrop_1x2i2{
+      outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+      outline-offset:var(--p-space-025);
+      background-color:var(--p-color-input-bg-surface-hover);
+      border-width:0;
+    }
+
+.Polaris-Checkbox__Input_30ock:focus-visible + .Polaris-Checkbox__Backdrop_1x2i2::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-Checkbox__Input_30ock:checked + .Polaris-Checkbox__Backdrop_1x2i2, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2{
+      border-color: var(--p-color-border-emphasis);
+      border-color:var(--p-color-bg-fill-brand);
+      background-color:var(--p-color-bg-fill-brand-selected);
+      box-shadow:inset 0 0 0 var(--p-space-800) var(--p-color-bg-fill-brand-selected);
+    }
+
+.Polaris-Checkbox__Input_30ock:checked + .Polaris-Checkbox__Backdrop_1x2i2::before, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (-ms-high-contrast: active) {
+
+.Polaris-Checkbox__Input_30ock:checked + .Polaris-Checkbox__Backdrop_1x2i2::before, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2::before {
+    border: var(--p-border-width-050) solid windowText;
+  }
+}
+
+.Polaris-Checkbox__Input_30ock:checked ~ .Polaris-Checkbox__Icon_yj27d, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx ~ .Polaris-Checkbox__Icon_yj27d{
+      transition:opacity var(--p-motion-duration-150) var(--p-motion-ease-out), transform var(--p-motion-duration-150) var(--p-motion-ease-out);
+      opacity:1;
+    }
+
+.Polaris-Checkbox__Input_30ock:checked ~ .Polaris-Checkbox__Icon_yj27d svg, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx ~ .Polaris-Checkbox__Icon_yj27d svg{
+        fill:var(--p-color-text-brand-on-bg-fill);
+      }
+
+.Polaris-Checkbox__Input_30ock:checked ~ .Polaris-Checkbox__Icon_yj27d.Polaris-Checkbox--animated_mk14a, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx ~ .Polaris-Checkbox__Icon_yj27d.Polaris-Checkbox--animated_mk14a{
+        transition:initial;
+      }
+
+.Polaris-Checkbox__Input_30ock:disabled + .Polaris-Checkbox__Backdrop_1x2i2{
+      border-color: var(--p-color-border-disabled);
+      border-color:transparent;
+      background-color:var(--p-color-checkbox-bg-surface-disabled);
+      box-shadow:none;
+    }
+
+.Polaris-Checkbox__Input_30ock:disabled + .Polaris-Checkbox__Backdrop_1x2i2::before {
+  background-color: var(--p-color-bg-surface-disabled);
+}
+
+.Polaris-Checkbox__Input_30ock:disabled + .Polaris-Checkbox__Backdrop_1x2i2:hover {
+  cursor: default;
+}
+
+.Polaris-Checkbox__Input_30ock:disabled + .Polaris-Checkbox__Backdrop_1x2i2::before{
+        background-color:transparent;
+      }
+
+.Polaris-Checkbox__Input_30ock:disabled ~ .Polaris-Checkbox__Icon_yj27d svg{
+      color:var(--p-color-checkbox-icon-disabled);
+    }
+
+.Polaris-Checkbox__Input_30ock:disabled:checked + .Polaris-Checkbox__Backdrop_1x2i2, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx:disabled + .Polaris-Checkbox__Backdrop_1x2i2{
+      background-color:var(--p-color-checkbox-bg-surface-disabled);
+    }
+
+.Polaris-Checkbox__Input_30ock:disabled:checked + .Polaris-Checkbox__Backdrop_1x2i2::before, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx:disabled + .Polaris-Checkbox__Backdrop_1x2i2::before{
+        background-color:transparent;
+      }
+
+.Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm + .Polaris-Checkbox__Backdrop_1x2i2{
+      background-color:var(--p-color-bg-surface-magic);
+      box-shadow:inset 0 0 0 var(--p-border-width-0165) var(--p-color-border-magic-secondary);
+    }
+
+.Polaris-Checkbox__ChoiceLabel_16hp3:hover .Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm + .Polaris-Checkbox__Backdrop_1x2i2{
+        background-color:var(--p-color-bg-surface-magic-hover);
+        box-shadow:inset 0 0 0 var(--p-border-width-0165) var(--p-color-border-magic-secondary-hover);
+      }
+
+.Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm:checked + .Polaris-Checkbox__Backdrop_1x2i2, .Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2{
+        border-color:var(--p-color-bg-fill-magic);
+        background-color:var(--p-color-bg-fill-magic);
+        box-shadow:inset 0 0 0 var(--p-space-800) var(--p-color-bg-fill-magic);
+      }
+
+.Polaris-Checkbox__ChoiceLabel_16hp3:hover .Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm:checked + .Polaris-Checkbox__Backdrop_1x2i2, .Polaris-Checkbox__ChoiceLabel_16hp3:hover .Polaris-Checkbox__Input_30ock.Polaris-Checkbox--toneMagic_tqodm.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2{
+          border-color:var(--p-color-bg-fill-magic);
+          background-color:var(--p-color-bg-fill-magic);
+          box-shadow:inset 0 0 0 var(--p-space-800) var(--p-color-bg-fill-magic);
+        }
+
+.Polaris-Checkbox__Backdrop_1x2i2{
+  position: relative;
+  border: var(--p-border-width-050) solid var(--p-color-input-border);
+  background-color: var(--p-color-bg-surface);
+  border-radius: var(--p-border-radius-100);
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+
+  border:var(--p-border-width-0165) solid var(--p-color-input-border);
+}
+
+.Polaris-Checkbox__Backdrop_1x2i2.Polaris-Checkbox--hover_37sww,.Polaris-Checkbox__Backdrop_1x2i2:hover {
+  cursor: pointer;
+  border-color: var(--p-color-border-hover);
+}
+
+.Polaris-Checkbox__Backdrop_1x2i2:hover{
+    border-color:var(--p-color-input-border-hover);
+  }
+
+.Polaris-Checkbox__Icon_yj27d{
+  position:absolute;
+  transform-origin:50% 50%;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity var(--p-motion-duration-100) var(--p-motion-ease-out), transform var(--p-motion-duration-100) var(--p-motion-ease-out);
+
+  top:calc(var(--p-space-050)*-1);
+  left:calc(var(--p-space-050)*-1);
+  bottom:calc(var(--p-space-050)*-1);
+  right:calc(var(--p-space-050)*-1);
+}
+
+.Polaris-Checkbox__Icon_yj27d.Polaris-Checkbox--animated_mk14a{
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:var(--p-space-050);
+    transition:initial;
+  }
+
+.Polaris-Checkbox__Icon_yj27d svg{
+    color:var(--p-color-text-brand-on-bg-fill);
+
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+  }
+
+@media (-ms-high-contrast: active){
+
+.Polaris-Checkbox__Icon_yj27d{
+    fill:windowText;
+}
+  }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Icon_yj27d svg{
+    color:var(--p-color-text-critical-on-bg-fill);
+  }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock + .Polaris-Checkbox__Backdrop_1x2i2{
+      border-color: var(--p-color-border-critical);
+      background-color: var(--p-color-bg-fill-critical-secondary);
+      background-color:var(--p-color-bg-surface-critical);
+      box-shadow:inset 0 0 0 var(--p-border-width-0165) var(--p-color-bg-fill-critical-active);
+    }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock + .Polaris-Checkbox__Backdrop_1x2i2.Polaris-Checkbox--hover_37sww, .Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock + .Polaris-Checkbox__Backdrop_1x2i2:hover {
+  border-color: var(--p-color-border-critical);
+}
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock + .Polaris-Checkbox__Backdrop_1x2i2::before {
+  background-color: var(--p-color-border-critical);
+}
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Backdrop_1x2i2:active{
+      box-shadow:inset 0 0 0 var(--p-space-050) var(--p-color-bg-fill-critical-active);
+    }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock:checked + .Polaris-Checkbox__Backdrop_1x2i2, .Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock.Polaris-Checkbox__Input--indeterminate_wtlpx + .Polaris-Checkbox__Backdrop_1x2i2{
+      background-color:var(--p-color-bg-fill-critical-selected);
+      box-shadow:inset 0 0 0 var(--p-space-300) var(--p-color-bg-fill-critical-selected);
+    }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock:active + .Polaris-Checkbox__Backdrop_1x2i2{
+      background-color:var(--p-color-border-critical);
+      box-shadow:inset 0 0 0 var(--p-space-050) var(--p-color-bg-fill-critical-active);
+    }
+
+.Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock:focus-visible + .Polaris-Checkbox__Backdrop_1x2i2,
+    .Polaris-Checkbox__ChoiceLabel_16hp3:hover .Polaris-Checkbox--error_37uk1 .Polaris-Checkbox__Input_30ock:focus-visible + .Polaris-Checkbox__Backdrop_1x2i2{
+      border-color:var(--p-color-border-critical-secondary);
+      background-color:var(--p-color-bg-surface-critical);
+    }
+
+.Polaris-Checkbox--animated_mk14a svg > path{
+  stroke-dasharray:2;
+  stroke-dashoffset:2;
+}
+
+.Polaris-Checkbox--animated_mk14a svg > path.Polaris-Checkbox--checked_17qxt{
+    animation-name:Polaris-Checkbox--pathAnimation_xxdul;
+    animation-duration:var(--p-motion-duration-150);
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+    animation-direction:normal;
+    animation-iteration-count:1;
+    opacity:1;
+  }
+
+@keyframes Polaris-Checkbox--pathAnimation_xxdul{
+  from{
+    stroke-dashoffset:2;
+  }
+
+  to{
+    stroke-dashoffset:0;
+  }
+}

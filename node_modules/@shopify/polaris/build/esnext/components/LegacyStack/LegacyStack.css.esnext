@@ -1,0 +1,28 @@
+import './LegacyStack.out.css';
+
+var styles = {
+  "LegacyStack": "Polaris-LegacyStack_eaeo0",
+  "Item": "Polaris-LegacyStack__Item_yiyol",
+  "noWrap": "Polaris-LegacyStack--noWrap_vecks",
+  "spacingNone": "Polaris-LegacyStack--spacingNone_1b3d3",
+  "spacingExtraTight": "Polaris-LegacyStack--spacingExtraTight_gv6hw",
+  "spacingTight": "Polaris-LegacyStack--spacingTight_1o4d6",
+  "spacingBaseTight": "Polaris-LegacyStack--spacingBaseTight_nb78v",
+  "spacingLoose": "Polaris-LegacyStack--spacingLoose_yte7q",
+  "spacingExtraLoose": "Polaris-LegacyStack--spacingExtraLoose_1ptvt",
+  "distributionLeading": "Polaris-LegacyStack--distributionLeading_rudtn",
+  "distributionTrailing": "Polaris-LegacyStack--distributionTrailing_z5d5z",
+  "distributionCenter": "Polaris-LegacyStack--distributionCenter_60gbr",
+  "distributionEqualSpacing": "Polaris-LegacyStack--distributionEqualSpacing_x9cqm",
+  "distributionFill": "Polaris-LegacyStack--distributionFill_1c1lq",
+  "distributionFillEvenly": "Polaris-LegacyStack--distributionFillEvenly_aehjo",
+  "alignmentLeading": "Polaris-LegacyStack--alignmentLeading_1pu7t",
+  "alignmentTrailing": "Polaris-LegacyStack--alignmentTrailing_cp27m",
+  "alignmentCenter": "Polaris-LegacyStack--alignmentCenter_1rtaw",
+  "alignmentFill": "Polaris-LegacyStack--alignmentFill_m3d4l",
+  "alignmentBaseline": "Polaris-LegacyStack--alignmentBaseline_aupj5",
+  "vertical": "Polaris-LegacyStack--vertical_uiuuj",
+  "Item-fill": "Polaris-LegacyStack__Item--fill_vpuzt"
+};
+
+export { styles as default };

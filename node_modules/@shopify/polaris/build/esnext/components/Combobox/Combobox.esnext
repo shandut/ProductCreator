@@ -1,0 +1,109 @@
+import React, { useState, Children, useRef, useCallback, useMemo } from 'react';
+import styles from './Combobox.css.esnext';
+import { ComboboxTextFieldContext, ComboboxListboxContext, ComboboxListboxOptionContext } from '../../utilities/combobox/context.esnext';
+import { TextField } from './components/TextField/TextField.esnext';
+import { Popover } from '../Popover/Popover.esnext';
+
+function Combobox({
+  activator,
+  allowMultiple,
+  children,
+  preferredPosition = 'below',
+  willLoadMoreOptions,
+  height,
+  maxHeight,
+  minHeight,
+  onScrolledToBottom,
+  onClose
+}) {
+  const [popoverActive, setPopoverActive] = useState(false);
+  const [activeOptionId, setActiveOptionId] = useState();
+  const [textFieldLabelId, setTextFieldLabelId] = useState();
+  const [listboxId, setListboxId] = useState();
+  const [textFieldFocused, setTextFieldFocused] = useState(false);
+  const shouldOpen = !popoverActive;
+  const popoverActiveWithChildren = popoverActive && Children.count(children) > 0;
+  const ref = useRef(null);
+  const handleClose = useCallback(() => {
+    setPopoverActive(false);
+    onClose?.();
+    setActiveOptionId(undefined);
+  }, [onClose]);
+  const handleOpen = useCallback(() => {
+    setPopoverActive(true);
+    setActiveOptionId(undefined);
+  }, []);
+  const onOptionSelected = useCallback(() => {
+    if (!allowMultiple) {
+      handleClose();
+      setActiveOptionId(undefined);
+      return;
+    }
+    ref.current?.forceUpdatePosition();
+  }, [allowMultiple, handleClose]);
+  const handleFocus = useCallback(() => {
+    if (shouldOpen) {
+      handleOpen();
+    }
+  }, [shouldOpen, handleOpen]);
+  const handleChange = useCallback(() => {
+    if (shouldOpen) {
+      handleOpen();
+    }
+  }, [shouldOpen, handleOpen]);
+  const handleBlur = useCallback(() => {
+    if (popoverActive) {
+      handleClose();
+    }
+  }, [popoverActive, handleClose]);
+  const textFieldContextValue = useMemo(() => ({
+    activeOptionId,
+    expanded: popoverActive,
+    listboxId,
+    setTextFieldFocused,
+    setTextFieldLabelId,
+    onTextFieldFocus: handleFocus,
+    onTextFieldChange: handleChange,
+    onTextFieldBlur: handleBlur
+  }), [activeOptionId, popoverActive, listboxId, setTextFieldFocused, setTextFieldLabelId, handleFocus, handleChange, handleBlur]);
+  const listboxOptionContextValue = useMemo(() => ({
+    allowMultiple
+  }), [allowMultiple]);
+  const listboxContextValue = useMemo(() => ({
+    listboxId,
+    textFieldLabelId,
+    textFieldFocused,
+    willLoadMoreOptions,
+    onOptionSelected,
+    setActiveOptionId,
+    setListboxId,
+    onKeyToBottom: onScrolledToBottom
+  }), [listboxId, textFieldLabelId, textFieldFocused, willLoadMoreOptions, onOptionSelected, setActiveOptionId, setListboxId, onScrolledToBottom]);
+  return /*#__PURE__*/React.createElement(Popover, {
+    ref: ref,
+    active: popoverActiveWithChildren,
+    activator: /*#__PURE__*/React.createElement(ComboboxTextFieldContext.Provider, {
+      value: textFieldContextValue
+    }, activator),
+    autofocusTarget: "none",
+    preventFocusOnClose: true,
+    fullWidth: true,
+    preferInputActivator: false,
+    preferredPosition: preferredPosition,
+    onClose: handleClose
+  }, Children.count(children) > 0 ? /*#__PURE__*/React.createElement(Popover.Pane, {
+    onScrolledToBottom: onScrolledToBottom,
+    height: height,
+    maxHeight: maxHeight,
+    minHeight: minHeight
+  }, /*#__PURE__*/React.createElement(ComboboxListboxContext.Provider, {
+    value: listboxContextValue
+  }, /*#__PURE__*/React.createElement(ComboboxListboxOptionContext.Provider, {
+    value: listboxOptionContextValue
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.Listbox
+  }, children)))) : null);
+}
+Combobox.TextField = TextField;
+
+export { Combobox };

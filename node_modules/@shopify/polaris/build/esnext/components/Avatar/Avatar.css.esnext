@@ -1,0 +1,26 @@
+import './Avatar.out.css';
+
+var styles = {
+  "Avatar": "Polaris-Avatar_z763p",
+  "imageHasLoaded": "Polaris-Avatar--imageHasLoaded_1bsq5",
+  "Text": "Polaris-Avatar__Text_yj3uv",
+  "long": "Polaris-Avatar--long_yix3t",
+  "hidden": "Polaris-Avatar--hidden_riqie",
+  "sizeXs": "Polaris-Avatar--sizeXs_z1uf6",
+  "sizeSm": "Polaris-Avatar--sizeSm_nwbw2",
+  "sizeMd": "Polaris-Avatar--sizeMd_ja64a",
+  "sizeLg": "Polaris-Avatar--sizeLg_mhyn6",
+  "sizeXl": "Polaris-Avatar--sizeXl_odady",
+  "styleOne": "Polaris-Avatar--styleOne_jtsnj",
+  "styleTwo": "Polaris-Avatar--styleTwo_15kyd",
+  "styleThree": "Polaris-Avatar--styleThree_1sohp",
+  "styleFour": "Polaris-Avatar--styleFour_16hgi",
+  "styleFive": "Polaris-Avatar--styleFive_dypl0",
+  "styleSix": "Polaris-Avatar--styleSix_4ljbo",
+  "styleSeven": "Polaris-Avatar--styleSeven_1abxj",
+  "Image": "Polaris-Avatar__Image_2qgms",
+  "Initials": "Polaris-Avatar__Initials_5s4f1",
+  "Svg": "Polaris-Avatar__Svg_375hu"
+};
+
+export { styles as default };

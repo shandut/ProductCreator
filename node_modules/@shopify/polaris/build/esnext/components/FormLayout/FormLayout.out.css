@@ -1,0 +1,16 @@
+.Polaris-FormLayout__Item_yiyol{
+  --pc-form-layout-item-min-size:13.75rem;
+  flex:1 1;
+}
+.Polaris-FormLayout__Item_yiyol.Polaris-FormLayout--grouped_17srt{
+    min-width:var(--pc-form-layout-item-min-size);
+  }
+@media (min-width: 0em) and (max-width: 30.6225em){
+  .Polaris-FormLayout__Item_yiyol.Polaris-FormLayout--grouped_17srt{
+      min-width:100%;
+  }
+    }
+.Polaris-FormLayout__Item_yiyol.Polaris-FormLayout--condensed_b60cb{
+    flex-basis:calc(var(--pc-form-layout-item-min-size)*0.5);
+    min-width:calc(var(--pc-form-layout-item-min-size)*0.5);
+  }

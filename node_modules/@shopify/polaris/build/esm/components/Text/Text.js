@@ -1,0 +1,35 @@
+import React from 'react';
+import { classNames } from '../../utilities/css.js';
+import styles from './Text.css.js';
+
+const deprecatedVariants = {
+  heading3xl: 'heading2xl'
+};
+const Text = ({
+  alignment,
+  as,
+  breakWord,
+  children,
+  tone,
+  fontWeight,
+  id,
+  numeric = false,
+  truncate = false,
+  variant,
+  visuallyHidden = false,
+  textDecorationLine
+}) => {
+  if (process.env.NODE_ENV === 'development' && variant && Object.prototype.hasOwnProperty.call(deprecatedVariants, variant)) {
+    // eslint-disable-next-line no-console
+    console.warn(`Deprecation: <Text variant="${variant}" />. The value "${variant}" will be removed in a future major version of Polaris. Use "${deprecatedVariants[variant]}" instead.`);
+  }
+  const Component = as || (visuallyHidden ? 'span' : 'p');
+  const className = classNames(styles.root, variant && styles[variant], fontWeight && styles[fontWeight], (alignment || truncate) && styles.block, alignment && styles[alignment], breakWord && styles.break, tone && styles[tone], numeric && styles.numeric, truncate && styles.truncate, visuallyHidden && styles.visuallyHidden, textDecorationLine && styles[textDecorationLine]);
+  return /*#__PURE__*/React.createElement(Component, Object.assign({
+    className: className
+  }, id && {
+    id
+  }), children);
+};
+
+export { Text };

@@ -1,0 +1,9 @@
+import './Link.out.css';
+
+var styles = {
+  "Link": "Polaris-Link_yj5sy",
+  "monochrome": "Polaris-Link--monochrome_14jw2",
+  "removeUnderline": "Polaris-Link--removeUnderline_adav6"
+};
+
+export { styles as default };

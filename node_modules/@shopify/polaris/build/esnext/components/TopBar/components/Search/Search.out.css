@@ -1,0 +1,53 @@
+.Polaris-TopBar-Search_q76sw{
+  position:fixed;
+  visibility:hidden;
+  z-index:var(--p-z-index-8);
+  pointer-events:none;
+  top:var(--pg-top-bar-height);
+  left:0;
+  right:0;
+  box-shadow:var(--p-shadow-600);
+  overflow:hidden;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-TopBar-Search_q76sw{
+    position:absolute;
+    top:100%;
+    max-width:36.25rem;
+    margin:var(--p-space-100) var(--p-space-500) 0;
+    border-radius:var(--p-border-radius-200);
+}
+  }
+
+@media (min-width: 48em){
+
+.Polaris-TopBar-Search_q76sw{
+    margin:var(--p-space-100) var(--p-space-800) 0;
+}
+  }
+
+.Polaris-TopBar-Search__SearchContent_6oiep{
+  background-color:var(--p-color-bg-surface);
+}
+
+.Polaris-TopBar-Search--visible_1wa12{
+  visibility:initial;
+  pointer-events:all;
+}
+
+.Polaris-TopBar-Search__Results_w9d26{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  max-height:calc(100vh - var(--pg-top-bar-height));
+  margin:0;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-TopBar-Search__Results_w9d26{
+    max-height:60vh;
+}
+  }

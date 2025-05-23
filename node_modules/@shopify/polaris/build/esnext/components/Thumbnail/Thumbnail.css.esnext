@@ -1,0 +1,12 @@
+import './Thumbnail.out.css';
+
+var styles = {
+  "Thumbnail": "Polaris-Thumbnail_15hj1",
+  "sizeExtraSmall": "Polaris-Thumbnail--sizeExtraSmall_1twbb",
+  "sizeSmall": "Polaris-Thumbnail--sizeSmall_7647q",
+  "sizeMedium": "Polaris-Thumbnail--sizeMedium_5f35p",
+  "sizeLarge": "Polaris-Thumbnail--sizeLarge_61dxo",
+  "transparent": "Polaris-Thumbnail--transparent_19sk8"
+};
+
+export { styles as default };

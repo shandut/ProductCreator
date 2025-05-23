@@ -1,0 +1,11 @@
+.Polaris-Autocomplete__Loading_1brcv{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:var(--p-space-200) var(--p-space-400);
+}
+
+.Polaris-Autocomplete__SectionWrapper_1b5l1 > *:not(:first-child){
+    margin-top:var(--p-space-200);
+  }

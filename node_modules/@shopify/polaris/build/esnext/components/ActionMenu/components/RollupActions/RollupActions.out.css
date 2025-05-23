@@ -1,0 +1,24 @@
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso{
+  text-align:right;
+}
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso button[type='button']{
+    background:var(--p-color-bg-fill-tertiary);
+    border-radius:var(--p-border-radius-200);
+    border:none;
+    box-shadow:none;
+    margin:0;
+  }
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso button[type='button']:active{
+      background:var(--p-color-bg-fill-tertiary-active);
+    }
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso button[type='button']:focus:not(:active){
+      outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+      outline-offset:var(--p-space-050);
+      background:var(--p-color-bg-fill-tertiary-active);
+    }
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso button[type='button']:focus:not(:active)::after{
+    content:none;
+  }
+.Polaris-ActionMenu-RollupActions__RollupActivator_88nso button[type='button']:hover{
+      background:var(--p-color-bg-fill-tertiary-hover);
+    }

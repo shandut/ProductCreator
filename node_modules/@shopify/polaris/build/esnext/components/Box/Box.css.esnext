@@ -1,0 +1,10 @@
+import './Box.out.css';
+
+var styles = {
+  "listReset": "Polaris-Box--listReset_1gz07",
+  "Box": "Polaris-Box_375yx",
+  "visuallyHidden": "Polaris-Box--visuallyHidden_yrtt6",
+  "printHidden": "Polaris-Box--printHidden_15ag0"
+};
+
+export { styles as default };

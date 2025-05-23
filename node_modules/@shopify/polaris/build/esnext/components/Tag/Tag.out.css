@@ -1,0 +1,313 @@
+.Polaris-Tag_375hg{
+  position:relative;
+  display:inline-flex;
+  max-width:100%;
+  align-items:center;
+  padding-inline:calc(var(--p-space-100) + var(--p-space-050));
+  background-color:var(--p-color-bg-fill-tertiary);
+  border-radius:var(--p-border-radius-200);
+  color:var(--p-color-text);
+}
+
+.Polaris-Tag_375hg.Polaris-Tag--disabled_hcuh9{
+    transition:none;
+    background:var(--p-color-bg-fill-disabled);
+    color:var(--p-color-text-disabled);
+  }
+
+.Polaris-Tag_375hg.Polaris-Tag--disabled_hcuh9 svg{
+      fill:var(--p-color-icon-disabled);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth{
+    -webkit-appearance:none;
+            appearance:none;
+    margin:0;
+    padding:0;
+    background:none;
+    border:none;
+    font-size:inherit;
+    line-height:inherit;
+    color:inherit;
+    cursor:pointer;
+    cursor:pointer;
+    padding:0 calc(var(--p-space-100) + var(--p-space-050));
+    background-color:var(--p-color-bg-fill-tertiary);
+    outline:var(--p-border-width-025) solid transparent;
+  }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth:focus{
+    outline:none;
+  }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth:hover{
+      background:var(--p-color-bg-fill-tertiary-hover);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth{
+    position: relative;
+  }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-200);
+}
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth:active{
+      background:var(--p-color-bg-fill-tertiary-active);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--clickable_1prth:disabled{
+      background:var(--p-color-bg-fill-disabled);
+      cursor:default;
+      pointer-events:none;
+      color:var(--p-color-text-disabled);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--linkable_1fdmd:hover{
+      background:var(--p-color-bg-fill-tertiary-hover);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--linkable_1fdmd:active{
+      background:var(--p-color-bg-fill-tertiary-active);
+    }
+
+.Polaris-Tag_375hg.Polaris-Tag--removable_1q527{
+    padding-right:0;
+    padding-inline-end:0;
+  }
+
+.Polaris-Tag__Button_r99lw{
+  -webkit-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  color:inherit;
+  cursor:pointer;
+  display:block;
+  flex-shrink:0;
+  height:1.125rem;
+  width:1.125rem;
+  margin:var(--p-space-025);
+  margin-left:var(--p-space-050);
+  border-radius:0.4375rem;
+  color:var(--p-color-icon-secondary);
+}
+
+.Polaris-Tag__Button_r99lw:focus{
+    outline:none;
+  }
+
+.Polaris-Tag__Button_r99lw svg{
+    fill:currentColor;
+  }
+
+.Polaris-Tag__Button_r99lw:hover{
+    background:var(--p-color-bg-fill-tertiary-hover);
+    color:var(--p-color-icon-hover);
+    outline:var(--p-border-width-025) solid transparent;
+  }
+
+.Polaris-Tag__Button_r99lw{
+  position: relative;
+}
+
+.Polaris-Tag__Button_r99lw::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-200);
+}
+
+.Polaris-Tag__Button_r99lw:focus-visible{
+    background:var(--p-color-bg-fill-tertiary-hover);
+    color:var(--p-color-icon-hover);
+  }
+
+.Polaris-Tag__Button_r99lw:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-Tag__Button_r99lw:active{
+    background:var(--p-color-bg-fill-tertiary-active);
+  }
+
+.Polaris-Tag__Button_r99lw:disabled{
+    cursor:default;
+    pointer-events:none;
+  }
+
+.Polaris-Tag__Button_r99lw:disabled svg{
+      fill:var(--p-color-icon-disabled);
+    }
+
+.Polaris-Tag__Link_yj5sy{
+  display:inline-grid;
+  color:var(--p-color-text);
+  outline:none;
+  border-radius:var(--p-border-radius-200);
+  text-decoration:none;
+  position: relative;
+}
+
+.Polaris-Tag__Link_yj5sy::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-200);
+}
+
+.Polaris-Tag__Link_yj5sy:focus-visible:not(:active){
+    text-decoration:underline;
+  }
+
+.Polaris-Tag__Link_yj5sy:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-Tag__Link_yj5sy:hover{
+    background:var(--p-color-bg-fill-tertiary-hover);
+    text-decoration:underline;
+  }
+
+.Polaris-Tag__Link_yj5sy.Polaris-Tag--segmented_150jh:hover{
+      background:none;
+    }
+
+.Polaris-Tag__Link_yj5sy.Polaris-Tag--segmented_150jh::after{
+      margin-right:var(--p-space-100);
+    }
+
+.Polaris-Tag__Link_yj5sy:active{
+    background:var(--p-color-bg-fill-tertiary-active);
+  }
+
+.Polaris-Tag__Text_yj3uv{
+  line-height:var(--p-font-line-height-500);
+}
+
+.Polaris-Tag--linkable_1fdmd.Polaris-Tag--removable_1q527:hover{
+  background:var(--p-color-bg-fill-tertiary-hover);
+}
+
+.Polaris-Tag--linkable_1fdmd.Polaris-Tag--removable_1q527:hover .Polaris-Tag__Button_r99lw{
+    background:var(--p-color-bg-fill-tertiary-active);
+  }
+
+.Polaris-Tag--sizeLarge_61dxo,
+.Polaris-Tag--sizeLarge_61dxo:is(.Polaris-Tag--removable_1q527, .Polaris-Tag--linkable_1fdmd){
+  min-height:1.5rem;
+  padding:0 var(--p-space-200);
+}
+
+@media (hover: none){
+
+.Polaris-Tag--sizeLarge_61dxo,
+.Polaris-Tag--sizeLarge_61dxo:is(.Polaris-Tag--removable_1q527, .Polaris-Tag--linkable_1fdmd){
+    padding-right:0;
+}
+  }
+
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Link_yj5sy.Polaris-Tag--segmented_150jh::after{
+  margin-right:0;
+}
+
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw{
+  opacity:0;
+  position:absolute;
+  right:var(--p-space-050);
+  left:auto;
+  width:1.25rem;
+  height:1.25rem;
+  margin:0;
+  background-color:var(--p-color-bg-fill-tertiary);
+}
+
+@media (hover: none){
+
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw{
+    opacity:1;
+    position:unset;
+}
+  }
+
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw:hover{
+    color:var(--p-color-icon-secondary-hover);
+  }
+
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw:active,
+  .Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw:focus{
+    color:var(--p-color-icon-secondary-active);
+  }
+
+.Polaris-Tag--sizeLarge_61dxo:hover .Polaris-Tag__Button_r99lw,
+.Polaris-Tag--sizeLarge_61dxo .Polaris-Tag__Button_r99lw:focus-visible{
+  opacity:1;
+}
+
+.Polaris-Tag--sizeLarge_61dxo:hover .Polaris-Tag--overlay_ib7rj{
+  position:absolute;
+  top:0;
+  right:1.25rem;
+  bottom:0;
+  width:0.75rem;
+  pointer-events:none;
+  background:linear-gradient(
+    to left,
+    var(--p-color-bg-fill-tertiary) 0%,
+    transparent 100%
+  );
+}
+
+.Polaris-Tag--sizeLarge_61dxo.Polaris-Tag--removable_1q527.Polaris-Tag--linkable_1fdmd .Polaris-Tag__Button_r99lw{
+    background-color:var(--p-color-bg-fill-tertiary-hover);
+  }
+
+@media (hover: none){
+
+.Polaris-Tag--sizeLarge_61dxo.Polaris-Tag--removable_1q527.Polaris-Tag--linkable_1fdmd .Polaris-Tag__Button_r99lw{
+      background-color:var(--p-color-bg-fill-tertiary);
+  }
+    }
+
+.Polaris-Tag--sizeLarge_61dxo.Polaris-Tag--removable_1q527.Polaris-Tag--linkable_1fdmd:hover .Polaris-Tag--overlay_ib7rj{
+    background:linear-gradient(
+      to left,
+      var(--p-color-bg-fill-tertiary-hover) 0%,
+      transparent 100%
+    );
+  }

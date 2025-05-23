@@ -1,0 +1,46 @@
+import React, { memo, useContext } from 'react';
+import { CheckIcon } from '@shopify/polaris-icons';
+import { classNames } from '../../../../utilities/css.esnext';
+import { ComboboxListboxOptionContext } from '../../../../utilities/combobox/context.esnext';
+import { ActionContext } from '../../../../utilities/listbox/context.esnext';
+import styles from './TextOption.css.esnext';
+import { Checkbox } from '../../../Checkbox/Checkbox.esnext';
+import { Box } from '../../../Box/Box.esnext';
+import { InlineStack } from '../../../InlineStack/InlineStack.esnext';
+import { Icon } from '../../../Icon/Icon.esnext';
+
+const TextOption = /*#__PURE__*/memo(function TextOption({
+  children,
+  selected,
+  disabled
+}) {
+  const {
+    allowMultiple
+  } = useContext(ComboboxListboxOptionContext);
+  const isAction = useContext(ActionContext);
+  const textOptionClassName = classNames(styles.TextOption, selected && !allowMultiple && styles.selected, disabled && styles.disabled, allowMultiple && styles.allowMultiple, isAction && styles.isAction);
+  const optionMarkup = selected ? /*#__PURE__*/React.createElement(Box, {
+    width: "100%"
+  }, /*#__PURE__*/React.createElement(InlineStack, {
+    wrap: false,
+    align: "space-between",
+    gap: "200"
+  }, children, /*#__PURE__*/React.createElement(InlineStack, {
+    align: "end"
+  }, /*#__PURE__*/React.createElement(Icon, {
+    source: CheckIcon
+  })))) : /*#__PURE__*/React.createElement(React.Fragment, null, children);
+  return /*#__PURE__*/React.createElement("div", {
+    className: textOptionClassName
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.Content
+  }, allowMultiple && !isAction ? /*#__PURE__*/React.createElement("div", {
+    className: styles.Checkbox
+  }, /*#__PURE__*/React.createElement(Checkbox, {
+    disabled: disabled,
+    checked: selected,
+    label: children
+  })) : optionMarkup));
+});
+
+export { TextOption };

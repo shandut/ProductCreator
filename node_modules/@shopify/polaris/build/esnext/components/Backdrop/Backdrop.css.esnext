@@ -1,0 +1,9 @@
+import './Backdrop.out.css';
+
+var styles = {
+  "Backdrop": "Polaris-Backdrop_1x2i2",
+  "transparent": "Polaris-Backdrop--transparent_19sk8",
+  "belowNavigation": "Polaris-Backdrop--belowNavigation_1y5t0"
+};
+
+export { styles as default };

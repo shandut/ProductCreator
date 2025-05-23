@@ -1,0 +1,10 @@
+.Polaris-Listbox-Loading__ListItem_wxd2m{
+  padding:0;
+  margin:0;
+}
+
+.Polaris-Listbox-Loading_1brcv{
+  padding:var(--p-space-200) var(--p-space-400);
+  display:grid;
+  place-items:center;
+}

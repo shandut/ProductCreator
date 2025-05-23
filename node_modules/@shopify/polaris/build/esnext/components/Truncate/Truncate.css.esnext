@@ -1,0 +1,7 @@
+import './Truncate.out.css';
+
+var styles = {
+  "Truncate": "Polaris-Truncate_4qxoo"
+};
+
+export { styles as default };

@@ -1,0 +1,77 @@
+.Polaris-SelectAllActions_1jipq{
+  display:flex;
+  gap:var(--p-space-200);
+  align-items:center;
+  justify-content:flex-start;
+  width:100%;
+  transition:var(--p-motion-duration-100) var(--p-motion-ease);
+  transition-property:transform, opacity;
+}
+
+.Polaris-SelectAllActions_1jipq.Polaris-SelectAllActions--selectAllActionsNotSticky_dwuo8{
+    transform:none;
+    opacity:1;
+  }
+
+.Polaris-SelectAllActions__SelectAllActions--entering_wm2u1,
+.Polaris-SelectAllActions__SelectAllActions--exiting_1c2of{
+  display:flex;
+  opacity:0;
+}
+
+.Polaris-SelectAllActions__SelectAllActions--entering_wm2u1:not(:is(.Polaris-SelectAllActions--selectAllActionsNotSticky_dwuo8, .Polaris-SelectAllActions__SelectAllActions--hasPagination_1xovr)), .Polaris-SelectAllActions__SelectAllActions--exiting_1c2of:not(:is(.Polaris-SelectAllActions--selectAllActionsNotSticky_dwuo8, .Polaris-SelectAllActions__SelectAllActions--hasPagination_1xovr)){
+    transform:translateY(100%);
+  }
+
+.Polaris-SelectAllActions__SelectAllActions--exited_1yp4f{
+  display:none;
+  opacity:0;
+}
+
+.Polaris-SelectAllActions__SelectAllActions--exited_1yp4f:not(:is(.Polaris-SelectAllActions--selectAllActionsNotSticky_dwuo8, .Polaris-SelectAllActions__SelectAllActions--hasPagination_1xovr)){
+    transform:translateY(100%);
+  }
+
+.Polaris-SelectAllActions__SelectAllActions--entered_1uaoo{
+  opacity:1;
+  display:flex;
+  transform:translateY(0);
+}
+
+.Polaris-SelectAllActions__AllAction_eazf4{
+  border:0;
+  background:none;
+  padding:0;
+  cursor:pointer;
+  color:var(--p-color-text-emphasis);
+  outline:none;
+  position: relative;
+}
+
+.Polaris-SelectAllActions__AllAction_eazf4::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+
+.Polaris-SelectAllActions__AllAction_eazf4:hover,
+  .Polaris-SelectAllActions__AllAction_eazf4:focus{
+    color:var(--p-color-text-emphasis-hover);
+  }
+
+.Polaris-SelectAllActions__AllAction_eazf4:active{
+    color:var(--p-color-text-emphasis-active);
+  }
+
+.Polaris-SelectAllActions__AllAction_eazf4:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}

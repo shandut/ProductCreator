@@ -1,0 +1,7 @@
+import './ChoiceList.out.css';
+
+var styles = {
+  "ChoiceChildren": "Polaris-ChoiceList__ChoiceChildren_1j4jt"
+};
+
+export { styles as default };

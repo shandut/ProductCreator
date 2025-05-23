@@ -1,0 +1,80 @@
+.Polaris-ActionMenu-SecondaryAction_1dl4i{
+  --pc-secondary-action-button-spacing:var(--p-space-300);
+}
+.Polaris-ActionMenu-SecondaryAction_1dl4i a,
+  .Polaris-ActionMenu-SecondaryAction_1dl4i button{
+    position: relative;
+    --pc-button-padding-block:var(--p-space-100);
+    --pc-button-padding-inline:var(--p-space-300);
+    background:var(--p-color-bg-fill-tertiary) !important;
+    box-shadow:none !important;
+    border:none;
+    border-radius:var(--p-border-radius-200) !important;
+    min-height:1.75rem;
+  }
+.Polaris-ActionMenu-SecondaryAction_1dl4i a::after, .Polaris-ActionMenu-SecondaryAction_1dl4i button::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.125rem;
+  right: -0.125rem;
+  bottom: -0.125rem;
+  left: -0.125rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.125rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+.Polaris-ActionMenu-SecondaryAction_1dl4i a:is(:hover, :focus), .Polaris-ActionMenu-SecondaryAction_1dl4i button:is(:hover, :focus){
+      background-color:var(--p-color-bg-fill-tertiary-hover) !important;
+    }
+.Polaris-ActionMenu-SecondaryAction_1dl4i a:active,
+    .Polaris-ActionMenu-SecondaryAction_1dl4i button:active,
+    .Polaris-ActionMenu-SecondaryAction_1dl4i a[aria-expanded='true'],
+    .Polaris-ActionMenu-SecondaryAction_1dl4i button[aria-expanded='true']{
+      background-color:var(--p-color-bg-fill-tertiary-active) !important;
+      box-shadow:var(--p-shadow-inset-200) !important;
+    }
+.Polaris-ActionMenu-SecondaryAction_1dl4i a:focus-visible, .Polaris-ActionMenu-SecondaryAction_1dl4i button:focus-visible{
+      outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+      outline-offset:var(--p-space-050);
+    }
+.Polaris-ActionMenu-SecondaryAction_1dl4i a:focus-visible::after, .Polaris-ActionMenu-SecondaryAction_1dl4i button:focus-visible::after{
+    content:none;
+  }
+.Polaris-ActionMenu-SecondaryAction_1dl4i a[aria-disabled='true'], .Polaris-ActionMenu-SecondaryAction_1dl4i button[aria-disabled='true']{
+      background-color:var(--p-color-bg-fill-disabled) !important;
+    }
+@media (min-width: 48em){
+  .Polaris-ActionMenu-SecondaryAction_1dl4i a,
+  .Polaris-ActionMenu-SecondaryAction_1dl4i button{
+      border:none !important;
+      position: relative;
+  }
+      .Polaris-ActionMenu-SecondaryAction_1dl4i a::after, .Polaris-ActionMenu-SecondaryAction_1dl4i button::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -0.0625rem;
+    right: -0.0625rem;
+    bottom: -0.0625rem;
+    left: -0.0625rem;
+    display: block;
+    pointer-events: none;
+    box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+    border-radius: var(--p-border-radius-100);
+  }
+    }
+.Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil a,
+    .Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil button{
+      color:var(--p-color-text-critical) !important;
+    }
+.Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil a svg, .Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil button svg{
+        fill:var(--p-color-text-critical);
+      }
+.Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil a:is(:hover, :focus), .Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil button:is(:hover, :focus){
+        background-color:var(--p-color-bg-fill-tertiary-hover) !important;
+      }
+.Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil a:active, .Polaris-ActionMenu-SecondaryAction_1dl4i.Polaris-ActionMenu-SecondaryAction--critical_uivil button:active{
+        background-color:var(--p-color-bg-fill-tertiary-active) !important;
+      }

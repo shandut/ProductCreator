@@ -1,0 +1,13 @@
+import React from 'react';
+
+var SvgCashDollarFilledIcon = function SvgCashDollarFilledIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm-.5-10.5a.75.75 0 0 1 1.5 0v.25h.75a.75.75 0 0 1 0 1.5h-2.25a.5.5 0 0 0 0 1h1a2 2 0 1 1 0 4v.25a.75.75 0 0 1-1.5 0v-.25h-.75a.75.75 0 0 1 0-1.5h2.25a.5.5 0 0 0 0-1h-1a2 2 0 1 1 0-4v-.25Z"
+  }));
+};
+SvgCashDollarFilledIcon.displayName = "CashDollarFilledIcon";
+
+export { SvgCashDollarFilledIcon as S };

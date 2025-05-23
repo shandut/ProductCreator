@@ -1,0 +1,8 @@
+import './SearchDismissOverlay.out.css';
+
+var styles = {
+  "SearchDismissOverlay": "Polaris-TopBar-SearchDismissOverlay_1vuxf",
+  "visible": "Polaris-TopBar-SearchDismissOverlay--visible_1wa12"
+};
+
+export { styles as default };

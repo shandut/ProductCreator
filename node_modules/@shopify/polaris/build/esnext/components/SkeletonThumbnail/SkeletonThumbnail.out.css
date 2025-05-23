@@ -1,0 +1,36 @@
+.Polaris-SkeletonThumbnail_u7qua{
+  --pc-skeleton-thumbnail-extra-small-size:1.5rem;
+  --pc-skeleton-thumbnail-small-size:2.5rem;
+  --pc-skeleton-thumbnail-medium-size:3.75rem;
+  --pc-skeleton-thumbnail-large-size:5rem;
+  display:flex;
+  background-color:var(--p-color-bg-fill-tertiary);
+  border-radius:var(--p-border-radius-200);
+}
+
+@media screen and (-ms-high-contrast: active){
+
+.Polaris-SkeletonThumbnail_u7qua{
+    background-color:grayText;
+}
+  }
+
+.Polaris-SkeletonThumbnail--sizeExtraSmall_1twbb{
+  height:var(--pc-skeleton-thumbnail-extra-small-size);
+  width:var(--pc-skeleton-thumbnail-extra-small-size);
+}
+
+.Polaris-SkeletonThumbnail--sizeSmall_7647q{
+  height:var(--pc-skeleton-thumbnail-small-size);
+  width:var(--pc-skeleton-thumbnail-small-size);
+}
+
+.Polaris-SkeletonThumbnail--sizeMedium_5f35p{
+  height:var(--pc-skeleton-thumbnail-medium-size);
+  width:var(--pc-skeleton-thumbnail-medium-size);
+}
+
+.Polaris-SkeletonThumbnail--sizeLarge_61dxo{
+  height:var(--pc-skeleton-thumbnail-large-size);
+  width:var(--pc-skeleton-thumbnail-large-size);
+}

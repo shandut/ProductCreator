@@ -1,0 +1,47 @@
+import React, { useId, Children } from 'react';
+import { wrapWithComponent } from '../../../../utilities/components.esnext';
+import { Item } from '../Item/Item.esnext';
+import { BlockStack } from '../../../BlockStack/BlockStack.esnext';
+import { InlineStack } from '../../../InlineStack/InlineStack.esnext';
+import { Box } from '../../../Box/Box.esnext';
+import { Text } from '../../../Text/Text.esnext';
+
+function Group({
+  children,
+  condensed,
+  title,
+  helpText
+}) {
+  const id = useId();
+  let helpTextElement = null;
+  let helpTextId;
+  let titleElement = null;
+  let titleId;
+  if (helpText) {
+    helpTextId = `${id}HelpText`;
+    helpTextElement = /*#__PURE__*/React.createElement(Box, {
+      id: helpTextId,
+      color: "text-secondary"
+    }, helpText);
+  }
+  if (title) {
+    titleId = `${id}Title`;
+    titleElement = /*#__PURE__*/React.createElement(Text, {
+      id: titleId,
+      as: "p"
+    }, title);
+  }
+  const itemsMarkup = Children.map(children, child => wrapWithComponent(child, Item, {
+    condensed
+  }));
+  return /*#__PURE__*/React.createElement(BlockStack, {
+    role: "group",
+    gap: "200",
+    "aria-labelledby": titleId,
+    "aria-describedby": helpTextId
+  }, titleElement, /*#__PURE__*/React.createElement(InlineStack, {
+    gap: "300"
+  }, itemsMarkup), helpTextElement);
+}
+
+export { Group };

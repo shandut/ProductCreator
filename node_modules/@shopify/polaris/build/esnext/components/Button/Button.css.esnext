@@ -1,0 +1,35 @@
+import './Button.out.css';
+
+var styles = {
+  "Button": "Polaris-Button_r99lw",
+  "disabled": "Polaris-Button--disabled_hcuh9",
+  "pressed": "Polaris-Button--pressed_17w8v",
+  "variantPrimary": "Polaris-Button--variantPrimary_1stsb",
+  "variantSecondary": "Polaris-Button--variantSecondary_moc9w",
+  "variantTertiary": "Polaris-Button--variantTertiary_ibcmv",
+  "variantPlain": "Polaris-Button--variantPlain_1bx18",
+  "removeUnderline": "Polaris-Button--removeUnderline_adav6",
+  "variantMonochromePlain": "Polaris-Button--variantMonochromePlain_55h85",
+  "toneSuccess": "Polaris-Button--toneSuccess_15hst",
+  "toneCritical": "Polaris-Button--toneCritical_jv6uf",
+  "sizeMicro": "Polaris-Button--sizeMicro_pq72j",
+  "sizeSlim": "Polaris-Button--sizeSlim_1p6ue",
+  "sizeMedium": "Polaris-Button--sizeMedium_5f35p",
+  "sizeLarge": "Polaris-Button--sizeLarge_61dxo",
+  "textAlignCenter": "Polaris-Button--textAlignCenter_1kere",
+  "textAlignStart": "Polaris-Button--textAlignStart_5hw7p",
+  "textAlignLeft": "Polaris-Button--textAlignLeft_1yjwh",
+  "textAlignEnd": "Polaris-Button--textAlignEnd_1ea3w",
+  "textAlignRight": "Polaris-Button--textAlignRight_1nn4o",
+  "fullWidth": "Polaris-Button--fullWidth_zyvh4",
+  "iconOnly": "Polaris-Button--iconOnly_viazp",
+  "iconWithText": "Polaris-Button--iconWithText_dhbvn",
+  "disclosure": "Polaris-Button--disclosure_yr3no",
+  "loading": "Polaris-Button--loading_1brcv",
+  "pressable": "Polaris-Button--pressable_1q8ey",
+  "hidden": "Polaris-Button--hidden_riqie",
+  "Icon": "Polaris-Button__Icon_yj27d",
+  "Spinner": "Polaris-Button__Spinner_mzr5w"
+};
+
+export { styles as default };

@@ -1,0 +1,581 @@
+import React, { useRef, useState, useCallback, useMemo, useEffect } from 'react';
+import { SortAscendingIcon, SortDescendingIcon } from '@shopify/polaris-icons';
+import { debounce } from '../../utilities/debounce.esnext';
+import { useToggle } from '../../utilities/use-toggle.esnext';
+import { useIsomorphicLayoutEffect } from '../../utilities/use-isomorphic-layout-effect.esnext';
+import { classNames } from '../../utilities/css.esnext';
+import styles from './IndexTable.css.esnext';
+import { IndexProvider } from '../IndexProvider/IndexProvider.esnext';
+import { Row } from './components/Row/Row.esnext';
+import { SELECT_ALL_ITEMS, SelectionType } from '../../utilities/index-provider/types.esnext';
+import { getTableHeadingsBySelector } from './utilities/utilities.esnext';
+import { EmptySearchResult } from '../EmptySearchResult/EmptySearchResult.esnext';
+import { ScrollContainer } from './components/ScrollContainer/ScrollContainer.esnext';
+import { BulkActions } from '../BulkActions/BulkActions.esnext';
+import { Cell } from './components/Cell/Cell.esnext';
+import { useIndexValue, useIndexSelectionChange } from '../../utilities/index-provider/hooks.esnext';
+import { useI18n } from '../../utilities/i18n/hooks.esnext';
+import { Spinner } from '../Spinner/Spinner.esnext';
+import { EventListener } from '../EventListener/EventListener.esnext';
+import { Pagination } from '../Pagination/Pagination.esnext';
+import { Checkbox } from '../Checkbox/Checkbox.esnext';
+import { Text } from '../Text/Text.esnext';
+import { LegacyStack } from '../LegacyStack/LegacyStack.esnext';
+import { Badge } from '../Badge/Badge.esnext';
+import { UnstyledButton } from '../UnstyledButton/UnstyledButton.esnext';
+import { Tooltip } from '../Tooltip/Tooltip.esnext';
+import { Sticky } from '../Sticky/Sticky.esnext';
+import { AfterInitialMount } from '../AfterInitialMount/AfterInitialMount.esnext';
+
+const SCROLL_BAR_PADDING = 16;
+const SCROLL_BAR_DEBOUNCE_PERIOD = 300;
+function IndexTableBase({
+  headings,
+  bulkActions = [],
+  promotedBulkActions = [],
+  children,
+  emptyState,
+  sort,
+  paginatedSelectAllActionText,
+  lastColumnSticky = false,
+  sortable,
+  sortDirection,
+  defaultSortDirection = 'descending',
+  sortColumnIndex,
+  onSort,
+  sortToggleLabels,
+  hasZebraStriping,
+  pagination,
+  ...restProps
+}) {
+  const {
+    loading,
+    bulkSelectState,
+    resourceName,
+    bulkActionsAccessibilityLabel,
+    selectMode,
+    selectable = restProps.selectable,
+    paginatedSelectAllText,
+    itemCount,
+    hasMoreItems,
+    selectedItemsCount,
+    condensed
+  } = useIndexValue();
+  const handleSelectionChange = useIndexSelectionChange();
+  const i18n = useI18n();
+  const {
+    value: hasMoreLeftColumns,
+    toggle: toggleHasMoreLeftColumns
+  } = useToggle(false);
+  const tablePosition = useRef({
+    top: 0,
+    left: 0
+  });
+  const tableHeadingRects = useRef([]);
+  const scrollableContainerElement = useRef(null);
+  const tableElement = useRef(null);
+  const tableBodyElement = useRef(null);
+  const condensedListElement = useRef(null);
+  const [tableInitialized, setTableInitialized] = useState(false);
+  const [stickyWrapper, setStickyWrapper] = useState(null);
+  const [hideScrollContainer, setHideScrollContainer] = useState(true);
+  const tableHeadings = useRef([]);
+  const stickyTableHeadings = useRef([]);
+  const stickyHeaderWrapperElement = useRef(null);
+  const firstStickyHeaderElement = useRef(null);
+  const stickyHeaderElement = useRef(null);
+  const scrollBarElement = useRef(null);
+  const scrollContainerElement = useRef(null);
+  const scrollingWithBar = useRef(false);
+  const scrollingContainer = useRef(false);
+  const lastSortedColumnIndex = useRef(sortColumnIndex);
+  const renderAfterSelectEvent = useRef(false);
+  const lastSelectedItemsCount = useRef(0);
+  const hasSelected = useRef(false);
+  if (selectedItemsCount !== lastSelectedItemsCount.current) {
+    renderAfterSelectEvent.current = true;
+    lastSelectedItemsCount.current = selectedItemsCount;
+  }
+  if (!hasSelected.current && selectedItemsCount !== 0) {
+    hasSelected.current = true;
+  }
+  const tableBodyRef = useCallback(node => {
+    if (node !== null && !tableInitialized) {
+      setTableInitialized(true);
+    }
+    tableBodyElement.current = node;
+  }, [tableInitialized]);
+  const handleSelectAllItemsInStore = useCallback(() => {
+    handleSelectionChange(selectedItemsCount === SELECT_ALL_ITEMS ? SelectionType.Page : SelectionType.All, true);
+  }, [handleSelectionChange, selectedItemsCount]);
+  const resizeTableHeadings = useMemo(() => debounce(() => {
+    if (!tableElement.current || !scrollableContainerElement.current) {
+      return;
+    }
+    const boundingRect = scrollableContainerElement.current.getBoundingClientRect();
+    tablePosition.current = {
+      top: boundingRect.top,
+      left: boundingRect.left
+    };
+    tableHeadingRects.current = tableHeadings.current.map(heading => ({
+      offsetWidth: heading.offsetWidth || 0,
+      offsetLeft: heading.offsetLeft || 0
+    }));
+    if (tableHeadings.current.length === 0) {
+      return;
+    }
+
+    // update left offset for first column
+    if (selectable && tableHeadings.current.length > 1) {
+      tableHeadings.current[1].style.left = `${tableHeadingRects.current[0].offsetWidth}px`;
+      if (stickyTableHeadings.current?.length) {
+        stickyTableHeadings.current[1].style.left = `${tableHeadingRects.current[0].offsetWidth}px`;
+      }
+    }
+
+    // update sticky header min-widths to match table widths
+    if (stickyTableHeadings.current?.length) {
+      stickyTableHeadings.current.forEach((heading, index) => {
+        heading.style.minWidth = `${tableHeadingRects.current[index]?.offsetWidth || 0}px`;
+      });
+    }
+  }), [selectable]);
+  const resizeTableScrollBar = useCallback(() => {
+    if (scrollBarElement.current && tableElement.current && tableInitialized) {
+      scrollBarElement.current.style.setProperty('--pc-index-table-scroll-bar-content-width', `${tableElement.current.offsetWidth - SCROLL_BAR_PADDING}px`);
+      setHideScrollContainer(scrollContainerElement.current?.offsetWidth === tableElement.current?.offsetWidth);
+    }
+  }, [tableInitialized]);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debounceResizeTableScrollbar = useCallback(debounce(resizeTableScrollBar, SCROLL_BAR_DEBOUNCE_PERIOD, {
+    trailing: true
+  }), [resizeTableScrollBar]);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleCanScrollRight = useCallback(debounce(() => {
+    if (!lastColumnSticky || !tableElement.current || !scrollableContainerElement.current) {
+      return;
+    }
+    const tableRect = tableElement.current.getBoundingClientRect();
+    const scrollableRect = scrollableContainerElement.current.getBoundingClientRect();
+    setCanScrollRight(tableRect.width > scrollableRect.width);
+  }), [lastColumnSticky]);
+  useEffect(() => {
+    handleCanScrollRight();
+  }, [handleCanScrollRight]);
+  const [canFitStickyColumn, setCanFitStickyColumn] = useState(true);
+  const handleCanFitStickyColumn = useCallback(() => {
+    if (!scrollableContainerElement.current || !tableHeadings.current.length) {
+      return;
+    }
+    const scrollableRect = scrollableContainerElement.current.getBoundingClientRect();
+    const checkboxColumnWidth = selectable ? tableHeadings.current[0].getBoundingClientRect().width : 0;
+    const firstStickyColumnWidth = tableHeadings.current[selectable ? 1 : 0].getBoundingClientRect().width;
+    const lastColumnIsNotTheFirst = selectable ? tableHeadings.current.length > 2 : 1;
+    // Don't consider the last column in the calculations if it's not sticky
+    const lastStickyColumnWidth = lastColumnSticky && lastColumnIsNotTheFirst ? tableHeadings.current[tableHeadings.current.length - 1].getBoundingClientRect().width : 0;
+    // Secure some space for the remaining columns to be visible
+    const restOfContentMinWidth = 100;
+    setCanFitStickyColumn(scrollableRect.width > firstStickyColumnWidth + checkboxColumnWidth + lastStickyColumnWidth + restOfContentMinWidth);
+  }, [lastColumnSticky, selectable]);
+  useEffect(() => {
+    if (tableInitialized) {
+      handleCanFitStickyColumn();
+    }
+  }, [handleCanFitStickyColumn, tableInitialized]);
+  const handleResize = useCallback(() => {
+    // hide the scrollbar when resizing
+    scrollBarElement.current?.style.setProperty('--pc-index-table-scroll-bar-content-width', `0px`);
+    resizeTableHeadings();
+    debounceResizeTableScrollbar();
+    handleCanScrollRight();
+    handleCanFitStickyColumn();
+  }, [resizeTableHeadings, debounceResizeTableScrollbar, handleCanScrollRight, handleCanFitStickyColumn]);
+  const handleScrollContainerScroll = useCallback((canScrollLeft, canScrollRight) => {
+    if (!scrollableContainerElement.current || !scrollBarElement.current) {
+      return;
+    }
+    if (!scrollingWithBar.current) {
+      scrollingContainer.current = true;
+      scrollBarElement.current.scrollLeft = scrollableContainerElement.current.scrollLeft;
+    }
+    scrollingWithBar.current = false;
+    if (stickyHeaderElement.current) {
+      stickyHeaderElement.current.scrollLeft = scrollableContainerElement.current.scrollLeft;
+    }
+    if (canScrollLeft && !hasMoreLeftColumns || !canScrollLeft && hasMoreLeftColumns) {
+      toggleHasMoreLeftColumns();
+    }
+    setCanScrollRight(canScrollRight);
+  }, [hasMoreLeftColumns, toggleHasMoreLeftColumns]);
+  const handleScrollBarScroll = useCallback(() => {
+    if (!scrollableContainerElement.current || !scrollBarElement.current) {
+      return;
+    }
+    if (!scrollingContainer.current) {
+      scrollingWithBar.current = true;
+      scrollableContainerElement.current.scrollLeft = scrollBarElement.current.scrollLeft;
+    }
+    scrollingContainer.current = false;
+  }, []);
+  useIsomorphicLayoutEffect(() => {
+    tableHeadings.current = getTableHeadingsBySelector(tableElement.current, '[data-index-table-heading]');
+    stickyTableHeadings.current = getTableHeadingsBySelector(stickyHeaderWrapperElement.current, '[data-index-table-sticky-heading]');
+    resizeTableHeadings();
+  }, [headings, resizeTableHeadings, firstStickyHeaderElement, tableInitialized]);
+  useEffect(() => {
+    resizeTableScrollBar();
+    setStickyWrapper(condensed ? condensedListElement.current : tableElement.current);
+  }, [tableInitialized, resizeTableScrollBar, condensed]);
+  const headingsMarkup = headings.map((heading, index) => renderHeading(heading, index, 'th', {
+    'data-index-table-heading': true
+  }, heading.id));
+  const stickyHeadingsMarkup = headings.map((heading, index) =>
+  // NOTE: No id since it would be a duplicate of the non-sticky header's id
+  renderHeading(heading, index, 'div', {
+    'data-index-table-sticky-heading': true
+  }));
+  const [selectedItemsCountValue, setSelectedItemsCountValue] = useState(selectedItemsCount === SELECT_ALL_ITEMS ? `${itemCount}+` : selectedItemsCount);
+  useEffect(() => {
+    if (selectedItemsCount === SELECT_ALL_ITEMS || selectedItemsCount > 0) {
+      setSelectedItemsCountValue(selectedItemsCount === SELECT_ALL_ITEMS ? `${itemCount}+` : selectedItemsCount);
+    }
+  }, [selectedItemsCount, itemCount]);
+  const selectAllActionsLabel = i18n.translate('Polaris.IndexTable.selected', {
+    selectedItemsCount: selectedItemsCountValue
+  });
+  const handleTogglePage = useCallback(() => {
+    handleSelectionChange(SelectionType.Page, Boolean(!bulkSelectState || bulkSelectState === 'indeterminate'));
+  }, [bulkSelectState, handleSelectionChange]);
+  const paginatedSelectAllAction = getPaginatedSelectAllAction();
+  const loadingMarkup = /*#__PURE__*/React.createElement("div", {
+    className: classNames(styles.LoadingPanel, loading && styles.LoadingPanelEntered)
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.LoadingPanelRow
+  }, /*#__PURE__*/React.createElement(Spinner, {
+    size: "small"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: styles.LoadingPanelText
+  }, i18n.translate('Polaris.IndexTable.resourceLoadingAccessibilityLabel', {
+    resourceNamePlural: resourceName.plural.toLocaleLowerCase()
+  }))));
+  const stickyTableClassNames = classNames(styles.StickyTable, hasMoreLeftColumns && styles['StickyTable-scrolling'], condensed && styles['StickyTable-condensed']);
+  const shouldShowActions = !condensed || selectedItemsCount;
+  const promotedActions = shouldShowActions ? promotedBulkActions : [];
+  const actions = shouldShowActions ? bulkActions : [];
+  const stickyHeaderMarkup = /*#__PURE__*/React.createElement("div", {
+    className: stickyTableClassNames,
+    role: "presentation"
+  }, /*#__PURE__*/React.createElement(Sticky, {
+    boundingElement: stickyWrapper
+  }, isSticky => {
+    const stickyHeaderClassNames = classNames(styles.StickyTableHeader, isSticky && styles['StickyTableHeader-isSticky'],
+    // Has a sticky left column enabled
+    canFitStickyColumn && styles['StickyTableHeader-sticky'],
+    // ie; is scrolled to the right
+    hasMoreLeftColumns && styles['StickyTableHeader-scrolling'],
+    // Has a sticky right column enabled
+    canFitStickyColumn && lastColumnSticky && styles['StickyTableHeader-sticky-last'],
+    // ie; is scrolled to the left
+    canFitStickyColumn && lastColumnSticky && canScrollRight && styles['StickyTableHeader-sticky-scrolling']);
+    const bulkActionsClassName = classNames(styles.BulkActionsWrapper, selectMode && styles.BulkActionsWrapperVisible, condensed && styles['StickyTableHeader-condensed'], isSticky && styles['StickyTableHeader-isSticky']);
+    const bulkActionsMarkup = shouldShowActions && !condensed ? /*#__PURE__*/React.createElement("div", {
+      className: bulkActionsClassName
+    }, /*#__PURE__*/React.createElement(BulkActions, {
+      selectMode: selectMode,
+      onToggleAll: handleTogglePage,
+      paginatedSelectAllText: paginatedSelectAllText,
+      paginatedSelectAllAction: paginatedSelectAllAction,
+      accessibilityLabel: bulkActionsAccessibilityLabel,
+      selected: bulkSelectState,
+      promotedActions: promotedActions,
+      actions: actions,
+      onSelectModeToggle: condensed ? handleSelectModeToggle : undefined,
+      label: selectAllActionsLabel,
+      buttonSize: "micro"
+    })) : null;
+    const headerMarkup = condensed ? /*#__PURE__*/React.createElement("div", {
+      className: classNames(styles.HeaderWrapper, (!selectable || condensed) && styles.unselectable)
+    }, loadingMarkup, sort) : /*#__PURE__*/React.createElement("div", {
+      className: stickyHeaderClassNames,
+      ref: stickyHeaderWrapperElement
+    }, loadingMarkup, /*#__PURE__*/React.createElement("div", {
+      className: styles.StickyTableHeadings,
+      ref: stickyHeaderElement
+    }, stickyHeadingsMarkup));
+    return /*#__PURE__*/React.createElement(React.Fragment, null, headerMarkup, bulkActionsMarkup);
+  }));
+  const scrollBarWrapperClassNames = classNames(styles.ScrollBarContainer, pagination && styles.ScrollBarContainerWithPagination, condensed && styles.scrollBarContainerCondensed, hideScrollContainer && styles.scrollBarContainerHidden);
+  const scrollBarClassNames = classNames(tableElement.current && tableInitialized && styles.ScrollBarContent);
+  const scrollBarMarkup = itemCount > 0 ? /*#__PURE__*/React.createElement(AfterInitialMount, {
+    onMount: resizeTableScrollBar
+  }, /*#__PURE__*/React.createElement("div", {
+    className: scrollBarWrapperClassNames,
+    ref: scrollContainerElement
+  }, /*#__PURE__*/React.createElement("div", {
+    onScroll: handleScrollBarScroll,
+    className: styles.ScrollBar,
+    ref: scrollBarElement
+  }, /*#__PURE__*/React.createElement("div", {
+    className: scrollBarClassNames
+  })))) : null;
+  const isSortable = sortable?.some(value => value);
+  const tableClassNames = classNames(styles.Table, hasMoreLeftColumns && styles['Table-scrolling'], selectMode && styles.disableTextSelection, !selectable && styles['Table-unselectable'], canFitStickyColumn && styles['Table-sticky'], isSortable && styles['Table-sortable'], canFitStickyColumn && lastColumnSticky && styles['Table-sticky-last'], canFitStickyColumn && lastColumnSticky && canScrollRight && styles['Table-sticky-scrolling'], hasZebraStriping && styles.ZebraStriping);
+  const emptyStateMarkup = emptyState ? emptyState : /*#__PURE__*/React.createElement(EmptySearchResult, {
+    title: i18n.translate('Polaris.IndexTable.emptySearchTitle', {
+      resourceNamePlural: resourceName.plural
+    }),
+    description: i18n.translate('Polaris.IndexTable.emptySearchDescription'),
+    withIllustration: true
+  });
+  const sharedMarkup = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(EventListener, {
+    event: "resize",
+    handler: handleResize
+  }), stickyHeaderMarkup);
+  const condensedClassNames = classNames(styles.CondensedList, hasZebraStriping && styles.ZebraStriping);
+  const bodyMarkup = condensed ? /*#__PURE__*/React.createElement(React.Fragment, null, sharedMarkup, /*#__PURE__*/React.createElement("ul", {
+    "data-selectmode": Boolean(selectMode),
+    className: condensedClassNames,
+    ref: condensedListElement
+  }, children)) : /*#__PURE__*/React.createElement(React.Fragment, null, sharedMarkup, /*#__PURE__*/React.createElement(ScrollContainer, {
+    scrollableContainerRef: scrollableContainerElement,
+    onScroll: handleScrollContainerScroll
+  }, /*#__PURE__*/React.createElement("table", {
+    ref: tableElement,
+    className: tableClassNames
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
+    className: styles.HeadingRow
+  }, headingsMarkup)), /*#__PURE__*/React.createElement("tbody", {
+    ref: tableBodyRef
+  }, children))));
+  const tableContentMarkup = itemCount > 0 ? bodyMarkup : /*#__PURE__*/React.createElement("div", {
+    className: styles.EmptySearchResultWrapper
+  }, emptyStateMarkup);
+  const paginationMarkup = pagination ? /*#__PURE__*/React.createElement("div", {
+    className: styles.PaginationWrapper
+  }, /*#__PURE__*/React.createElement(Pagination, Object.assign({
+    type: "table"
+  }, pagination))) : null;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: styles.IndexTable
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.IndexTableWrapper
+  }, !condensed && loadingMarkup, tableContentMarkup, scrollBarMarkup, paginationMarkup)));
+  function renderHeading(heading, index, Tag, tagProps, id) {
+    const isSecond = index === 0;
+    const isLast = index === headings.length - 1;
+    const hasSortable = sortable?.some(value => value === true);
+    const headingAlignment = heading.alignment || 'start';
+    const headingContentClassName = classNames(styles.TableHeading, headingAlignment === 'center' && styles['TableHeading-align-center'], headingAlignment === 'end' && styles['TableHeading-align-end'], hasSortable && styles['TableHeading-sortable'], isSecond && styles['TableHeading-second'], isLast && !heading.hidden && styles['TableHeading-last'], !selectable && styles['TableHeading-unselectable'], heading.flush && styles['TableHeading-flush']);
+    const stickyPositioningStyle = selectable !== false && isSecond && tableHeadingRects.current && tableHeadingRects.current.length > 0 ? {
+      left: tableHeadingRects.current[0].offsetWidth
+    } : undefined;
+    const headingContent = /*#__PURE__*/React.createElement(Tag, Object.assign({
+      id: id,
+      className: headingContentClassName,
+      key: getHeadingKey(heading),
+      style: stickyPositioningStyle
+    }, tagProps), renderHeadingContent(heading, index));
+    if (index !== 0 || !selectable) {
+      return headingContent;
+    }
+    const checkboxClassName = classNames(styles.TableHeading, hasSortable && styles['TableHeading-sortable'], index === 0 && styles['TableHeading-first']);
+    const checkboxContent = /*#__PURE__*/React.createElement(Tag, Object.assign({
+      className: checkboxClassName,
+      key: `${heading}-${index}`
+    }, tagProps), renderCheckboxContent());
+    return [checkboxContent, headingContent];
+  }
+  function renderCheckboxContent() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: styles.ColumnHeaderCheckboxWrapper
+    }, /*#__PURE__*/React.createElement(Checkbox, {
+      label: i18n.translate('Polaris.IndexTable.selectAllLabel', {
+        resourceNamePlural: resourceName.plural
+      }),
+      labelHidden: true,
+      onChange: handleSelectPage,
+      checked: bulkSelectState
+    }));
+  }
+  function handleSortHeadingClick(index, direction) {
+    renderAfterSelectEvent.current = false;
+    hasSelected.current = false;
+    lastSortedColumnIndex.current = sortColumnIndex;
+    onSort?.(index, direction);
+  }
+  function renderHeadingContent(heading, index) {
+    let headingContent;
+    const defaultTooltipProps = {
+      width: heading.tooltipWidth ?? 'default',
+      activatorWrapper: 'div',
+      dismissOnMouseOut: true,
+      persistOnClick: heading.tooltipPersistsOnClick
+    };
+    const defaultHeaderTooltipProps = {
+      ...defaultTooltipProps,
+      padding: '400',
+      borderRadius: '200',
+      content: heading.tooltipContent,
+      preferredPosition: 'above'
+    };
+    const headingTitle = /*#__PURE__*/React.createElement(Text, {
+      as: "span",
+      variant: "bodySm",
+      fontWeight: "medium",
+      visuallyHidden: heading.hidden
+    }, heading.title);
+    if (heading.new) {
+      headingContent = /*#__PURE__*/React.createElement(LegacyStack, {
+        wrap: false,
+        alignment: "center"
+      }, headingTitle, /*#__PURE__*/React.createElement(Badge, {
+        tone: "new"
+      }, i18n.translate('Polaris.IndexTable.onboardingBadgeText')));
+    } else {
+      headingContent = headingTitle;
+    }
+    const style = {
+      '--pc-index-table-heading-extra-padding-right': heading.paddingBlockEnd ? `var(--p-space-${heading.paddingBlockEnd})` : '0'
+    };
+    if (sortable?.[index]) {
+      const isCurrentlySorted = index === sortColumnIndex;
+      const isPreviouslySorted = !isCurrentlySorted && index === lastSortedColumnIndex.current;
+      const isRenderAfterSelectEvent = renderAfterSelectEvent.current || !hasSelected.current && selectedItemsCount !== 0;
+      const isAscending = sortDirection === 'ascending';
+      let newDirection = heading.defaultSortDirection ?? defaultSortDirection;
+      let SourceComponent = newDirection === 'ascending' ? SortAscendingIcon : SortDescendingIcon;
+      if (isCurrentlySorted) {
+        newDirection = isAscending ? 'descending' : 'ascending';
+        SourceComponent = sortDirection === 'ascending' ? SortAscendingIcon : SortDescendingIcon;
+      }
+      const iconMarkup = /*#__PURE__*/React.createElement("span", {
+        className: classNames(styles.TableHeadingSortIcon, heading?.alignment === 'end' && styles['TableHeadingSortIcon-heading-align-end'], isCurrentlySorted && styles['TableHeadingSortIcon-visible'])
+      }, /*#__PURE__*/React.createElement(SourceComponent, {
+        focusable: "false",
+        "aria-hidden": "true",
+        className: styles.TableHeadingSortSvg
+      }));
+      const defaultSortButtonProps = {
+        onClick: () => handleSortHeadingClick(index, newDirection),
+        className: classNames(styles.TableHeadingSortButton, !isCurrentlySorted && heading?.alignment === 'end' && styles['TableHeadingSortButton-heading-align-end'], isCurrentlySorted && heading?.alignment === 'end' && styles['TableHeadingSortButton-heading-align-end-currently-sorted'], isPreviouslySorted && !isRenderAfterSelectEvent && heading?.alignment === 'end' && styles['TableHeadingSortButton-heading-align-end-previously-sorted']),
+        tabIndex: selectMode ? -1 : 0
+      };
+      const sortMarkup = /*#__PURE__*/React.createElement(UnstyledButton, defaultSortButtonProps, iconMarkup, /*#__PURE__*/React.createElement("span", {
+        className: classNames(sortToggleLabels && selectMode && heading.tooltipContent && styles.TableHeadingTooltipUnderlinePlaceholder)
+      }, headingContent));
+      if (!sortToggleLabels || selectMode) {
+        return /*#__PURE__*/React.createElement("div", {
+          className: styles.SortableTableHeadingWithCustomMarkup
+        }, sortMarkup);
+      }
+      const tooltipDirection = isCurrentlySorted ? sortDirection : newDirection;
+      const sortTooltipContent = sortToggleLabels[index][tooltipDirection];
+      if (!heading.tooltipContent) {
+        return (
+          /*#__PURE__*/
+          // Regular header with sort icon and sort direction tooltip
+          React.createElement("div", {
+            style: style,
+            className: classNames(heading.paddingBlockEnd && styles['TableHeading-extra-padding-right'])
+          }, /*#__PURE__*/React.createElement(Tooltip, Object.assign({}, defaultTooltipProps, {
+            content: sortTooltipContent,
+            preferredPosition: "above"
+          }), sortMarkup))
+        );
+      }
+      if (heading.tooltipContent) {
+        return (
+          /*#__PURE__*/
+          // Header text and sort icon have separate tooltips
+          React.createElement("div", {
+            className: classNames(styles.SortableTableHeadingWithCustomMarkup, heading.paddingBlockEnd && styles['TableHeading-extra-padding-right']),
+            style: style
+          }, /*#__PURE__*/React.createElement(UnstyledButton, defaultSortButtonProps, /*#__PURE__*/React.createElement(Tooltip, defaultHeaderTooltipProps, /*#__PURE__*/React.createElement("span", {
+            className: styles.TableHeadingUnderline
+          }, headingContent)), /*#__PURE__*/React.createElement(Tooltip, Object.assign({}, defaultTooltipProps, {
+            content: sortTooltipContent,
+            preferredPosition: "above"
+          }), iconMarkup)))
+        );
+      }
+    }
+    if (heading.tooltipContent) {
+      return (
+        /*#__PURE__*/
+        // Non-sortable header with tooltip
+        React.createElement("div", {
+          style: style,
+          className: classNames(heading.paddingBlockEnd && styles['TableHeading-extra-padding-right'])
+        }, /*#__PURE__*/React.createElement(Tooltip, Object.assign({}, defaultHeaderTooltipProps, {
+          activatorWrapper: "span"
+        }), /*#__PURE__*/React.createElement("span", {
+          className: classNames(styles.TableHeadingUnderline, styles.SortableTableHeaderWrapper)
+        }, headingContent)))
+      );
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      style: style,
+      className: classNames(heading.paddingBlockEnd && styles['TableHeading-extra-padding-right'])
+    }, headingContent);
+  }
+  function handleSelectPage(checked) {
+    handleSelectionChange(SelectionType.Page, checked);
+  }
+  function getPaginatedSelectAllAction() {
+    if (!selectable || !hasMoreItems) {
+      return;
+    }
+    const customActionText = paginatedSelectAllActionText ?? i18n.translate('Polaris.IndexTable.selectAllItems', {
+      itemsLength: itemCount,
+      resourceNamePlural: resourceName.plural.toLocaleLowerCase()
+    });
+    const actionText = selectedItemsCount === SELECT_ALL_ITEMS ? i18n.translate('Polaris.IndexTable.undo') : customActionText;
+    return {
+      content: actionText,
+      onAction: handleSelectAllItemsInStore
+    };
+  }
+  function handleSelectModeToggle() {
+    handleSelectionChange(SelectionType.All, false);
+  }
+}
+function getHeadingKey(heading) {
+  if (heading.id) {
+    return heading.id;
+  } else if (typeof heading.title === 'string') {
+    return heading.title;
+  }
+  return '';
+}
+function IndexTable({
+  children,
+  selectable = true,
+  itemCount,
+  selectedItemsCount = 0,
+  resourceName: passedResourceName,
+  loading,
+  hasMoreItems,
+  condensed,
+  onSelectionChange,
+  paginatedSelectAllText,
+  ...indexTableBaseProps
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(IndexProvider, {
+    selectable: selectable && !condensed,
+    itemCount: itemCount,
+    selectedItemsCount: selectedItemsCount,
+    resourceName: passedResourceName,
+    loading: loading,
+    hasMoreItems: hasMoreItems,
+    condensed: condensed,
+    onSelectionChange: onSelectionChange,
+    paginatedSelectAllText: paginatedSelectAllText
+  }, /*#__PURE__*/React.createElement(IndexTableBase, indexTableBaseProps, children)));
+}
+IndexTable.Cell = Cell;
+IndexTable.Row = Row;
+
+export { IndexTable };

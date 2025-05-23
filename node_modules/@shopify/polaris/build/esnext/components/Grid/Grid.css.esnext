@@ -1,0 +1,7 @@
+import './Grid.out.css';
+
+var styles = {
+  "Grid": "Polaris-Grid_yirxx"
+};
+
+export { styles as default };

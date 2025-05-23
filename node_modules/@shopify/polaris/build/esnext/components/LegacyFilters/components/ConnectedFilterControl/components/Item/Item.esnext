@@ -1,0 +1,22 @@
+import React from 'react';
+import { classNames } from '../../../../../../utilities/css.esnext';
+import { useToggle } from '../../../../../../utilities/use-toggle.esnext';
+import styles from '../../ConnectedFilterControl.css.esnext';
+
+function Item({
+  children
+}) {
+  const {
+    value: focused,
+    setTrue: forceTrueFocused,
+    setFalse: forceFalseFocused
+  } = useToggle(false);
+  const className = classNames(styles.Item, focused && styles['Item-focused']);
+  return /*#__PURE__*/React.createElement("div", {
+    onBlur: forceFalseFocused,
+    onFocus: forceTrueFocused,
+    className: className
+  }, children);
+}
+
+export { Item };

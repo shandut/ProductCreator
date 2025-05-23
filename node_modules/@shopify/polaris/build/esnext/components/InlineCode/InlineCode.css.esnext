@@ -1,0 +1,7 @@
+import './InlineCode.out.css';
+
+var styles = {
+  "Code": "Polaris-InlineCode__Code_yisjj"
+};
+
+export { styles as default };

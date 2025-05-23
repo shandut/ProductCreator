@@ -1,0 +1,28 @@
+import React from 'react';
+import { ExitIcon } from '@shopify/polaris-icons';
+import styles from './FullscreenBar.css.esnext';
+import { useI18n } from '../../utilities/i18n/hooks.esnext';
+import { Text } from '../Text/Text.esnext';
+import { Icon } from '../Icon/Icon.esnext';
+
+function FullscreenBar({
+  onAction,
+  children
+}) {
+  const i18n = useI18n();
+  const backButtonMarkup = /*#__PURE__*/React.createElement(Text, {
+    as: "span",
+    variant: "bodyLg"
+  }, i18n.translate('Polaris.FullscreenBar.back'));
+  return /*#__PURE__*/React.createElement("div", {
+    className: styles.FullscreenBar
+  }, /*#__PURE__*/React.createElement("button", {
+    className: styles.BackAction,
+    onClick: onAction,
+    "aria-label": i18n.translate('Polaris.FullscreenBar.accessibilityLabel')
+  }, /*#__PURE__*/React.createElement(Icon, {
+    source: ExitIcon
+  }), backButtonMarkup), children);
+}
+
+export { FullscreenBar };

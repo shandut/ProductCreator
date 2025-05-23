@@ -1,0 +1,137 @@
+.Polaris-Tooltip-TooltipOverlay_16r9b{
+  --pc-tooltip-chevron-x-pos: initial;
+  --pc-tooltip-border-radius: initial;
+  --pc-tooltip-padding: initial;
+  --pc-tooltip-overlay-offset:var(--p-space-300);
+  --pc-tooltip-shadow-bevel-z-index:1;
+  --pc-tooltip-tail-z-index:calc(var(--pc-tooltip-shadow-bevel-z-index) + 1);
+  position:relative;
+  margin:var(--pc-tooltip-overlay-offset) var(--p-space-100) var(--p-space-100);
+  opacity:1;
+  box-shadow:var(--p-shadow-400);
+  border-radius:var(--pc-tooltip-border-radius);
+  pointer-events:none;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity, left, top, transform;
+  transform:none;
+  transition:none;
+  min-width:4ch;
+
+  position: relative;
+
+  box-shadow: var(--p-shadow-300);
+
+  border-radius: var(--pc-tooltip-border-radius);
+}
+
+.Polaris-Tooltip-TooltipOverlay_16r9b::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--pc-tooltip-shadow-bevel-z-index);
+  box-shadow: var(--p-shadow-bevel-100);
+  border-radius: var(--pc-tooltip-border-radius);
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}
+
+@media screen and (-ms-high-contrast: active){
+
+.Polaris-Tooltip-TooltipOverlay_16r9b{
+    border:var(--p-border-width-050) solid windowText;
+}
+  }
+
+.Polaris-Tooltip-TooltipOverlay_16r9b .Polaris-Tooltip-TooltipOverlay__Tail_yixpw{
+    position:absolute;
+    top:calc(var(--p-space-200)*-1 + 0.05rem);
+    left:calc(var(--pc-tooltip-chevron-x-pos) - var(--p-space-150) - var(--p-space-400));
+    z-index:var(--pc-tooltip-tail-z-index);
+  }
+
+.Polaris-Tooltip-TooltipOverlay_16r9b.Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z::after{
+      top:auto;
+      bottom:calc(var(--p-space-400)*-1);
+      border-color:var(--p-color-bg-surface) transparent transparent transparent;
+    }
+
+.Polaris-Tooltip-TooltipOverlay_16r9b.Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z .Polaris-Tooltip-TooltipOverlay__Tail_yixpw{
+      top:unset;
+      bottom:calc(var(--p-space-200)*-1);
+      filter:drop-shadow(0 0.1875rem 0.125rem rgba(26, 26, 26, 0.1));
+    }
+
+.Polaris-Tooltip-TooltipOverlay--measuring_wb2tw{
+  opacity:0;
+}
+
+.Polaris-Tooltip-TooltipOverlay--measured_sk4vh:not(.Polaris-Tooltip-TooltipOverlay--instant_xfprd){
+  animation:var(--p-motion-keyframes-appear-below) var(--p-motion-duration-50) var(--p-motion-ease-out) var(--p-motion-duration-100) 1 both;
+}
+
+@media (prefers-reduced-motion){
+
+.Polaris-Tooltip-TooltipOverlay--measured_sk4vh:not(.Polaris-Tooltip-TooltipOverlay--instant_xfprd){
+    animation:none;
+}
+  }
+
+.Polaris-Tooltip-TooltipOverlay--measured_sk4vh.Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z:not(.Polaris-Tooltip-TooltipOverlay--instant_xfprd){
+  animation:var(--p-motion-keyframes-appear-above) var(--p-motion-duration-50) var(--p-motion-ease-out) var(--p-motion-duration-100) 1 both;
+}
+
+@media (prefers-reduced-motion){
+
+.Polaris-Tooltip-TooltipOverlay--measured_sk4vh.Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z:not(.Polaris-Tooltip-TooltipOverlay--instant_xfprd){
+    animation:none;
+}
+  }
+
+.Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z{
+  margin:var(--p-space-100) var(--p-space-100) var(--pc-tooltip-overlay-offset);
+}
+
+.Polaris-Tooltip-TooltipOverlay__Content_xd1mk{
+  position:relative;
+  background-color:var(--p-color-bg-surface);
+  color:var(--p-color-text);
+  word-break:break-word;
+  border-radius:var(--pc-tooltip-border-radius);
+  padding:var(--pc-tooltip-padding);
+}
+
+.Polaris-Tooltip-TooltipOverlay--default_y9uu3{
+  max-width:12.5rem;
+}
+
+.Polaris-Tooltip-TooltipOverlay--wide_yisjh{
+  max-width:17.1875rem;
+}
+
+[data-polaris-tooltip-activator]{
+  outline:0;
+  position: relative;
+}
+
+[data-polaris-tooltip-activator]::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+
+[data-polaris-tooltip-activator]:focus-visible::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}

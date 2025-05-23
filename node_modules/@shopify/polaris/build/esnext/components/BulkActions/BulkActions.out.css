@@ -1,0 +1,112 @@
+.Polaris-BulkActions__BulkActionsOuterLayout_1ppu1{
+  position:relative;
+  flex:1 1;
+  width:100%;
+}
+
+.Polaris-BulkActions__BulkActionsSelectAllWrapper_1wi2j{
+  min-height:1.5rem;
+  display:flex;
+  align-items:center;
+  gap:var(--p-space-200);
+}
+
+.Polaris-BulkActions__BulkActionsPromotedActionsWrapper_1l4mb{
+  flex:1 1;
+}
+
+.Polaris-BulkActions__BulkActionsLayout_3i17k{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
+  flex:1 1 auto;
+  gap:var(--p-space-100);
+}
+
+.Polaris-BulkActions__BulkActionsLayout_3i17k > *{
+    flex:0 0 auto;
+  }
+
+.Polaris-BulkActions--bulkActionsLayoutMeasuring_jczq0{
+  visibility:hidden;
+  height:0;
+}
+
+.Polaris-BulkActions__BulkActionsMeasurerLayout_8ipuo{
+  position:absolute;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
+  flex:1 1 auto;
+  gap:0;
+  padding:0;
+  visibility:hidden;
+  height:0;
+  width:100%;
+}
+
+.Polaris-BulkActions__BulkActionsMeasurerLayout_8ipuo > *{
+    flex:0 0 auto;
+  }
+
+.Polaris-BulkActions__BulkActionButton_1njj8{
+  white-space:nowrap;
+}
+
+.Polaris-BulkActions__BulkActionButton_1njj8 button{
+    display:flex;
+  }
+
+.Polaris-BulkActions--disabled_hcuh9{
+  transition:none;
+  box-shadow:none;
+  border-color:var(--p-color-border-disabled);
+  background:var(--p-color-bg-fill-disabled);
+  color:var(--p-color-text-disabled);
+  cursor:default;
+  pointer-events:none;
+}
+
+.Polaris-BulkActions--disabled_hcuh9 svg{
+    fill:var(--p-color-icon-disabled);
+  }
+
+.Polaris-BulkActions__AllAction_eazf4{
+  border:0;
+  background:none;
+  padding:0;
+  cursor:pointer;
+  color:var(--p-color-text-emphasis);
+  outline:none;
+  position: relative;
+}
+
+.Polaris-BulkActions__AllAction_eazf4::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+
+.Polaris-BulkActions__AllAction_eazf4:hover,
+  .Polaris-BulkActions__AllAction_eazf4:focus{
+    color:var(--p-color-text-emphasis-hover);
+  }
+
+.Polaris-BulkActions__AllAction_eazf4:active{
+    color:var(--p-color-text-emphasis-active);
+  }
+
+.Polaris-BulkActions__AllAction_eazf4:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}

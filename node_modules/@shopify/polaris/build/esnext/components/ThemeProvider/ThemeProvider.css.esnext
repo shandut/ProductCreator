@@ -1,0 +1,7 @@
+import './ThemeProvider.out.css';
+
+var styles = {
+  "themeContainer": "Polaris-ThemeProvider--themeContainer_wrkh3"
+};
+
+export { styles as default };

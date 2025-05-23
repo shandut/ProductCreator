@@ -1,0 +1,16 @@
+.Polaris-PositionedOverlay_2y1hl{
+  position:absolute;
+  z-index:var(--p-z-index-2);
+}
+
+.Polaris-PositionedOverlay--fixed_2pq5o{
+  position:fixed;
+}
+
+.Polaris-PositionedOverlay--calculating_fzare{
+  visibility:hidden;
+}
+
+.Polaris-PositionedOverlay--preventInteraction_11hw5{
+  pointer-events:none;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"SkeletonTabs.d.ts","sourceRoot":"","sources":["../../../../../src/components/SkeletonTabs/SkeletonTabs.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAM1B,MAAM,WAAW,iBAAiB;IAChC,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,4BAA4B;IAC5B,MAAM,CAAC,EAAE,OAAO,CAAC;CAClB;AAED,wBAAgB,YAAY,CAAC,EAAC,KAAS,EAAE,MAAc,EAAC,EAAE,iBAAiB,qBAY1E"}

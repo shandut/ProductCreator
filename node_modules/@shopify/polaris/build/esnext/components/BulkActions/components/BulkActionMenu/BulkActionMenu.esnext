@@ -1,0 +1,35 @@
+import React from 'react';
+import { useToggle } from '../../../../utilities/use-toggle.esnext';
+import { BulkActionButton } from '../BulkActionButton/BulkActionButton.esnext';
+import { Popover } from '../../../Popover/Popover.esnext';
+import { ActionList } from '../../../ActionList/ActionList.esnext';
+
+function BulkActionMenu({
+  title,
+  actions,
+  isNewBadgeInBadgeActions,
+  size
+}) {
+  const {
+    value: isVisible,
+    toggle: toggleMenuVisibility
+  } = useToggle(false);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Popover, {
+    active: isVisible,
+    activator: /*#__PURE__*/React.createElement(BulkActionButton, {
+      disclosure: true,
+      showContentInButton: true,
+      onAction: toggleMenuVisibility,
+      content: title,
+      indicator: isNewBadgeInBadgeActions,
+      size: size
+    }),
+    onClose: toggleMenuVisibility,
+    preferInputActivator: true
+  }, /*#__PURE__*/React.createElement(ActionList, {
+    items: actions,
+    onActionAnyItem: toggleMenuVisibility
+  })));
+}
+
+export { BulkActionMenu };

@@ -1,0 +1,28 @@
+.Polaris-Indicator_dw7mr{
+  --pc-indicator-size:0.625rem;
+  --pc-indicator-base-position:calc(var(--p-space-100)*-1);
+}
+
+.Polaris-Indicator_dw7mr::before,
+  .Polaris-Indicator_dw7mr::after{
+    content:'';
+    position:absolute;
+    background-color:var(--p-color-border-info);
+    right:var(--pc-indicator-base-position);
+    top:var(--pc-indicator-base-position);
+    width:var(--pc-indicator-size);
+    height:var(--pc-indicator-size);
+    border-radius:var(--p-border-radius-full);
+    border:calc(var(--pc-indicator-size)/2) solid transparent;
+  }
+
+.Polaris-Indicator--pulseIndicator_2j5c8::before{
+  z-index:1;
+  animation:var(--p-motion-keyframes-bounce) var(--p-motion-duration-5000) ease infinite;
+}
+
+.Polaris-Indicator--pulseIndicator_2j5c8::after{
+  right:var(--pc-indicator-base-position);
+  top:var(--pc-indicator-base-position);
+  animation:var(--p-motion-keyframes-pulse) var(--p-motion-duration-5000) ease infinite;
+}

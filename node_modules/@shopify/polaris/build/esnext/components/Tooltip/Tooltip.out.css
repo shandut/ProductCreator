@@ -1,0 +1,7 @@
+.Polaris-Tooltip__TooltipContainer_mtgy1{
+  display:flex;
+}
+
+.Polaris-Tooltip__HasUnderline_c9bix{
+  border-bottom:var(--p-border-width-050) dotted var(--p-color-border);
+}

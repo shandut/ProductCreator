@@ -1,0 +1,157 @@
+.Polaris-Filters-FilterPill__FilterButton_f6p6d{
+  background:var(--p-color-bg-surface);
+  border-radius:var(--p-border-radius-200);
+  border:var(--p-color-border) dashed var(--p-border-width-025);
+  cursor:pointer;
+  color:var(--p-color-text);
+  position: relative;
+}
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  right: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  bottom: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  left: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 calc(var(--p-border-width-025)*-1 + -0.0625rem) var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d.Polaris-Filters-FilterPill--focusedFilterButton_63s2b:focus-within:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d:hover,
+  .Polaris-Filters-FilterPill__FilterButton_f6p6d:focus,
+  .Polaris-Filters-FilterPill__FilterButton_f6p6d:active{
+    background:var(--p-color-bg-surface-hover);
+    border-color:var(--p-color-border);
+  }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d:hover path, .Polaris-Filters-FilterPill__FilterButton_f6p6d:focus path, .Polaris-Filters-FilterPill__FilterButton_f6p6d:active path{
+      fill:var(--p-color-icon-hover);
+    }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d:hover,
+  .Polaris-Filters-FilterPill__FilterButton_f6p6d:active{
+    border-style:solid;
+  }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d:hover,
+  .Polaris-Filters-FilterPill__FilterButton_f6p6d:focus{
+    background:transparent;
+  }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d:active{
+    background:var(--p-color-bg-surface-secondary);
+  }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d.Polaris-Filters-FilterPill__ActiveFilterButton_1bv66{
+    background:var(--p-color-bg-surface);
+    border-style:solid;
+  }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d.Polaris-Filters-FilterPill__ActiveFilterButton_1bv66:active{
+      background:var(--p-color-bg-surface-secondary);
+    }
+
+.Polaris-Filters-FilterPill__FilterButton_f6p6d::after{
+    border-radius:var(--p-border-radius-200);
+  }
+
+.Polaris-Filters-FilterPill__PlainButton_brig7{
+  background:none;
+  color:inherit;
+  border:none;
+  padding:0;
+  font:inherit;
+  cursor:inherit;
+  outline:inherit;
+}
+
+.Polaris-Filters-FilterPill__PlainButton_brig7 path{
+    fill:var(--p-color-icon);
+  }
+
+.Polaris-Filters-FilterPill__PlainButton_brig7[aria-disabled='true'] path{
+      fill:var(--p-color-icon-disabled);
+    }
+
+.Polaris-Filters-FilterPill__ToggleButton_rhyab{
+  padding:0 var(--p-space-200) 0 var(--p-space-300);
+  height:1.625rem;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Filters-FilterPill__ToggleButton_rhyab{
+    padding:0 var(--p-space-100) 0 var(--p-space-200);
+    height:1.375rem;
+}
+  }
+
+.Polaris-Filters-FilterPill__ActiveFilterButton_1bv66 .Polaris-Filters-FilterPill__ToggleButton_rhyab{
+  padding-right:var(--p-space-050);
+}
+
+@media (min-width: 48em){
+
+.Polaris-Filters-FilterPill__ActiveFilterButton_1bv66 .Polaris-Filters-FilterPill__ToggleButton_rhyab{
+    padding-right:0;
+}
+  }
+
+.Polaris-Filters-FilterPill--clearButton_b7wzo{
+  position: relative;
+  margin-right:var(--p-space-200);
+}
+
+.Polaris-Filters-FilterPill--clearButton_b7wzo::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-100);
+}
+
+@media (min-width: 48em){
+
+.Polaris-Filters-FilterPill--clearButton_b7wzo{
+    margin-right:var(--p-space-100);
+}
+  }
+
+.Polaris-Filters-FilterPill--clearButton_b7wzo:focus-visible:not(:active)::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Filters-FilterPill__IconWrapper_1kb6z{
+    scale:0.8;
+}
+  }
+
+.Polaris-Filters-FilterPill__PopoverWrapper_16k43{
+  min-width:11.5625rem;
+  max-width:18.75rem;
+  word-break:break-word;
+}
+
+.Polaris-Filters-FilterPill__ClearButtonWrapper_1daij button{
+    min-height:0;
+    padding:0;
+    margin:0;
+  }

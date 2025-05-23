@@ -1,0 +1,14 @@
+'use strict';
+
+var React = require('react');
+
+var SvgPinFilledIcon = function SvgPinFilledIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 5.275v-1.025c0-.69.56-1.25 1.25-1.25h4.5c.69 0 1.25.56 1.25 1.25v1.025c0 .448-.24.862-.63 1.085l-.43.246.866 3.894h.694c.69 0 1.25.56 1.25 1.25v1c0 .69-.56 1.25-1.25 1.25h-2.781l-.48 2.873a.75.75 0 0 1-1.479 0l-.479-2.873h-2.781c-.69 0-1.25-.56-1.25-1.25v-1c0-.69.56-1.25 1.25-1.25h.694l.866-3.894-.43-.246a1.25 1.25 0 0 1-.63-1.085Z"
+  }));
+};
+SvgPinFilledIcon.displayName = "PinFilledIcon";
+
+exports.SvgPinFilledIcon = SvgPinFilledIcon;

@@ -1,0 +1,20 @@
+import './Banner.out.css';
+
+var styles = {
+  "Banner": "Polaris-Banner_z4w8k",
+  "keyFocused": "Polaris-Banner--keyFocused_1aqee",
+  "withinContentContainer": "Polaris-Banner--withinContentContainer_1uwmg",
+  "withinPage": "Polaris-Banner--withinPage_kguwn",
+  "DismissIcon": "Polaris-Banner__DismissIcon_13v0e",
+  "text-success-on-bg-fill": "Polaris-Banner--textSuccessOnBgFill_1hcf6",
+  "text-success": "Polaris-Banner__text--success_121xw",
+  "text-warning-on-bg-fill": "Polaris-Banner--textWarningOnBgFill_1139z",
+  "text-warning": "Polaris-Banner__text--warning_1p3rm",
+  "text-critical-on-bg-fill": "Polaris-Banner--textCriticalOnBgFill_kazam",
+  "text-critical": "Polaris-Banner__text--critical_ybz9a",
+  "text-info-on-bg-fill": "Polaris-Banner--textInfoOnBgFill_z9p5k",
+  "text-info": "Polaris-Banner__text--info_ah604",
+  "icon-secondary": "Polaris-Banner__icon--secondary_ezco3"
+};
+
+export { styles as default };

@@ -1,0 +1,13 @@
+.Polaris-Listbox-Option_r96cc{
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+.Polaris-Listbox-Option_r96cc:focus{
+    outline:none;
+  }
+
+.Polaris-Listbox-Option--divider_myoiu{
+  border-bottom:var(--p-border-width-025) solid var(--p-color-border-secondary);
+}

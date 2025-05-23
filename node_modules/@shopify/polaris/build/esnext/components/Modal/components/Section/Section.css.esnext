@@ -1,0 +1,8 @@
+import './Section.out.css';
+
+var styles = {
+  "Section": "Polaris-Modal-Section_1b1h1",
+  "titleHidden": "Polaris-Modal-Section--titleHidden_14zrw"
+};
+
+export { styles as default };

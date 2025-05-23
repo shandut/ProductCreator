@@ -1,0 +1,8 @@
+import './Indicator.out.css';
+
+var styles = {
+  "Indicator": "Polaris-Indicator_dw7mr",
+  "pulseIndicator": "Polaris-Indicator--pulseIndicator_2j5c8"
+};
+
+export { styles as default };

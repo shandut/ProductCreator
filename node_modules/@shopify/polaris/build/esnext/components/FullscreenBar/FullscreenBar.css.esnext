@@ -1,0 +1,8 @@
+import './FullscreenBar.out.css';
+
+var styles = {
+  "FullscreenBar": "Polaris-FullscreenBar_tzdog",
+  "BackAction": "Polaris-FullscreenBar__BackAction_19vli"
+};
+
+export { styles as default };

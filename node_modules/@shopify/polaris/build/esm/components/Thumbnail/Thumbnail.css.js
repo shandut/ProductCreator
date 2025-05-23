@@ -1,0 +1,10 @@
+var styles = {
+  "Thumbnail": "Polaris-Thumbnail",
+  "sizeExtraSmall": "Polaris-Thumbnail--sizeExtraSmall",
+  "sizeSmall": "Polaris-Thumbnail--sizeSmall",
+  "sizeMedium": "Polaris-Thumbnail--sizeMedium",
+  "sizeLarge": "Polaris-Thumbnail--sizeLarge",
+  "transparent": "Polaris-Thumbnail--transparent"
+};
+
+export { styles as default };

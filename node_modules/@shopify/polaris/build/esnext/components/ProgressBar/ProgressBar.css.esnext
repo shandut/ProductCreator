@@ -1,0 +1,19 @@
+import './ProgressBar.out.css';
+
+var styles = {
+  "ProgressBar": "Polaris-ProgressBar_17609",
+  "sizeSmall": "Polaris-ProgressBar--sizeSmall_7647q",
+  "sizeMedium": "Polaris-ProgressBar--sizeMedium_5f35p",
+  "sizeLarge": "Polaris-ProgressBar--sizeLarge_61dxo",
+  "toneHighlight": "Polaris-ProgressBar--toneHighlight_u7zt2",
+  "tonePrimary": "Polaris-ProgressBar--tonePrimary_8qyly",
+  "toneSuccess": "Polaris-ProgressBar--toneSuccess_15hst",
+  "toneCritical": "Polaris-ProgressBar--toneCritical_jv6uf",
+  "Indicator": "Polaris-ProgressBar__Indicator_dw7mr",
+  "IndicatorAppearActive": "Polaris-ProgressBar__IndicatorAppearActive_ziqta",
+  "IndicatorAppearDone": "Polaris-ProgressBar__IndicatorAppearDone_10ohs",
+  "Progress": "Polaris-ProgressBar__Progress_ixe53",
+  "Label": "Polaris-ProgressBar__Label_2vd36"
+};
+
+export { styles as default };

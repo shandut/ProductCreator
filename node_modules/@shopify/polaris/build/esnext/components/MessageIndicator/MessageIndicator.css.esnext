@@ -1,0 +1,8 @@
+import './MessageIndicator.out.css';
+
+var styles = {
+  "MessageIndicatorWrapper": "Polaris-MessageIndicator__MessageIndicatorWrapper_152yb",
+  "MessageIndicator": "Polaris-MessageIndicator_1e26p"
+};
+
+export { styles as default };

@@ -1,0 +1,77 @@
+.Polaris-Scrollable_1ed9o{
+  --pc-scrollable-shadow-size:var(--p-space-500);
+  --pc-scrollable-shadow-color:rgba(0, 0, 0, 0.15);
+  --pc-scrollable-shadow-bottom:0 var(--pc-scrollable-shadow-size) var(--pc-scrollable-shadow-size) var(--pc-scrollable-shadow-size) var(--pc-scrollable-shadow-color);
+  --pc-scrollable-shadow-top:0 calc(var(--pc-scrollable-shadow-size)*-1) var(--pc-scrollable-shadow-size) var(--pc-scrollable-shadow-size) var(--pc-scrollable-shadow-color);
+  --pc-scrollable-max-height:none;
+  -webkit-overflow-scrolling:touch;
+  position:relative;
+  max-height:var(--pc-scrollable-max-height);
+  overflow-x:hidden;
+  overflow-y:hidden;
+  isolation:isolate;
+}
+
+.Polaris-Scrollable_1ed9o:focus{
+    outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+    outline-offset:var(--p-space-050);
+  }
+
+.Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasTopShadow_cgwp0::before,
+    .Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasBottomShadow_all2n::before,
+    .Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasTopShadow_cgwp0::after,
+    .Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasBottomShadow_all2n::after{
+      content:'';
+      position:sticky;
+
+      left:0;
+      display:block;
+      pointer-events:none;
+      height:var(--p-space-0);
+      width:100%;
+      z-index:32;
+    }
+
+.Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasTopShadow_cgwp0::before, .Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasBottomShadow_all2n::before{
+      top:0;
+    }
+
+.Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasTopShadow_cgwp0::after, .Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasBottomShadow_all2n::after{
+      bottom:0;
+    }
+
+.Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasTopShadow_cgwp0::before{
+    box-shadow:var(--pc-scrollable-shadow-top);
+  }
+
+.Polaris-Scrollable_1ed9o.Polaris-Scrollable--hasBottomShadow_all2n::after{
+    box-shadow:var(--pc-scrollable-shadow-bottom);
+  }
+
+.Polaris-Scrollable--horizontal_17qq4{
+  overflow-x:auto;
+}
+
+.Polaris-Scrollable--vertical_uiuuj{
+  overflow-y:auto;
+}
+
+.Polaris-Scrollable--scrollbarWidthThin_b8ha9{
+  scrollbar-width:thin;
+}
+
+.Polaris-Scrollable--scrollbarWidthNone_1c7l0{
+  scrollbar-width:none;
+}
+
+.Polaris-Scrollable--scrollbarWidthAuto_1momw{
+  scrollbar-width:auto;
+}
+
+.Polaris-Scrollable--scrollbarGutterStable_17mam{
+  scrollbar-gutter:stable;
+}
+
+.Polaris-Scrollable__scrollbarGutterStableboth--edges_133rp{
+  scrollbar-gutter:stable both-edges;
+}

@@ -1,0 +1,15 @@
+import './MappedAction.out.css';
+
+var styles = {
+  "ActionContainer": "Polaris-Autocomplete-MappedAction__ActionContainer_hk0rr",
+  "Action": "Polaris-Autocomplete-MappedAction__Action_r96cs",
+  "destructive": "Polaris-Autocomplete-MappedAction--destructive_zy6o5",
+  "selected": "Polaris-Autocomplete-MappedAction--selected_mijeo",
+  "disabled": "Polaris-Autocomplete-MappedAction--disabled_hcuh9",
+  "Prefix": "Polaris-Autocomplete-MappedAction__Prefix_10fbz",
+  "Suffix": "Polaris-Autocomplete-MappedAction__Suffix_10fbu",
+  "Content": "Polaris-Autocomplete-MappedAction__Content_xd1mk",
+  "Text": "Polaris-Autocomplete-MappedAction__Text_yj3uv"
+};
+
+export { styles as default };

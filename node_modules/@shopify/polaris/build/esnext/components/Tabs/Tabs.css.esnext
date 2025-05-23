@@ -1,0 +1,29 @@
+import './Tabs.out.css';
+
+var styles = {
+  "Outer": "Polaris-Tabs__Outer_37t24",
+  "Wrapper": "Polaris-Tabs__Wrapper_mkrm3",
+  "WrapperWithNewButton": "Polaris-Tabs__WrapperWithNewButton_n10tb",
+  "ButtonWrapper": "Polaris-Tabs__ButtonWrapper_mxqbe",
+  "Tabs": "Polaris-Tabs_yjc8o",
+  "Tab": "Polaris-Tabs__Tab_375k2",
+  "Tab-active": "Polaris-Tabs__Tab--active_2tfyj",
+  "Tab-hasActions": "Polaris-Tabs__Tab--hasActions_1ysg1",
+  "Tab-iconOnly": "Polaris-Tabs__Tab--iconOnly_1etqr",
+  "fillSpace": "Polaris-Tabs--fillSpace_yc42y",
+  "TabContainer": "Polaris-Tabs__TabContainer_dsj6d",
+  "fitted": "Polaris-Tabs--fitted_ijluy",
+  "titleWithIcon": "Polaris-Tabs--titleWithIcon_11lkm",
+  "List": "Polaris-Tabs__List_yj3nl",
+  "Item": "Polaris-Tabs__Item_yiyol",
+  "DisclosureTab": "Polaris-Tabs__DisclosureTab_1qbhg",
+  "DisclosureTab-visible": "Polaris-Tabs__DisclosureTab--visible_1v5xr",
+  "DisclosureActivator": "Polaris-Tabs__DisclosureActivator_1mita",
+  "TabsMeasurer": "Polaris-Tabs__TabsMeasurer_15ef4",
+  "NewTab": "Polaris-Tabs__NewTab_ouedr",
+  "ActionListWrap": "Polaris-Tabs__ActionListWrap_1nl6z",
+  "Panel": "Polaris-Tabs__Panel_2vct4",
+  "Panel-hidden": "Polaris-Tabs__Panel--hidden_1h4kj"
+};
+
+export { styles as default };

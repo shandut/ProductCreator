@@ -1,0 +1,11 @@
+.Polaris-PageActions_fcnua{
+  margin:0 auto;
+
+  border-top:0;
+  padding:var(--p-space-400);
+}
+@media (min-width: 30.625em){
+  .Polaris-PageActions_fcnua{
+    padding:var(--p-space-400) 0;
+}
+  }

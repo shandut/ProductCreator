@@ -1,0 +1,10 @@
+import './MappedOption.out.css';
+
+var styles = {
+  "Content": "Polaris-Autocomplete-MappedOption__Content_xd1mk",
+  "Media": "Polaris-Autocomplete-MappedOption__Media_2t8qq",
+  "singleSelectionMedia": "Polaris-Autocomplete-MappedOption--singleSelectionMedia_1872h",
+  "disabledMedia": "Polaris-Autocomplete-MappedOption--disabledMedia_wfh7h"
+};
+
+export { styles as default };

@@ -1,0 +1,35 @@
+import React, { isValidElement } from 'react';
+import styles from '../../LegacyCard.css.esnext';
+import { buttonsFrom } from '../../../Button/utils.esnext';
+import { ButtonGroup } from '../../../ButtonGroup/ButtonGroup.esnext';
+import { InlineStack } from '../../../InlineStack/InlineStack.esnext';
+import { Text } from '../../../Text/Text.esnext';
+
+function Header({
+  children,
+  title,
+  actions
+}) {
+  const actionMarkup = actions ? /*#__PURE__*/React.createElement(ButtonGroup, null, buttonsFrom(actions, {
+    variant: 'plain'
+  })) : null;
+  const titleMarkup = /*#__PURE__*/isValidElement(title) ? title : /*#__PURE__*/React.createElement(Text, {
+    variant: "headingSm",
+    as: "h2"
+  }, title);
+  const headingMarkup = actionMarkup || children ? /*#__PURE__*/React.createElement(InlineStack, {
+    wrap: false,
+    gap: "200",
+    align: "space-between",
+    blockAlign: "center"
+  }, titleMarkup, /*#__PURE__*/React.createElement(InlineStack, {
+    wrap: false,
+    gap: "400",
+    blockAlign: "center"
+  }, actionMarkup, children)) : titleMarkup;
+  return /*#__PURE__*/React.createElement("div", {
+    className: styles.Header
+  }, headingMarkup);
+}
+
+export { Header };

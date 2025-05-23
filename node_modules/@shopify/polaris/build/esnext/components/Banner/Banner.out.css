@@ -1,0 +1,116 @@
+.Polaris-Banner_z4w8k{
+  background-color:var(--p-color-bg-surface);
+  position:relative;
+  display:flex;
+}
+
+.Polaris-Banner_z4w8k:focus{
+    outline:none;
+  }
+
+.Polaris-Banner_z4w8k.Polaris-Banner--keyFocused_1aqee{
+    outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+  }
+
+.Polaris-Banner--withinContentContainer_1uwmg{
+  border-radius:var(--p-border-radius-200);
+}
+
+.Polaris-Banner--withinContentContainer_1uwmg + .Polaris-Banner_z4w8k{
+    margin-top:var(--p-space-200);
+  }
+
+.Polaris-Banner--withinPage_kguwn{
+  position: relative;
+  box-shadow: var(--p-shadow-200);
+  border-radius: var(--p-border-radius-0);
+}
+
+.Polaris-Banner--withinPage_kguwn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  box-shadow: var(--p-shadow-bevel-100);
+  border-radius: var(--p-border-radius-0);
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-Banner--withinPage_kguwn{
+    position: relative;
+    box-shadow: var(--p-shadow-200);
+    border-radius: var(--p-border-radius-300);
+}
+    .Polaris-Banner--withinPage_kguwn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    box-shadow: var(--p-shadow-bevel-100);
+    border-radius: var(--p-border-radius-300);
+    pointer-events: none;
+    mix-blend-mode: luminosity;
+  }
+  }
+
+.Polaris-Banner--withinPage_kguwn + .Polaris-Banner_z4w8k{
+    margin-top:var(--p-space-400);
+  }
+
+.Polaris-Banner__DismissIcon_13v0e{
+  display:flex;
+}
+
+.Polaris-Banner--textSuccessOnBgFill_1hcf6.Polaris-Banner--textSuccessOnBgFill_1hcf6.Polaris-Banner--textSuccessOnBgFill_1hcf6 svg,
+  .Polaris-Banner--textSuccessOnBgFill_1hcf6.Polaris-Banner--textSuccessOnBgFill_1hcf6.Polaris-Banner--textSuccessOnBgFill_1hcf6 path{
+    fill:var(--p-color-text-success-on-bg-fill);
+  }
+
+.Polaris-Banner__text--success_121xw.Polaris-Banner__text--success_121xw.Polaris-Banner__text--success_121xw svg,
+  .Polaris-Banner__text--success_121xw.Polaris-Banner__text--success_121xw.Polaris-Banner__text--success_121xw path{
+    fill:var(--p-color-text-success);
+  }
+
+.Polaris-Banner--textWarningOnBgFill_1139z.Polaris-Banner--textWarningOnBgFill_1139z.Polaris-Banner--textWarningOnBgFill_1139z svg,
+  .Polaris-Banner--textWarningOnBgFill_1139z.Polaris-Banner--textWarningOnBgFill_1139z.Polaris-Banner--textWarningOnBgFill_1139z path{
+    fill:var(--p-color-text-warning-on-bg-fill);
+  }
+
+.Polaris-Banner__text--warning_1p3rm.Polaris-Banner__text--warning_1p3rm.Polaris-Banner__text--warning_1p3rm svg,
+  .Polaris-Banner__text--warning_1p3rm.Polaris-Banner__text--warning_1p3rm.Polaris-Banner__text--warning_1p3rm path{
+    fill:var(--p-color-text-warning);
+  }
+
+.Polaris-Banner--textCriticalOnBgFill_kazam.Polaris-Banner--textCriticalOnBgFill_kazam.Polaris-Banner--textCriticalOnBgFill_kazam svg,
+  .Polaris-Banner--textCriticalOnBgFill_kazam.Polaris-Banner--textCriticalOnBgFill_kazam.Polaris-Banner--textCriticalOnBgFill_kazam path{
+    fill:var(--p-color-text-critical-on-bg-fill);
+  }
+
+.Polaris-Banner__text--critical_ybz9a.Polaris-Banner__text--critical_ybz9a.Polaris-Banner__text--critical_ybz9a svg,
+  .Polaris-Banner__text--critical_ybz9a.Polaris-Banner__text--critical_ybz9a.Polaris-Banner__text--critical_ybz9a path{
+    fill:var(--p-color-text-critical);
+  }
+
+.Polaris-Banner--textInfoOnBgFill_z9p5k.Polaris-Banner--textInfoOnBgFill_z9p5k.Polaris-Banner--textInfoOnBgFill_z9p5k svg,
+  .Polaris-Banner--textInfoOnBgFill_z9p5k.Polaris-Banner--textInfoOnBgFill_z9p5k.Polaris-Banner--textInfoOnBgFill_z9p5k path{
+    fill:var(--p-color-text-info-on-bg-fill);
+  }
+
+.Polaris-Banner__text--info_ah604.Polaris-Banner__text--info_ah604.Polaris-Banner__text--info_ah604 svg,
+  .Polaris-Banner__text--info_ah604.Polaris-Banner__text--info_ah604.Polaris-Banner__text--info_ah604 path{
+    fill:var(--p-color-text-info);
+  }
+
+.Polaris-Banner__icon--secondary_ezco3.Polaris-Banner__icon--secondary_ezco3.Polaris-Banner__icon--secondary_ezco3 svg,
+  .Polaris-Banner__icon--secondary_ezco3.Polaris-Banner__icon--secondary_ezco3.Polaris-Banner__icon--secondary_ezco3 path{
+    fill:var(--p-color-icon-secondary);
+  }

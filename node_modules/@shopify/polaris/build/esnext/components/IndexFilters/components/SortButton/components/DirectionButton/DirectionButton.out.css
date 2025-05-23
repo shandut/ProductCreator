@@ -1,0 +1,50 @@
+.Polaris-SortButton-DirectionButton_1lqxu{
+  position: relative;
+  border-radius:var(--p-border-radius-200);
+  padding:var(--p-space-100) var(--p-space-300) var(--p-space-100) var(--p-space-200);
+  display:grid;
+  align-items:center;
+  grid-template-columns:auto 1fr;
+  gap:var(--p-space-050);
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:none;
+  text-align:left;
+}
+
+.Polaris-SortButton-DirectionButton_1lqxu::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 -0.0625rem var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-200);
+}
+
+.Polaris-SortButton-DirectionButton_1lqxu:hover{
+    background-color:var(--p-color-bg-fill-transparent-hover);
+  }
+
+.Polaris-SortButton-DirectionButton_1lqxu + .Polaris-SortButton-DirectionButton_1lqxu{
+    margin-top:var(--p-space-100);
+  }
+
+.Polaris-SortButton-DirectionButton_1lqxu:focus-visible{
+    outline:0;
+  }
+
+.Polaris-SortButton-DirectionButton_1lqxu:focus-visible::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}
+
+.Polaris-SortButton-DirectionButton__DirectionButton--active_1n7us{
+  color:var(--p-color-text);
+  background:var(--p-color-bg-fill-transparent-active);
+}

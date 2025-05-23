@@ -1,0 +1,1 @@
+{"version":3,"file":"context.d.ts","sourceRoot":"","sources":["../../../../../src/components/DropZone/context.tsx"],"names":[],"mappings":";AAIA,UAAU,mBAAmB;IAC3B,QAAQ,EAAE,OAAO,CAAC;IAClB,OAAO,EAAE,OAAO,CAAC;IACjB,SAAS,EAAE,OAAO,CAAC;IACnB,aAAa,EAAE,OAAO,CAAC;IACvB,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;CACd;AAED,eAAO,MAAM,eAAe,8CAO1B,CAAC"}

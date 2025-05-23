@@ -1,0 +1,8 @@
+import './Section.out.css';
+
+var styles = {
+  "SectionGroup": "Polaris-Listbox-Section__SectionGroup_gynu8",
+  "noDivider": "Polaris-Listbox-Section--noDivider_485wt"
+};
+
+export { styles as default };

@@ -1,0 +1,13 @@
+import React from 'react';
+
+var SvgLayoutColumn1Icon = function SvgLayoutColumn1Icon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M4 6.75c0-2.071 1.679-3.75 3.75-3.75h4.5c2.071 0 3.75 1.679 3.75 3.75v6.5c0 2.071-1.679 3.75-3.75 3.75h-4.5c-2.071 0-3.75-1.679-3.75-3.75v-6.5Zm3.75-2.25c-1.243 0-2.25 1.007-2.25 2.25v6.5c0 1.243 1.007 2.25 2.25 2.25h4.5c1.243 0 2.25-1.007 2.25-2.25v-6.5c0-1.243-1.007-2.25-2.25-2.25h-4.5Z"
+  }));
+};
+SvgLayoutColumn1Icon.displayName = "LayoutColumn1Icon";
+
+export { SvgLayoutColumn1Icon as S };

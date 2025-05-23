@@ -1,0 +1,8 @@
+var styles = {
+  "Label": "Polaris-Label",
+  "hidden": "Polaris-Label--hidden",
+  "Text": "Polaris-Label__Text",
+  "RequiredIndicator": "Polaris-Label__RequiredIndicator"
+};
+
+export { styles as default };

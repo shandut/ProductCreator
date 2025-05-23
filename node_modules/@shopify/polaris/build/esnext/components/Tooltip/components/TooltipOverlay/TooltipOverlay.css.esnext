@@ -1,0 +1,15 @@
+import './TooltipOverlay.out.css';
+
+var styles = {
+  "TooltipOverlay": "Polaris-Tooltip-TooltipOverlay_16r9b",
+  "Tail": "Polaris-Tooltip-TooltipOverlay__Tail_yixpw",
+  "positionedAbove": "Polaris-Tooltip-TooltipOverlay--positionedAbove_1f44z",
+  "measuring": "Polaris-Tooltip-TooltipOverlay--measuring_wb2tw",
+  "measured": "Polaris-Tooltip-TooltipOverlay--measured_sk4vh",
+  "instant": "Polaris-Tooltip-TooltipOverlay--instant_xfprd",
+  "Content": "Polaris-Tooltip-TooltipOverlay__Content_xd1mk",
+  "default": "Polaris-Tooltip-TooltipOverlay--default_y9uu3",
+  "wide": "Polaris-Tooltip-TooltipOverlay--wide_yisjh"
+};
+
+export { styles as default };

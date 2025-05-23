@@ -1,0 +1,13 @@
+import React from 'react';
+
+var SvgChartStackedIcon = function SvgChartStackedIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M5.75 5.75c-1.519 0-2.75 1.231-2.75 2.75v3c0 1.519 1.231 2.75 2.75 2.75h8.5c1.519 0 2.75-1.231 2.75-2.75v-3c0-1.519-1.231-2.75-2.75-2.75h-8.5Zm-1.25 2.75c0-.69.56-1.25 1.25-1.25h4.25v5.5h-4.25c-.69 0-1.25-.56-1.25-1.25v-3Zm8.5 4.25h1.25c.69 0 1.25-.56 1.25-1.25v-3c0-.69-.56-1.25-1.25-1.25h-1.25v5.5Z"
+  }));
+};
+SvgChartStackedIcon.displayName = "ChartStackedIcon";
+
+export { SvgChartStackedIcon as S };

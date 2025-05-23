@@ -1,0 +1,43 @@
+import './Text.out.css';
+
+var styles = {
+  "root": "Polaris-Text--root_yj4ah",
+  "block": "Polaris-Text--block_32woz",
+  "truncate": "Polaris-Text--truncate_4qxon",
+  "visuallyHidden": "Polaris-Text--visuallyHidden_yrtt6",
+  "start": "Polaris-Text--start_30ir5",
+  "center": "Polaris-Text--center_z4ik6",
+  "end": "Polaris-Text--end_375c0",
+  "justify": "Polaris-Text--justify_f67oi",
+  "base": "Polaris-Text--base_yisxj",
+  "inherit": "Polaris-Text--inherit_wgz08",
+  "disabled": "Polaris-Text--disabled_hcuh9",
+  "success": "Polaris-Text--success_z03ht",
+  "critical": "Polaris-Text--critical_uivil",
+  "caution": "Polaris-Text--caution_1b1gs",
+  "subdued": "Polaris-Text--subdued_17vaa",
+  "magic": "Polaris-Text--magic_2xe55",
+  "magic-subdued": "Polaris-Text__magic--subdued_1o0qg",
+  "text-inverse": "Polaris-Text__text--inverse_1v0hu",
+  "text-inverse-secondary": "Polaris-Text--textInverseSecondary_bwaxm",
+  "headingXs": "Polaris-Text--headingXs_9lann",
+  "headingSm": "Polaris-Text--headingSm_14l4b",
+  "headingMd": "Polaris-Text--headingMd_lwjt4",
+  "headingLg": "Polaris-Text--headingLg_yyh4u",
+  "headingXl": "Polaris-Text--headingXl_1dele",
+  "heading2xl": "Polaris-Text--heading2xl_1aguw",
+  "heading3xl": "Polaris-Text--heading3xl_ue5la",
+  "bodyXs": "Polaris-Text--bodyXs_z23iq",
+  "bodySm": "Polaris-Text--bodySm_nvqxj",
+  "bodyMd": "Polaris-Text--bodyMd_jaf4s",
+  "bodyLg": "Polaris-Text--bodyLg_mi7qq",
+  "regular": "Polaris-Text--regular_pjgr0",
+  "medium": "Polaris-Text--medium_oli4o",
+  "semibold": "Polaris-Text--semibold_k1k0m",
+  "bold": "Polaris-Text--bold_yirzs",
+  "break": "Polaris-Text--break_32vap",
+  "numeric": "Polaris-Text--numeric_1r59u",
+  "line-through": "Polaris-Text__line--through_1cl7a"
+};
+
+export { styles as default };

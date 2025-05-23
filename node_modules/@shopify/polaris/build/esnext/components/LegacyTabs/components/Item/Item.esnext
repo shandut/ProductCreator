@@ -1,0 +1,64 @@
+import React, { PureComponent } from 'react';
+import { classNames } from '../../../../utilities/css.esnext';
+import styles from '../../LegacyTabs.css.esnext';
+import { FeaturesContext } from '../../../../utilities/features/context.esnext';
+import { UnstyledLink } from '../../../UnstyledLink/UnstyledLink.esnext';
+
+class Item extends PureComponent {
+  static contextType = FeaturesContext;
+  focusedNode = null;
+  componentDidMount() {
+    const {
+      focusedNode
+    } = this;
+    const {
+      focused
+    } = this.props;
+    if (focusedNode && focusedNode instanceof HTMLElement && focused) {
+      focusedNode.focus();
+    }
+  }
+  componentDidUpdate() {
+    const {
+      focusedNode
+    } = this;
+    const {
+      focused
+    } = this.props;
+    if (focusedNode && focusedNode instanceof HTMLElement && focused) {
+      focusedNode.focus();
+    }
+  }
+  render() {
+    const {
+      id,
+      panelID,
+      children,
+      url,
+      accessibilityLabel,
+      onClick = noop
+    } = this.props;
+    const classname = classNames(styles.Item);
+    const sharedProps = {
+      id,
+      ref: this.setFocusedNode,
+      onClick,
+      className: classname,
+      'aria-controls': panelID,
+      'aria-selected': false,
+      'aria-label': accessibilityLabel
+    };
+    const markup = url ? /*#__PURE__*/React.createElement(UnstyledLink, Object.assign({}, sharedProps, {
+      url: url
+    }), children) : /*#__PURE__*/React.createElement("button", Object.assign({}, sharedProps, {
+      type: "button"
+    }), children);
+    return /*#__PURE__*/React.createElement("li", null, markup);
+  }
+  setFocusedNode = node => {
+    this.focusedNode = node;
+  };
+}
+function noop() {}
+
+export { Item };

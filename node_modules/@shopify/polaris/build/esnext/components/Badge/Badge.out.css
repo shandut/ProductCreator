@@ -1,0 +1,182 @@
+.Polaris-Badge_2qgie{
+  --pc-badge-horizontal-padding:var(--p-space-200);
+  --pc-badge-vertical-padding:var(--p-space-050);
+  display:inline-flex;
+  align-items:center;
+  padding:var(--pc-badge-vertical-padding) var(--pc-badge-horizontal-padding);
+  background-color:var(--p-color-bg-fill-transparent-secondary);
+  border-radius:var(--p-border-radius-200);
+  color:var(--p-color-text-secondary);
+  font-weight:var(--p-font-weight-medium);
+}
+
+.Polaris-Badge_2qgie svg{
+    fill:var(--p-color-text-secondary);
+  }
+
+@media print{
+
+.Polaris-Badge_2qgie{
+    border:solid var(--p-border-width-025) var(--p-color-border);
+}
+  }
+
+.Polaris-Badge--toneSuccess_15hst{
+  background-color:var(--p-color-bg-fill-success-secondary);
+  color:var(--p-color-text-success);
+}
+
+.Polaris-Badge--toneSuccess_15hst svg{
+    fill:var(--p-color-icon-success);
+  }
+
+.Polaris-Badge__toneSuccess--strong_dlrte{
+  color:var(--p-color-text-success-on-bg-fill);
+  background-color:var(--p-color-bg-fill-success);
+}
+
+.Polaris-Badge__toneSuccess--strong_dlrte svg{
+    fill:var(--p-color-text-success-on-bg-fill);
+  }
+
+.Polaris-Badge--toneInfo_888w9{
+  background-color:var(--p-color-bg-fill-info-secondary);
+  color:var(--p-color-text-info);
+}
+
+.Polaris-Badge--toneInfo_888w9 svg{
+    fill:var(--p-color-icon-info);
+  }
+
+.Polaris-Badge__toneInfo--strong_qq6hg{
+  color:var(--p-color-text-info-on-bg-fill);
+  background-color:var(--p-color-bg-fill-info);
+}
+
+.Polaris-Badge__toneInfo--strong_qq6hg svg{
+    fill:var(--p-color-text-info-on-bg-fill);
+  }
+
+.Polaris-Badge--toneAttention_ff4zk{
+  background-color:var(--p-color-bg-fill-caution-secondary);
+  color:var(--p-color-text-caution);
+}
+
+.Polaris-Badge--toneAttention_ff4zk svg{
+    fill:var(--p-color-icon-caution);
+  }
+
+.Polaris-Badge__toneAttention--strong_1lwee{
+  color:var(--p-color-text-caution-on-bg-fill);
+  background-color:var(--p-color-bg-fill-caution);
+}
+
+.Polaris-Badge__toneAttention--strong_1lwee svg{
+    fill:var(--p-color-text-caution-on-bg-fill);
+  }
+
+.Polaris-Badge--toneWarning_1phxg{
+  background-color:var(--p-color-bg-fill-warning-secondary);
+  color:var(--p-color-text-warning);
+}
+
+.Polaris-Badge--toneWarning_1phxg svg{
+    fill:var(--p-color-icon-warning);
+  }
+
+.Polaris-Badge__toneWarning--strong_qjx5t{
+  color:var(--p-color-text-warning-on-bg-fill);
+  background-color:var(--p-color-bg-fill-warning);
+}
+
+.Polaris-Badge__toneWarning--strong_qjx5t svg{
+    fill:var(--p-color-text-warning-on-bg-fill);
+  }
+
+.Polaris-Badge--toneCritical_jv6uf{
+  background-color:var(--p-color-bg-fill-critical-secondary);
+  color:var(--p-color-text-critical);
+}
+
+.Polaris-Badge--toneCritical_jv6uf svg{
+    fill:var(--p-color-icon-critical);
+  }
+
+.Polaris-Badge__toneCritical--strong_1ovge{
+  color:var(--p-color-text-critical-on-bg-fill);
+  background-color:var(--p-color-bg-fill-critical);
+}
+
+.Polaris-Badge__toneCritical--strong_1ovge svg{
+    fill:var(--p-color-text-critical-on-bg-fill);
+  }
+
+.Polaris-Badge--toneNew_vwxid{
+  border:none;
+  background-color:var(--p-color-bg-fill-transparent-secondary);
+  color:var(--p-color-text-secondary);
+  font-weight:var(--p-font-weight-bold);
+  border-radius:var(--p-border-radius-200);
+}
+
+.Polaris-Badge--toneNew_vwxid svg{
+    fill:var(--p-color-text-secondary);
+  }
+
+.Polaris-Badge--toneMagic_tqodm{
+  background-color:var(--p-color-bg-fill-magic-secondary);
+  color:var(--p-color-text-magic);
+}
+
+.Polaris-Badge--toneMagic_tqodm svg{
+    fill:var(--p-color-text-magic);
+  }
+
+.Polaris-Badge__toneRead--only_cbkof{
+  color:var(--p-color-text-secondary);
+  background-color:transparent;
+}
+
+.Polaris-Badge__toneRead--only_cbkof svg{
+    fill:var(--p-color-icon-secondary);
+  }
+
+.Polaris-Badge--toneEnabled_lm455{
+  color:var(--p-color-text);
+}
+
+.Polaris-Badge--toneEnabled_lm455 svg{
+    fill:var(--p-color-icon-success);
+  }
+
+.Polaris-Badge--sizeLarge_61dxo{
+  padding:var(--p-space-100) var(--p-space-200);
+}
+
+.Polaris-Badge--withinFilter_11dcy{
+  border-radius:var(--p-border-radius-100);
+}
+
+.Polaris-Badge__Icon_yj27d{
+  margin:calc(var(--p-space-050)*-1) 0 calc(var(--p-space-050)*-1) calc(var(--p-space-200)*-1);
+}
+
+.Polaris-Badge__Icon_yj27d svg{
+    display:inline-block;
+    vertical-align:top;
+  }
+
+.Polaris-Badge--sizeLarge_61dxo .Polaris-Badge__Icon_yj27d{
+    margin:0 var(--p-space-100) 0 calc(var(--p-space-050)*-1);
+  }
+
+.Polaris-Badge__Icon_yj27d + *{
+    margin-left:0;
+  }
+
+.Polaris-Badge__PipContainer_dsjox{
+  display:grid;
+  align-items:center;
+  margin-left:calc(var(--p-space-050)*-1);
+  margin-right:var(--p-space-100);
+}

@@ -1,0 +1,8 @@
+import './Tooltip.out.css';
+
+var styles = {
+  "TooltipContainer": "Polaris-Tooltip__TooltipContainer_mtgy1",
+  "HasUnderline": "Polaris-Tooltip__HasUnderline_c9bix"
+};
+
+export { styles as default };

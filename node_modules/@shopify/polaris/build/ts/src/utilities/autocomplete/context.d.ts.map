@@ -1,0 +1,1 @@
+{"version":3,"file":"context.d.ts","sourceRoot":"","sources":["../../../../../src/utilities/autocomplete/context.ts"],"names":[],"mappings":";AAEA,UAAU,uBAAuB;IAC/B,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,QAAQ,CAAC,EAAE,OAAO,CAAC;IACnB,QAAQ,CAAC,IAAI,IAAI,CAAC;IAClB,WAAW,CAAC,EAAE,OAAO,CAAC;CACvB;AAED,eAAO,MAAM,mBAAmB,kDAA6C,CAAC"}

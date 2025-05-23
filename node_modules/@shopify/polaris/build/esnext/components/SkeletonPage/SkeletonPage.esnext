@@ -1,0 +1,96 @@
+import React from 'react';
+import styles from './SkeletonPage.css.esnext';
+import { useI18n } from '../../utilities/i18n/hooks.esnext';
+import { BlockStack } from '../BlockStack/BlockStack.esnext';
+import { Box } from '../Box/Box.esnext';
+import { InlineStack } from '../InlineStack/InlineStack.esnext';
+import { Text } from '../Text/Text.esnext';
+
+function SkeletonPage({
+  children,
+  fullWidth,
+  narrowWidth,
+  primaryAction,
+  title = '',
+  backAction
+}) {
+  const i18n = useI18n();
+  const titleContent = title ? /*#__PURE__*/React.createElement(Text, {
+    as: "h1",
+    variant: "headingLg",
+    fontWeight: "bold"
+  }, title) : /*#__PURE__*/React.createElement("div", {
+    className: styles.SkeletonTitle
+  }, /*#__PURE__*/React.createElement(Box, {
+    background: "bg-fill-tertiary",
+    minWidth: "120px",
+    minHeight: "28px",
+    borderRadius: "100"
+  }));
+  const primaryActionMarkup = primaryAction ? /*#__PURE__*/React.createElement(Box, {
+    id: "SkeletonPage-PrimaryAction",
+    borderRadius: "100",
+    background: "bg-fill-tertiary",
+    minHeight: "2.25rem",
+    minWidth: "6.25rem"
+  }) : null;
+  const backActionMarkup = backAction ? /*#__PURE__*/React.createElement(Box, {
+    borderRadius: "100",
+    background: "bg-fill-tertiary",
+    minHeight: "2.25rem",
+    minWidth: "2.25rem",
+    maxWidth: "2.25rem"
+  }) : null;
+  return /*#__PURE__*/React.createElement(BlockStack, {
+    gap: "400",
+    inlineAlign: "center"
+  }, /*#__PURE__*/React.createElement(Box, Object.assign({
+    width: "100%",
+    padding: "0",
+    paddingInlineStart: {
+      sm: '600'
+    },
+    paddingInlineEnd: {
+      sm: '600'
+    },
+    maxWidth: "var(--pc-skeleton-page-max-width)",
+    "aria-label": i18n.translate('Polaris.SkeletonPage.loadingLabel'),
+    role: "status"
+  }, narrowWidth && {
+    maxWidth: 'var(--pc-skeleton-page-max-width-narrow)'
+  }, fullWidth && {
+    maxWidth: 'none'
+  }), /*#__PURE__*/React.createElement(BlockStack, null, /*#__PURE__*/React.createElement(Box, {
+    paddingBlockStart: {
+      xs: '400',
+      md: '500'
+    },
+    paddingBlockEnd: {
+      xs: '400',
+      md: '500'
+    },
+    paddingInlineStart: {
+      xs: '400',
+      sm: '0'
+    },
+    paddingInlineEnd: {
+      xs: '400',
+      sm: '0'
+    },
+    width: "100%"
+  }, /*#__PURE__*/React.createElement(InlineStack, {
+    gap: "400",
+    align: "space-between",
+    blockAlign: "center"
+  }, /*#__PURE__*/React.createElement(InlineStack, {
+    gap: "400"
+  }, backActionMarkup, /*#__PURE__*/React.createElement(Box, {
+    paddingBlockStart: "100",
+    paddingBlockEnd: "100"
+  }, titleContent)), primaryActionMarkup)), /*#__PURE__*/React.createElement(Box, {
+    paddingBlockEnd: "200",
+    width: "100%"
+  }, children))));
+}
+
+export { SkeletonPage };

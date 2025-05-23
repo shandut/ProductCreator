@@ -1,0 +1,9 @@
+import './Pagination.out.css';
+
+var styles = {
+  "Pagination": "Polaris-Pagination_1af4k",
+  "table": "Polaris-Pagination--table_2qj3n",
+  "TablePaginationActions": "Polaris-Pagination__TablePaginationActions_3gpq4"
+};
+
+export { styles as default };

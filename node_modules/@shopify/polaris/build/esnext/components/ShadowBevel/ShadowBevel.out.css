@@ -1,0 +1,199 @@
+.Polaris-ShadowBevel_1hoxq{
+  overflow:clip;
+  z-index:0;
+
+  --pc-shadow-bevel-z-index: initial;
+
+  --pc-shadow-bevel-box-shadow-xs: initial;
+
+  --pc-shadow-bevel-box-shadow-sm: initial;
+
+  --pc-shadow-bevel-box-shadow-md: initial;
+
+  --pc-shadow-bevel-box-shadow-lg: initial;
+
+  --pc-shadow-bevel-box-shadow-xl: initial;
+
+  --pc-shadow-bevel-box-shadow: var(--pc-shadow-bevel-box-shadow-xs);
+  --pc-shadow-bevel-border-radius-xs: initial;
+  --pc-shadow-bevel-border-radius-sm: initial;
+  --pc-shadow-bevel-border-radius-md: initial;
+  --pc-shadow-bevel-border-radius-lg: initial;
+  --pc-shadow-bevel-border-radius-xl: initial;
+  --pc-shadow-bevel-border-radius: var(--pc-shadow-bevel-border-radius-xs);
+  --pc-shadow-bevel-content-xs: initial;
+  --pc-shadow-bevel-content-sm: initial;
+  --pc-shadow-bevel-content-md: initial;
+  --pc-shadow-bevel-content-lg: initial;
+  --pc-shadow-bevel-content-xl: initial;
+  --pc-shadow-bevel-content: var(--pc-shadow-bevel-content-xs);
+
+  position: relative;
+
+  box-shadow: var(--pc-shadow-bevel-box-shadow);
+
+  border-radius: var(--pc-shadow-bevel-border-radius);
+}
+@media (min-width: 30.625em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-box-shadow: var(
+        --pc-shadow-bevel-box-shadow-sm,
+        var(--pc-shadow-bevel-box-shadow-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-box-shadow: var(
+        --pc-shadow-bevel-box-shadow-md,
+        var(
+          --pc-shadow-bevel-box-shadow-sm,
+          var(--pc-shadow-bevel-box-shadow-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-box-shadow: var(
+        --pc-shadow-bevel-box-shadow-lg,
+        var(
+          --pc-shadow-bevel-box-shadow-md,
+          var(
+            --pc-shadow-bevel-box-shadow-sm,
+            var(--pc-shadow-bevel-box-shadow-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-box-shadow: var(
+        --pc-shadow-bevel-box-shadow-xl,
+        var(
+          --pc-shadow-bevel-box-shadow-lg,
+          var(
+            --pc-shadow-bevel-box-shadow-md,
+            var(
+              --pc-shadow-bevel-box-shadow-sm,
+              var(--pc-shadow-bevel-box-shadow-xs)
+            )
+          )
+        )
+      );
+}
+}
+@media (min-width: 30.625em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-border-radius: var(
+        --pc-shadow-bevel-border-radius-sm,
+        var(--pc-shadow-bevel-border-radius-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-border-radius: var(
+        --pc-shadow-bevel-border-radius-md,
+        var(
+          --pc-shadow-bevel-border-radius-sm,
+          var(--pc-shadow-bevel-border-radius-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-border-radius: var(
+        --pc-shadow-bevel-border-radius-lg,
+        var(
+          --pc-shadow-bevel-border-radius-md,
+          var(
+            --pc-shadow-bevel-border-radius-sm,
+            var(--pc-shadow-bevel-border-radius-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-border-radius: var(
+        --pc-shadow-bevel-border-radius-xl,
+        var(
+          --pc-shadow-bevel-border-radius-lg,
+          var(
+            --pc-shadow-bevel-border-radius-md,
+            var(
+              --pc-shadow-bevel-border-radius-sm,
+              var(--pc-shadow-bevel-border-radius-xs)
+            )
+          )
+        )
+      );
+}
+}
+@media (min-width: 30.625em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-content: var(
+        --pc-shadow-bevel-content-sm,
+        var(--pc-shadow-bevel-content-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-content: var(
+        --pc-shadow-bevel-content-md,
+        var(
+          --pc-shadow-bevel-content-sm,
+          var(--pc-shadow-bevel-content-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-content: var(
+        --pc-shadow-bevel-content-lg,
+        var(
+          --pc-shadow-bevel-content-md,
+          var(
+            --pc-shadow-bevel-content-sm,
+            var(--pc-shadow-bevel-content-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-ShadowBevel_1hoxq{
+    --pc-shadow-bevel-content: var(
+        --pc-shadow-bevel-content-xl,
+        var(
+          --pc-shadow-bevel-content-lg,
+          var(
+            --pc-shadow-bevel-content-md,
+            var(
+              --pc-shadow-bevel-content-sm,
+              var(--pc-shadow-bevel-content-xs)
+            )
+          )
+        )
+      );
+}
+}
+.Polaris-ShadowBevel_1hoxq::before {
+  content: var(--pc-shadow-bevel-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--pc-shadow-bevel-z-index);
+  box-shadow: var(--p-shadow-bevel-100);
+  border-radius: var(--pc-shadow-bevel-border-radius);
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}

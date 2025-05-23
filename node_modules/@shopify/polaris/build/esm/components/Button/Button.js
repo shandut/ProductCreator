@@ -1,0 +1,137 @@
+import React from 'react';
+import { SelectIcon, ChevronDownIcon, ChevronUpIcon } from '@shopify/polaris-icons';
+import { useBreakpoints } from '../../utilities/breakpoints.js';
+import { classNames, variationName } from '../../utilities/css.js';
+import { handleMouseUpByBlurring } from '../../utilities/focus.js';
+import styles from './Button.css.js';
+import { Icon } from '../Icon/Icon.js';
+import { Spinner } from '../Spinner/Spinner.js';
+import { UnstyledButton } from '../UnstyledButton/UnstyledButton.js';
+import { useI18n } from '../../utilities/i18n/hooks.js';
+import { Text } from '../Text/Text.js';
+
+function Button({
+  id,
+  children,
+  url,
+  disabled,
+  external,
+  download,
+  target,
+  submit,
+  loading,
+  pressed,
+  accessibilityLabel,
+  role,
+  ariaControls,
+  ariaExpanded,
+  ariaDescribedBy,
+  ariaChecked,
+  onClick,
+  onFocus,
+  onBlur,
+  onKeyDown,
+  onKeyPress,
+  onKeyUp,
+  onMouseEnter,
+  onTouchStart,
+  onPointerDown,
+  icon,
+  disclosure,
+  removeUnderline,
+  size = 'medium',
+  textAlign = 'center',
+  fullWidth,
+  dataPrimaryLink,
+  tone,
+  variant = 'secondary'
+}) {
+  const i18n = useI18n();
+  const isDisabled = disabled || loading;
+  const {
+    mdUp
+  } = useBreakpoints();
+  const className = classNames(styles.Button, styles.pressable, styles[variationName('variant', variant)], styles[variationName('size', size)], styles[variationName('textAlign', textAlign)], fullWidth && styles.fullWidth, disclosure && styles.disclosure, icon && children && styles.iconWithText, icon && children == null && styles.iconOnly, isDisabled && styles.disabled, loading && styles.loading, pressed && !disabled && !url && styles.pressed, removeUnderline && styles.removeUnderline, tone && styles[variationName('tone', tone)]);
+  const disclosureMarkup = disclosure ? /*#__PURE__*/React.createElement("span", {
+    className: loading ? styles.hidden : styles.Icon
+  }, /*#__PURE__*/React.createElement(Icon, {
+    source: loading ? 'placeholder' : getDisclosureIconSource(disclosure, ChevronUpIcon, ChevronDownIcon)
+  })) : null;
+  const iconSource = isIconSource(icon) ? /*#__PURE__*/React.createElement(Icon, {
+    source: loading ? 'placeholder' : icon
+  }) : icon;
+  const iconMarkup = iconSource ? /*#__PURE__*/React.createElement("span", {
+    className: loading ? styles.hidden : styles.Icon
+  }, iconSource) : null;
+  const hasPlainText = ['plain', 'monochromePlain'].includes(variant);
+  let textFontWeight = 'medium';
+  if (hasPlainText) {
+    textFontWeight = 'regular';
+  } else if (variant === 'primary') {
+    textFontWeight = mdUp ? 'medium' : 'semibold';
+  }
+  let textVariant = 'bodySm';
+  if (size === 'large' || hasPlainText && size !== 'micro') {
+    textVariant = 'bodyMd';
+  }
+  const childMarkup = children ? /*#__PURE__*/React.createElement(Text, {
+    as: "span",
+    variant: textVariant,
+    fontWeight: textFontWeight
+    // Fixes Safari bug that doesn't re-render button text to correct color
+    ,
+    key: disabled ? 'text-disabled' : 'text'
+  }, children) : null;
+  const spinnerSVGMarkup = loading ? /*#__PURE__*/React.createElement("span", {
+    className: styles.Spinner
+  }, /*#__PURE__*/React.createElement(Spinner, {
+    size: "small",
+    accessibilityLabel: i18n.translate('Polaris.Button.spinnerAccessibilityLabel')
+  })) : null;
+  const commonProps = {
+    id,
+    className,
+    accessibilityLabel,
+    ariaDescribedBy,
+    role,
+    onClick,
+    onFocus,
+    onBlur,
+    onMouseUp: handleMouseUpByBlurring,
+    onMouseEnter,
+    onTouchStart,
+    'data-primary-link': dataPrimaryLink
+  };
+  const linkProps = {
+    url,
+    external,
+    download,
+    target
+  };
+  const actionProps = {
+    submit,
+    disabled: isDisabled,
+    loading,
+    ariaControls,
+    ariaExpanded,
+    ariaChecked,
+    pressed,
+    onKeyDown,
+    onKeyUp,
+    onKeyPress,
+    onPointerDown
+  };
+  const buttonMarkup = /*#__PURE__*/React.createElement(UnstyledButton, Object.assign({}, commonProps, linkProps, actionProps), spinnerSVGMarkup, iconMarkup, childMarkup, disclosureMarkup);
+  return buttonMarkup;
+}
+function isIconSource(x) {
+  return typeof x === 'string' || typeof x === 'object' && x.body || typeof x === 'function';
+}
+function getDisclosureIconSource(disclosure, upIcon, downIcon) {
+  if (disclosure === 'select') {
+    return SelectIcon;
+  }
+  return disclosure === 'up' ? upIcon : downIcon;
+}
+
+export { Button };

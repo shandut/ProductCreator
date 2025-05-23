@@ -1,0 +1,27 @@
+import './LegacyFilters.out.css';
+
+var styles = {
+  "LegacyFilters": "Polaris-LegacyFilters_qi2oo",
+  "LegacyFiltersContainer": "Polaris-LegacyFilters__LegacyFiltersContainer_1rwv0",
+  "LegacyFiltersContainerHeader": "Polaris-LegacyFilters__LegacyFiltersContainerHeader_2rkvu",
+  "LegacyFiltersDesktopContainerContent": "Polaris-LegacyFilters__LegacyFiltersDesktopContainerContent_1y4m8",
+  "LegacyFiltersMobileContainerContent": "Polaris-LegacyFilters__LegacyFiltersMobileContainerContent_zroq5",
+  "LegacyFiltersContainerFooter": "Polaris-LegacyFilters__LegacyFiltersContainerFooter_137lx",
+  "LegacyFiltersMobileContainerFooter": "Polaris-LegacyFilters__LegacyFiltersMobileContainerFooter_yvqhr",
+  "EmptyFooterState": "Polaris-LegacyFilters__EmptyFooterState_17wyq",
+  "FilterTriggerContainer": "Polaris-LegacyFilters__FilterTriggerContainer_w27xp",
+  "FilterTrigger": "Polaris-LegacyFilters__FilterTrigger_60gd4",
+  "FilterTriggerTitle": "Polaris-LegacyFilters__FilterTriggerTitle_lbjb0",
+  "AppliedFilterBadgeContainer": "Polaris-LegacyFilters__AppliedFilterBadgeContainer_63v3b",
+  "open": "Polaris-LegacyFilters--open_yj2jb",
+  "FilterTriggerLabelContainer": "Polaris-LegacyFilters__FilterTriggerLabelContainer_gnr9n",
+  "first": "Polaris-LegacyFilters--first_30jv6",
+  "last": "Polaris-LegacyFilters--last_yj3nf",
+  "FilterNodeContainer": "Polaris-LegacyFilters__FilterNodeContainer_18d1s",
+  "SearchIcon": "Polaris-LegacyFilters__SearchIcon_158og",
+  "Backdrop": "Polaris-LegacyFilters__Backdrop_1x2i2",
+  "HelpText": "Polaris-LegacyFilters__HelpText_8qj1a",
+  "TagsContainer": "Polaris-LegacyFilters__TagsContainer_sze4w"
+};
+
+export { styles as default };

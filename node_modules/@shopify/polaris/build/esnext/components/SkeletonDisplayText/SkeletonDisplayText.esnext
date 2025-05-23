@@ -1,0 +1,19 @@
+import React from 'react';
+import { classNames, variationName, sanitizeCustomProperties } from '../../utilities/css.esnext';
+import styles from './SkeletonDisplayText.css.esnext';
+
+function SkeletonDisplayText({
+  size = 'medium',
+  maxWidth
+}) {
+  const className = classNames(styles.DisplayText, size && styles[variationName('size', size)]);
+  const style = {
+    '--pc-skeleton-display-text-max-width': maxWidth ?? undefined
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: className,
+    style: sanitizeCustomProperties(style)
+  });
+}
+
+export { SkeletonDisplayText };

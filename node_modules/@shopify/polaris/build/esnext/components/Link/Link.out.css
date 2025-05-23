@@ -1,0 +1,58 @@
+.Polaris-Link_yj5sy{
+  -webkit-appearance:none;
+          appearance:none;
+  display:inline;
+  text-align:inherit;
+  padding:0;
+  background:none;
+  border:0;
+  font-size:inherit;
+  font-weight:inherit;
+  color:var(--p-color-text-link);
+  text-decoration:underline;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+.Polaris-Link_yj5sy:hover{
+    color:var(--p-color-text-link-hover);
+    text-decoration:underline;
+  }
+
+.Polaris-Link_yj5sy:focus,
+  .Polaris-Link_yj5sy:focus-visible{
+    outline:var(--p-color-border-focus) auto var(--p-border-width-050);
+    outline-offset:var(--p-space-050);
+    border-radius:var(--p-border-radius-150);
+  }
+
+.Polaris-Link_yj5sy:active{
+    position:relative;
+    color:var(--p-color-text-link-active);
+  }
+
+@media print{
+
+.Polaris-Link_yj5sy{
+    -webkit-text-decoration-color:var(--p-color-border-tertiary);
+            text-decoration-color:var(--p-color-border-tertiary);
+}
+  }
+
+.Polaris-Link--monochrome_14jw2{
+  color:inherit;
+}
+
+.Polaris-Link--monochrome_14jw2:hover,
+  .Polaris-Link--monochrome_14jw2:focus,
+  .Polaris-Link--monochrome_14jw2:active{
+    color:inherit;
+  }
+
+.Polaris-Link--removeUnderline_adav6{
+  text-decoration:none;
+}
+
+.Polaris-Link--removeUnderline_adav6:hover{
+    text-decoration:underline;
+  }

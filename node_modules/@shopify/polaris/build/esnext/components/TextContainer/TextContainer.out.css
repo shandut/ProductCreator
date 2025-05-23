@@ -1,0 +1,15 @@
+.Polaris-TextContainer_szg8b{
+  --pc-text-container-spacing:var(--p-space-400);
+}
+
+.Polaris-TextContainer_szg8b > *:not(:first-child){
+    margin-top:var(--pc-text-container-spacing);
+  }
+
+.Polaris-TextContainer--spacingTight_1o4d6{
+  --pc-text-container-spacing:var(--p-space-200);
+}
+
+.Polaris-TextContainer--spacingLoose_yte7q{
+  --pc-text-container-spacing:var(--p-space-500);
+}

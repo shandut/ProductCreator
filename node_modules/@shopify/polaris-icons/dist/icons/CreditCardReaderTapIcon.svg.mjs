@@ -1,0 +1,17 @@
+import React from 'react';
+
+var SvgCreditCardReaderTapIcon = function SvgCreditCardReaderTapIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M10 4.25c-1.795 0-3.25 1.455-3.25 3.25 0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-2.623 2.127-4.75 4.75-4.75s4.75 2.127 4.75 4.75c0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-1.795-1.455-3.25-3.25-3.25Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M5.25 17c-.414 0-.75-.336-.75-.75v-5c0-1.243 1.007-2.25 2.25-2.25h6.5c1.243 0 2.25 1.007 2.25 2.25v5c0 .414-.336.75-.75.75h-9.5Zm2.75-1.5h-2v-4.25c0-.414.336-.75.75-.75h1.25v5Zm2-5h3.25c.414 0 .75.336.75.75v4.25h-4v-5Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.25 7.5c0-.414.336-.75.75-.75s.75.336.75.75.336.75.75.75.75-.336.75-.75c0-1.243-1.007-2.25-2.25-2.25s-2.25 1.007-2.25 2.25c0 .414.336.75.75.75s.75-.336.75-.75Z"
+  }));
+};
+SvgCreditCardReaderTapIcon.displayName = "CreditCardReaderTapIcon";
+
+export { SvgCreditCardReaderTapIcon as S };

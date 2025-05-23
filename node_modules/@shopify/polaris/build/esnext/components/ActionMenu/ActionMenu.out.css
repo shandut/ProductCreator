@@ -1,0 +1,10 @@
+.Polaris-ActionMenu_1hlnt{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+}
+@media print{
+  .Polaris-ActionMenu_1hlnt{
+    display:none !important;
+}
+  }

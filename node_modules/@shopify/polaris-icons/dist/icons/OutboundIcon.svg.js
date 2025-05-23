@@ -1,0 +1,16 @@
+'use strict';
+
+var React = require('react');
+
+var SvgOutboundIcon = function SvgOutboundIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 15.75c0 .414-.336.75-.75.75h-11.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h11.5c.414 0 .75.336.75.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 13.75c-.414 0-.75-.336-.75-.75v-6.94l-1.72 1.72c-.293.293-.767.293-1.06 0-.293-.293-.293-.767 0-1.06l3-3c.293-.293.767-.293 1.06 0l3 3c.293.293.293.767 0 1.06-.293.293-.767.293-1.06 0l-1.72-1.72v6.94c0 .414-.336.75-.75.75Z"
+  }));
+};
+SvgOutboundIcon.displayName = "OutboundIcon";
+
+exports.SvgOutboundIcon = SvgOutboundIcon;

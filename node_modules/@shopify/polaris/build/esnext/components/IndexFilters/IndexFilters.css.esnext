@@ -1,0 +1,18 @@
+import './IndexFilters.out.css';
+
+var styles = {
+  "IndexFiltersWrapper": "Polaris-IndexFilters__IndexFiltersWrapper_m4vfy",
+  "IndexFilters": "Polaris-IndexFilters_1t8qs",
+  "IndexFiltersSticky": "Polaris-IndexFilters__IndexFiltersSticky_1lddm",
+  "IndexFiltersStickyFlush": "Polaris-IndexFilters__IndexFiltersStickyFlush_viem1",
+  "TabsWrapper": "Polaris-IndexFilters__TabsWrapper_1kaqz",
+  "SmallScreenTabsWrapper": "Polaris-IndexFilters__SmallScreenTabsWrapper_13avj",
+  "TabsWrapperLoading": "Polaris-IndexFilters__TabsWrapperLoading_6ua2b",
+  "DesktopLoading": "Polaris-IndexFilters__DesktopLoading_11d66",
+  "TabsLoading": "Polaris-IndexFilters__TabsLoading_z8frl",
+  "ActionWrap": "Polaris-IndexFilters__ActionWrap_3efpv",
+  "Spinner": "Polaris-IndexFilters__Spinner_mzr5w",
+  "ButtonWrap": "Polaris-IndexFilters__ButtonWrap_3e1l4"
+};
+
+export { styles as default };

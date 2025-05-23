@@ -1,0 +1,52 @@
+.Polaris-CalloutCard_ttsf2{
+  display:flex;
+  align-items:center;
+}
+
+.Polaris-CalloutCard__Image_2qgms{
+  display:none;
+  flex:0 0 auto;
+  width:6.25rem;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-CalloutCard__Image_2qgms{
+    display:block;
+    margin-left:var(--p-space-500);
+}
+  }
+
+.Polaris-CalloutCard__DismissImage_1dcw4{
+  margin-right:var(--p-space-500);
+}
+
+.Polaris-CalloutCard__Content_xd1mk{
+  flex:1 1 auto;
+}
+
+.Polaris-CalloutCard__Title_2qj8j{
+  margin-bottom:var(--p-space-200);
+}
+
+.Polaris-CalloutCard__Buttons_17lkt{
+  margin-top:var(--p-space-200);
+}
+
+.Polaris-CalloutCard__Container_13mbo{
+  position:relative;
+}
+
+.Polaris-CalloutCard__Dismiss_z8d6a{
+  right:var(--p-space-300);
+  top:var(--p-space-400);
+  position:absolute;
+}
+
+.Polaris-CalloutCard__Dismiss_z8d6a svg{
+    fill:var(--p-color-icon-secondary);
+  }
+
+.Polaris-CalloutCard--hasDismiss_kf0ua{
+  padding-right:calc(var(--p-space-800) + var(--p-space-300));
+}

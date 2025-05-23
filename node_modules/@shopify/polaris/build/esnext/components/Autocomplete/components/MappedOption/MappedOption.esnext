@@ -1,0 +1,33 @@
+import React, { memo } from 'react';
+import { classNames } from '../../../../utilities/css.esnext';
+import styles from './MappedOption.css.esnext';
+import { Listbox } from '../../../Listbox/Listbox.esnext';
+
+const MappedOption = /*#__PURE__*/memo(function MappedOption({
+  label,
+  value,
+  disabled,
+  media,
+  selected,
+  singleSelection
+}) {
+  const mediaClassNames = classNames(styles.Media, disabled && styles.disabledMedia, singleSelection && styles.singleSelectionMedia);
+  const mediaMarkup = media ? /*#__PURE__*/React.createElement("div", {
+    className: mediaClassNames
+  }, media) : null;
+  const accessibilityLabel = typeof label === 'string' ? label : undefined;
+  return /*#__PURE__*/React.createElement(Listbox.Option, {
+    accessibilityLabel: accessibilityLabel,
+    key: value,
+    selected: selected,
+    value: value,
+    disabled: disabled
+  }, /*#__PURE__*/React.createElement(Listbox.TextOption, {
+    selected: selected,
+    disabled: disabled
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.Content
+  }, mediaMarkup, label)));
+});
+
+export { MappedOption };

@@ -1,0 +1,62 @@
+
+  .Polaris-Pagination_1af4k button{
+    border:none !important;
+    box-shadow:none !important;
+    background-color:var(--p-color-bg-fill-tertiary);
+  }
+
+.Polaris-Pagination_1af4k button:hover{
+      background-color:var(--p-color-bg-fill-tertiary-hover);
+    }
+
+.Polaris-Pagination_1af4k button:active{
+      box-shadow:var(--p-shadow-inset-200) !important;
+    }
+
+.Polaris-Pagination_1af4k button:active,
+    .Polaris-Pagination_1af4k button:focus{
+      background-color:var(--p-color-bg-fill-tertiary-active);
+    }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n{
+    border-top:0.0625rem solid var(--p-color-border);
+  }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button{
+      --button-min-height:var(--p-height-700);
+      background-color:var(--p-color-bg-surface-secondary-selected);
+      min-height:var(--button-min-height);
+      min-width:var(--button-min-height);
+      height:var(--button-min-height);
+      width:var(--button-min-height);
+      display:flex;
+      padding:unset;
+    }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:hover{
+        background-color:var(--p-color-bg-fill-tertiary-hover);
+      }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:hover svg{
+          fill:var(--p-color-icon-hover);
+        }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:active,
+      .Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:focus{
+        background-color:var(--p-color-bg-fill-tertiary-active);
+      }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:active svg, .Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:focus svg{
+          fill:var(--p-color-icon-active);
+        }
+
+.Polaris-Pagination_1af4k.Polaris-Pagination--table_2qj3n button:disabled svg{
+          fill:var(--p-color-icon-disabled);
+        }
+
+.Polaris-Pagination__TablePaginationActions_3gpq4{
+  display:flex;
+  gap:var(--p-space-025);
+  align-items:center;
+  justify-content:center;
+}

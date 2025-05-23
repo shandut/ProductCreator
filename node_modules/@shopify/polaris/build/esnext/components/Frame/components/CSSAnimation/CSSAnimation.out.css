@@ -1,0 +1,13 @@
+.Polaris-Frame-CSSAnimation--startFade_1gu4x{
+  opacity:0;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:opacity;
+  transition:opacity var(--p-motion-duration-300) var(--p-motion-ease-out);
+  pointer-events:none;
+}
+
+.Polaris-Frame-CSSAnimation--endFade_1qzoi{
+  opacity:1;
+  pointer-events:auto;
+}

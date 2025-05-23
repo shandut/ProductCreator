@@ -1,0 +1,52 @@
+.Polaris-SkeletonDisplayText__DisplayText_1u0t8{
+  --pc-skeleton-display-text-height:var(--p-font-line-height-500);
+  --pc-skeleton-display-text-height-not-condensed:var(
+    --p-font-line-height-500
+  );
+  max-width:var(--pc-skeleton-display-text-max-width, 120px);
+
+  display:flex;
+  background-color:var(--p-color-bg-fill-tertiary);
+  border-radius:var(--p-border-radius-100);
+  height:var(--pc-skeleton-display-text-height);
+}
+
+@media screen and (-ms-high-contrast: active){
+
+.Polaris-SkeletonDisplayText__DisplayText_1u0t8{
+    background-color:grayText;
+}
+  }
+
+@media (min-width: 48em){
+
+.Polaris-SkeletonDisplayText__DisplayText_1u0t8{
+    height:var(--pc-skeleton-display-text-height-not-condensed);
+}
+  }
+
+.Polaris-SkeletonDisplayText--sizeSmall_7647q{
+  --pc-skeleton-display-text-height:var(--p-font-line-height-600);
+  --pc-skeleton-display-text-height-not-condensed:var(
+    --p-font-line-height-700
+  );
+}
+
+.Polaris-SkeletonDisplayText--sizeMedium_5f35p{
+  --pc-skeleton-display-text-height:var(--p-font-line-height-700);
+  --pc-skeleton-display-text-height-not-condensed:var(
+    --p-font-line-height-800
+  );
+}
+
+.Polaris-SkeletonDisplayText--sizeLarge_61dxo{
+  --pc-skeleton-display-text-height:var(--p-font-line-height-700);
+  --pc-skeleton-display-text-height-not-condensed:var(
+    --p-font-line-height-800
+  );
+}
+
+.Polaris-SkeletonDisplayText--sizeExtraLarge_1akox{
+  --pc-skeleton-display-text-height:2.25rem;
+  --pc-skeleton-display-text-height-not-condensed:2.75rem;
+}

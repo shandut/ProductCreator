@@ -1,0 +1,409 @@
+{
+  "Polaris": {
+    "Avatar": {
+      "label": "Avatar",
+      "labelWithInitials": "Avatar con iniziali {initials}"
+    },
+    "Autocomplete": {
+      "spinnerAccessibilityLabel": "Caricamento in corso",
+      "ellipsis": "{content}…"
+    },
+    "Badge": {
+      "PROGRESS_LABELS": {
+        "incomplete": "Incompleto",
+        "partiallyComplete": "Parzialmente completo",
+        "complete": "Completo"
+      },
+      "TONE_LABELS": {
+        "info": "Info",
+        "success": "Operazione riuscita",
+        "warning": "Avvertimento",
+        "attention": "Attenzione",
+        "new": "Novità",
+        "critical": "Critico",
+        "readOnly": "Sola lettura",
+        "enabled": "Abilitato"
+      },
+      "progressAndTone": "{toneLabel} {progressLabel}"
+    },
+    "Banner": {
+      "dismissButton": "Elimina notifica"
+    },
+    "Button": {
+      "spinnerAccessibilityLabel": "Caricamento in corso"
+    },
+    "Common": {
+      "checkbox": "casella di spunta",
+      "undo": "Annulla",
+      "cancel": "Annulla",
+      "clear": "Rimuovi",
+      "close": "Chiudi",
+      "submit": "Invia",
+      "more": "Altro"
+    },
+    "ContextualSaveBar": {
+      "save": "Salva",
+      "discard": "Rimuovi"
+    },
+    "DataTable": {
+      "sortAccessibilityLabel": "ordina {direction} per",
+      "navAccessibilityLabel": "Scorri la tabella {direction} di una colonna",
+      "totalsRowHeading": "Totali",
+      "totalRowHeading": "Totale"
+    },
+    "DatePicker": {
+      "previousMonth": "Mostra il mese precedente, {previousMonthName} {showPreviousYear}",
+      "nextMonth": "Mostra il mese successivo, {nextMonth} {nextYear}",
+      "today": "Oggi ",
+      "months": {
+        "january": "Gennaio",
+        "february": "Febbraio",
+        "march": "Marzo",
+        "april": "Aprile",
+        "may": "Maggio",
+        "june": "Giugno",
+        "july": "Luglio",
+        "august": "Agosto",
+        "september": "Settembre",
+        "october": "Ottobre",
+        "november": "Novembre",
+        "december": "Dicembre"
+      },
+      "daysAbbreviated": {
+        "monday": "Lun",
+        "tuesday": "Mar",
+        "wednesday": "Mer",
+        "thursday": "Gio",
+        "friday": "Ven",
+        "saturday": "Sab",
+        "sunday": "Dom"
+      },
+      "days": {
+        "monday": "lunedì",
+        "tuesday": "martedì",
+        "wednesday": "mercoledì",
+        "thursday": "giovedì",
+        "friday": "venerdì",
+        "saturday": "sabato",
+        "sunday": "domenica"
+      },
+      "start": "Inizio intervallo",
+      "end": "Fine intervallo"
+    },
+    "DiscardConfirmationModal": {
+      "title": "Rimuovi tutte le modifiche non salvate",
+      "message": "Rimuovendo le modifiche, eliminerai tutte quelle apportate dopo l'ultimo salvataggio.",
+      "primaryAction": "Rimuovi modifiche",
+      "secondaryAction": "Continua a modificare"
+    },
+    "DropZone": {
+      "errorOverlayTextFile": "Il tipo di file non è valido",
+      "errorOverlayTextImage": "Il tipo di immagine non è valido",
+      "single": {
+        "overlayTextFile": "Rilascia il file per caricarlo",
+        "overlayTextImage": "Rilascia l'immagine per caricarla",
+        "actionTitleFile": "Aggiungi file",
+        "actionTitleImage": "Aggiungi immagine",
+        "actionHintFile": "o rilascia il file per caricarlo",
+        "actionHintImage": "o rilascia l'immagine per caricarla",
+        "labelFile": "Carica file",
+        "labelImage": "Carica immagine",
+        "overlayTextVideo": "Rilascia il video per caricarlo",
+        "actionTitleVideo": "Aggiungi video",
+        "actionHintVideo": "o rilascia il video per caricarlo",
+        "labelVideo": "Carica video"
+      },
+      "allowMultiple": {
+        "overlayTextFile": "Rilascia i file per caricarli",
+        "overlayTextImage": "Rilascia le immagini per caricarle",
+        "actionTitleFile": "Aggiungi file",
+        "actionTitleImage": "Aggiungi immagini",
+        "actionHintFile": "o rilascia i file per caricarli",
+        "actionHintImage": "o rilascia le immagini per caricarle",
+        "labelFile": "Carica file",
+        "labelImage": "Carica immagini",
+        "overlayTextVideo": "Rilascia i video per caricarli",
+        "actionTitleVideo": "aggiungi video",
+        "actionHintVideo": "o rilascia i video per caricarli",
+        "labelVideo": "Carica video"
+      },
+      "errorOverlayTextVideo": "Il tipo di video non è valido"
+    },
+    "EmptySearchResult": {
+      "altText": "Risultati di ricerca assenti"
+    },
+    "Frame": {
+      "skipToContent": "Vai direttamente al contenuto",
+      "Navigation": {
+        "closeMobileNavigationLabel": "Chiudi la navigazione"
+      },
+      "navigationLabel": "Navigazione"
+    },
+    "ActionMenu": {
+      "RollupActions": {
+        "rollupButton": "Visualizza azioni"
+      },
+      "Actions": {
+        "moreActions": "Altre azioni"
+      }
+    },
+    "Filters": {
+      "moreFilters": "Più filtri",
+      "filter": "Filtra {resourceName}",
+      "noFiltersApplied": "Nessun filtro applicato",
+      "cancel": "Annulla",
+      "done": "Fatto",
+      "clearAllFilters": "Rimuovi tutti i filtri",
+      "clear": "Rimuovi",
+      "clearLabel": "Rimuovi {filterName}",
+      "moreFiltersWithCount": "Altri filtri ({count})",
+      "addFilter": "Aggiungi filtro",
+      "clearFilters": "Cancella tutto",
+      "searchInView": "in:{viewName}"
+    },
+    "Modal": {
+      "iFrameTitle": "markup del testo",
+      "modalWarning": "Le seguenti proprietà necessarie mancano da Modal: {missingProps}"
+    },
+    "Pagination": {
+      "previous": "Indietro",
+      "next": "Avanti",
+      "pagination": "Impaginazione"
+    },
+    "ProgressBar": {
+      "negativeWarningMessage": "I valori passati alle proprietà di progresso non devono essere negativi. Ripristino di {progress} su 0.",
+      "exceedWarningMessage": "I valori passati alle proprietà di progresso non devono essere superiori a 100. Impostazione di {progress} su 100."
+    },
+    "ResourceList": {
+      "sortingLabel": "Ordina per",
+      "defaultItemSingular": "articolo",
+      "defaultItemPlural": "articoli",
+      "showing": "Visualizzazione di {itemsCount} {resource}",
+      "loading": "Caricamento {resource}",
+      "selected": "{selectedItemsCount} selezionati",
+      "allItemsSelected": "Tutti i {itemsLength}+ {resourceNamePlural} nel tuo negozio sono selezionati",
+      "selectAllItems": "Seleziona tutti i {itemsLength}+ {resourceNamePlural} nel tuo negozio",
+      "emptySearchResultTitle": "Impossibile trovare {resourceNamePlural}",
+      "emptySearchResultDescription": "Prova a cambiare i filtri o il termine di ricerca",
+      "selectButtonText": "Seleziona",
+      "a11yCheckboxDeselectAllSingle": "Deseleziona {resourceNameSingular}",
+      "a11yCheckboxSelectAllSingle": "Seleziona {resourceNameSingular}",
+      "a11yCheckboxDeselectAllMultiple": "Deseleziona tutto: {itemsLength} {resourceNamePlural}",
+      "a11yCheckboxSelectAllMultiple": "Seleziona tutto: {itemsLength} {resourceNamePlural}",
+      "Item": {
+        "actionsDropdownLabel": "Azioni per {accessibilityLabel}",
+        "actionsDropdown": "Menu a discesa azioni",
+        "viewItem": "Visualizza dettagli di {itemName}"
+      },
+      "BulkActions": {
+        "actionsActivatorLabel": "Azioni",
+        "moreActionsActivatorLabel": "Altre azioni"
+      },
+      "showingTotalCount": "Visualizzazione di {itemsCount} su {totalItemsCount} {resource}",
+      "allFilteredItemsSelected": "Tutti i {itemsLength}+ {resourceNamePlural} in questo filtro sono selezionati",
+      "selectAllFilteredItems": "Seleziona tutti i {resourceNamePlural} {itemsLength}+ in questo filtro"
+    },
+    "SkeletonPage": {
+      "loadingLabel": "Caricamento della pagina"
+    },
+    "Tabs": {
+      "toggleTabsLabel": "Altre visualizzazioni",
+      "newViewAccessibilityLabel": "Crea nuova vista",
+      "newViewTooltip": "Crea vista",
+      "Tab": {
+        "rename": "Rinomina vista",
+        "duplicate": "Duplica vista",
+        "edit": "Modifica vista",
+        "editColumns": "Modifica colonne",
+        "delete": "Elimina vista",
+        "copy": "Copia di {name}",
+        "deleteModal": {
+          "title": "Eliminare la vista?",
+          "description": "L'operazione non può essere annullata. La vista {viewName} non sarà più disponibile nel pannello di controllo.",
+          "cancel": "Annulla",
+          "delete": "Elimina vista"
+        }
+      },
+      "RenameModal": {
+        "title": "Rinomina vista",
+        "label": "Nome",
+        "cancel": "Annulla",
+        "create": "Salva",
+        "errors": {
+          "sameName": "Esiste già una vista con questo nome. Scegli un nome diverso."
+        }
+      },
+      "DuplicateModal": {
+        "title": "Duplica vista",
+        "label": "Nome",
+        "cancel": "Annulla",
+        "create": "Crea vista",
+        "errors": {
+          "sameName": "Esiste già una vista con questo nome. Scegli un nome diverso."
+        }
+      },
+      "CreateViewModal": {
+        "title": "Crea nuova vista",
+        "label": "Nome",
+        "cancel": "Annulla",
+        "create": "Crea vista",
+        "errors": {
+          "sameName": "Esiste già una vista con questo nome. Scegli un nome diverso."
+        }
+      }
+    },
+    "Tag": {
+      "ariaLabel": "Rimuovi {children}"
+    },
+    "TextField": {
+      "characterCount": "{count} caratteri",
+      "characterCountWithMaxLength": "{count} caratteri utilizzati su {limit}"
+    },
+    "TopBar": {
+      "toggleMenuLabel": "Apri/chiudi menu",
+      "SearchField": {
+        "clearButtonLabel": "Rimuovi",
+        "search": "Cerca"
+      }
+    },
+    "MediaCard": {
+      "popoverButton": "Azioni",
+      "dismissButton": "Ignora"
+    },
+    "VideoThumbnail": {
+      "playButtonA11yLabel": {
+        "default": "Riproduci video",
+        "defaultWithDuration": "Riproduci video della lunghezza di {duration}",
+        "duration": {
+          "hours": {
+            "other": {
+              "only": "{hourCount} ore",
+              "andMinutes": "{hourCount} ore e {minuteCount} minuti",
+              "andMinute": "{hourCount} ore e {minuteCount} minuto",
+              "minutesAndSeconds": "{hourCount} ore, {minuteCount} minuti e {secondCount} secondi",
+              "minutesAndSecond": "{hourCount} ore, {minuteCount} minuti e {secondCount} secondo",
+              "minuteAndSeconds": "{hourCount} ore, {minuteCount} minuto e {secondCount} secondi",
+              "minuteAndSecond": "{hourCount} ore, {minuteCount} minuto e {secondCount} secondo",
+              "andSeconds": "{hourCount} ore e {secondCount} secondi",
+              "andSecond": "{hourCount} ore e {secondCount} secondo"
+            },
+            "one": {
+              "only": "{hourCount} ora",
+              "andMinutes": "{hourCount} ora e {minuteCount} minuti",
+              "andMinute": "{hourCount} ora e {minuteCount} minuto",
+              "minutesAndSeconds": "{hourCount} ora, {minuteCount} minuti e {secondCount} secondi",
+              "minutesAndSecond": "{hourCount} ora, {minuteCount} minuti e {secondCount} secondo",
+              "minuteAndSeconds": "{hourCount} ora, {minuteCount} minuto e {secondCount} secondi",
+              "minuteAndSecond": "{hourCount} ora, {minuteCount} minuto e {secondCount} secondo",
+              "andSeconds": "{hourCount} ora e {secondCount} secondi",
+              "andSecond": "{hourCount} ora e {secondCount} secondo"
+            }
+          },
+          "minutes": {
+            "other": {
+              "only": "{minuteCount} minuti",
+              "andSeconds": "{minuteCount} minuti e {secondCount} secondi",
+              "andSecond": "{minuteCount} minuti e {secondCount} secondo"
+            },
+            "one": {
+              "only": "{minuteCount} minuto",
+              "andSeconds": "{minuteCount} minuto e {secondCount} secondi",
+              "andSecond": "{minuteCount} minuto e {secondCount} secondo"
+            }
+          },
+          "seconds": {
+            "other": "{secondCount} secondi",
+            "one": "{secondCount} secondo",
+            "many": "{secondCount} secondi"
+          }
+        }
+      }
+    },
+    "Loading": {
+      "label": "Barra di caricamento della pagina"
+    },
+    "TooltipOverlay": {
+      "accessibilityLabel": "Suggerimento: {label}"
+    },
+    "IndexProvider": {
+      "defaultItemSingular": "Articolo",
+      "defaultItemPlural": "Articoli",
+      "allItemsSelected": "Tutti i {itemsLength}+ {resourceNamePlural} sono selezionati",
+      "selected": "{selectedItemsCount} selezionati",
+      "a11yCheckboxDeselectAllSingle": "Deseleziona {resourceNameSingular}",
+      "a11yCheckboxSelectAllSingle": "Seleziona {resourceNameSingular}",
+      "a11yCheckboxDeselectAllMultiple": "Deseleziona tutto: {itemsLength} {resourceNamePlural}",
+      "a11yCheckboxSelectAllMultiple": "Seleziona tutto: {itemsLength} {resourceNamePlural}"
+    },
+    "IndexTable": {
+      "emptySearchTitle": "Impossibile trovare {resourceNamePlural}",
+      "emptySearchDescription": "Prova a cambiare i filtri o il termine di ricerca",
+      "onboardingBadgeText": "Novità",
+      "resourceLoadingAccessibilityLabel": "Caricamento {resourceNamePlural} in corso",
+      "selectAllLabel": "Seleziona tutto: {resourceNamePlural}",
+      "selected": "{selectedItemsCount} selezionati",
+      "undo": "Annulla",
+      "selectAllItems": "Seleziona tutti i {itemsLength}+ {resourceNamePlural}",
+      "selectItem": "Seleziona {resourceName}",
+      "selectButtonText": "Seleziona",
+      "sortAccessibilityLabel": "ordina {direction} per"
+    },
+    "Page": {
+      "Header": {
+        "rollupActionsLabel": "Visualizza azioni per {title}",
+        "pageReadyAccessibilityLabel": "{title}. Questa pagina è pronta"
+      }
+    },
+    "FullscreenBar": {
+      "back": "Indietro",
+      "accessibilityLabel": "Esci dalla modalità schermo intero"
+    },
+    "FilterPill": {
+      "clear": "Cancella",
+      "unsavedChanges": "Modifiche non salvate - {label}"
+    },
+    "IndexFilters": {
+      "searchFilterTooltip": "Cerca e filtra",
+      "searchFilterTooltipWithShortcut": "Cerca e filtra (F)",
+      "searchFilterAccessibilityLabel": "Cerca e filtra risultati",
+      "sort": "Ordina i risultati",
+      "addView": "Aggiungi nuova vista",
+      "newView": "Ricerca personalizzata",
+      "SortButton": {
+        "ariaLabel": "Ordina i risultati",
+        "tooltip": "Ordina",
+        "title": "Ordina per",
+        "sorting": {
+          "asc": "Crescente",
+          "desc": "Decrescente",
+          "az": "A-Z",
+          "za": "Z-A"
+        }
+      },
+      "UpdateButtons": {
+        "cancel": "Annulla",
+        "update": "Aggiorna",
+        "save": "Salva",
+        "saveAs": "Salva con nome",
+        "modal": {
+          "title": "Salva vista come",
+          "label": "Nome",
+          "sameName": "Esiste già una vista con questo nome. Scegli un nome diverso.",
+          "save": "Salva",
+          "cancel": "Annulla"
+        }
+      },
+      "EditColumnsButton": {
+        "tooltip": "Modifica colonne",
+        "accessibilityLabel": "Personalizza l'ordine e la visibilità delle colonne della tabella"
+      }
+    },
+    "ActionList": {
+      "SearchField": {
+        "clearButtonLabel": "Cancella",
+        "search": "Cerca",
+        "placeholder": "Cerca azioni"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+import './Scrollable.out.css';
+
+var styles = {
+  "Scrollable": "Polaris-Scrollable_1ed9o",
+  "hasTopShadow": "Polaris-Scrollable--hasTopShadow_cgwp0",
+  "hasBottomShadow": "Polaris-Scrollable--hasBottomShadow_all2n",
+  "horizontal": "Polaris-Scrollable--horizontal_17qq4",
+  "vertical": "Polaris-Scrollable--vertical_uiuuj",
+  "scrollbarWidthThin": "Polaris-Scrollable--scrollbarWidthThin_b8ha9",
+  "scrollbarWidthNone": "Polaris-Scrollable--scrollbarWidthNone_1c7l0",
+  "scrollbarWidthAuto": "Polaris-Scrollable--scrollbarWidthAuto_1momw",
+  "scrollbarGutterStable": "Polaris-Scrollable--scrollbarGutterStable_17mam",
+  "scrollbarGutterStableboth-edges": "Polaris-Scrollable__scrollbarGutterStableboth--edges_133rp"
+};
+
+export { styles as default };

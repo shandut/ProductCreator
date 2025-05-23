@@ -1,0 +1,7 @@
+import './ShadowBevel.out.css';
+
+var styles = {
+  "ShadowBevel": "Polaris-ShadowBevel_1hoxq"
+};
+
+export { styles as default };

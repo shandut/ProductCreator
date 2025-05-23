@@ -1,0 +1,27 @@
+.Polaris-Modal__Body_yjdx1,
+.Polaris-Modal__NoScrollBody_1cosb{
+  flex-grow:1;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Modal__Body_yjdx1,
+.Polaris-Modal__NoScrollBody_1cosb{
+    flex-grow:unset;
+}
+  }
+
+.Polaris-Modal__IFrame_j9n24{
+  --pc-modal-frame-small-width:38.75rem;
+  display:block;
+  width:var(--pc-modal-frame-small-width);
+  max-width:100vw;
+  border:none;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Modal__IFrame_j9n24{
+    max-width:var(--pc-modal-frame-small-width);
+}
+  }

@@ -1,0 +1,175 @@
+.Polaris-OptionList-Option_r96cc{
+  -webkit-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  color:inherit;
+  cursor:pointer;
+  width:100%;
+  min-height:var(--pg-control-height);
+  text-align:left;
+  text-decoration:none;
+  border-radius:var(--p-border-radius-100);
+  margin-top:var(--p-space-100);
+  color:inherit;
+}
+
+.Polaris-OptionList-Option_r96cc:focus{
+    outline:none;
+  }
+
+.Polaris-OptionList-Option_r96cc:visited{
+    color:inherit;
+  }
+
+.Polaris-OptionList-Option_r96cc:first-child{
+    margin-top:0;
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z{
+  -webkit-appearance:none;
+          appearance:none;
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  font-size:inherit;
+  line-height:inherit;
+  color:inherit;
+  cursor:pointer;
+  text-align:left;
+
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+}
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z:focus{
+    outline:none;
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--focused_17w4h:focus-visible:not(:active){
+    outline:var(--p-border-width-050) solid var(--p-color-border-focus);
+    outline-offset:var(--p-space-025);
+    background-color:var(--p-color-bg-surface-secondary-hover);
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--active_jeq8y{
+    background:var(--p-color-bg-surface-secondary-selected);
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z:not(.Polaris-OptionList-Option--disabled_hcuh9){
+    color:inherit;
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--select_ss8pl,
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--select_ss8pl:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--active_jeq8y{
+    font-weight:var(--p-font-weight-semibold);
+    background:var(--p-color-bg-surface-secondary-active);
+  }
+
+.Polaris-OptionList-Option__SingleSelectOption_gki7z .Polaris-OptionList-Option__Media_2t8qq{
+    padding:0 var(--p-space-200) 0 0;
+  }
+
+.Polaris-OptionList-Option__Label_2vd36,
+.Polaris-OptionList-Option__SingleSelectOption_gki7z,
+.Polaris-OptionList-Option__MultiSelectOption_1xb85{
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+  cursor:pointer;
+  border-radius:var(--p-border-radius-200);
+  padding:var(--p-space-150);
+  word-wrap:break-word;
+  word-break:break-word;
+  overflow-wrap:break-word;
+}
+
+.Polaris-OptionList-Option__Label_2vd36:hover:not(.Polaris-OptionList-Option--disabled_hcuh9), .Polaris-OptionList-Option__SingleSelectOption_gki7z:hover:not(.Polaris-OptionList-Option--disabled_hcuh9), .Polaris-OptionList-Option__MultiSelectOption_1xb85:hover:not(.Polaris-OptionList-Option--disabled_hcuh9){
+    background-color:var(--p-color-bg-surface-secondary-hover);
+  }
+
+.Polaris-OptionList-Option__Label_2vd36:active:not(.Polaris-OptionList-Option--disabled_hcuh9), .Polaris-OptionList-Option__SingleSelectOption_gki7z:active:not(.Polaris-OptionList-Option--disabled_hcuh9), .Polaris-OptionList-Option__MultiSelectOption_1xb85:active:not(.Polaris-OptionList-Option--disabled_hcuh9){
+    background:var(--p-color-bg-surface-secondary-active);
+  }
+
+.Polaris-OptionList-Option__Label_2vd36:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__MultiSelectOption_1xb85:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__Label_2vd36:active:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z:active:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__MultiSelectOption_1xb85:active:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__Label_2vd36.Polaris-OptionList-Option--select_ss8pl,
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--select_ss8pl,
+  .Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--select_ss8pl,
+  .Polaris-OptionList-Option__Label_2vd36.Polaris-OptionList-Option--select_ss8pl:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--select_ss8pl:hover:not(.Polaris-OptionList-Option--disabled_hcuh9),
+  .Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--select_ss8pl:hover:not(.Polaris-OptionList-Option--disabled_hcuh9){
+    outline:var(--p-border-width-025) solid transparent;
+  }
+
+.Polaris-OptionList-Option__Label_2vd36 .Polaris-OptionList-Option__Media_2t8qq, .Polaris-OptionList-Option__SingleSelectOption_gki7z .Polaris-OptionList-Option__Media_2t8qq, .Polaris-OptionList-Option__MultiSelectOption_1xb85 .Polaris-OptionList-Option__Media_2t8qq{
+    padding:0 var(--p-space-200) 0 0;
+  }
+
+.Polaris-OptionList-Option__Label_2vd36.Polaris-OptionList-Option--disabled_hcuh9, .Polaris-OptionList-Option__SingleSelectOption_gki7z.Polaris-OptionList-Option--disabled_hcuh9, .Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--disabled_hcuh9{
+    background:transparent;
+    cursor:default;
+    color:var(--p-color-text-disabled);
+  }
+
+.Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--select_ss8pl.Polaris-OptionList-Option__CheckboxLabel_13dcr{
+      background-color:transparent;
+    }
+
+.Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--select_ss8pl svg{
+      fill:var(--p-color-icon-active);
+    }
+
+.Polaris-OptionList-Option__MultiSelectOption_1xb85.Polaris-OptionList-Option--select_ss8pl:hover:not(.Polaris-OptionList-Option--disabled_hcuh9){
+    background-color:var(--p-color-bg-surface-secondary-hover);
+  }
+
+.Polaris-OptionList-Option--disabled_hcuh9 .Polaris-OptionList-Option__Media_2t8qq svg{
+  fill:var(--p-color-icon-disabled);
+}
+
+.Polaris-OptionList-Option__Media_2t8qq svg{
+  fill:var(--p-color-icon);
+}
+
+.Polaris-OptionList-Option--verticalAlignTop_ckp14{
+  align-items:flex-start;
+}
+
+.Polaris-OptionList-Option--verticalAlignCenter_1962m{
+  align-items:center;
+}
+
+.Polaris-OptionList-Option--verticalAlignBottom_1vhxo{
+  align-items:flex-end;
+}
+
+.Polaris-OptionList-Option__Icon_yj27d{
+  margin-left:var(--p-space-200);
+}
+
+.Polaris-OptionList-Option__Icon_yj27d svg{
+    fill:var(--p-color-icon-brand);
+  }
+
+.Polaris-OptionList-Option__Checkbox_1d6zr{
+  box-sizing:border-box;
+  display:flex;
+  flex-shrink:0;
+  width:1.25rem;
+  height:1.25rem;
+  margin-right:var(--p-space-200);
+  align-items:center;
+}

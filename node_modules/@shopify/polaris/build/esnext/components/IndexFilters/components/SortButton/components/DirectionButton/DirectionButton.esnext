@@ -1,0 +1,33 @@
+import React from 'react';
+import { ArrowUpIcon, ArrowDownIcon } from '@shopify/polaris-icons';
+import { classNames } from '../../../../../../utilities/css.esnext';
+import styles from './DirectionButton.css.esnext';
+import { UnstyledButton } from '../../../../../UnstyledButton/UnstyledButton.esnext';
+import { Icon } from '../../../../../Icon/Icon.esnext';
+import { Text } from '../../../../../Text/Text.esnext';
+
+function DirectionButton({
+  onClick,
+  active,
+  children,
+  direction,
+  value
+}) {
+  const classes = classNames(styles.DirectionButton, active && styles['DirectionButton-active']);
+  function handleClick() {
+    onClick([value]);
+  }
+  return /*#__PURE__*/React.createElement(UnstyledButton, {
+    className: classes,
+    onClick: handleClick
+  }, /*#__PURE__*/React.createElement(Icon, {
+    source: direction === 'asc' ? ArrowUpIcon : ArrowDownIcon,
+    tone: "base"
+  }), /*#__PURE__*/React.createElement(Text, {
+    as: "span",
+    variant: "bodySm",
+    fontWeight: "medium"
+  }, children));
+}
+
+export { DirectionButton };

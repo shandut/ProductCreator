@@ -1,0 +1,15 @@
+import './VideoThumbnail.out.css';
+
+var styles = {
+  "Thumbnail": "Polaris-VideoThumbnail__Thumbnail_15hj1",
+  "ThumbnailContainer": "Polaris-VideoThumbnail__ThumbnailContainer_gq5vb",
+  "PlayButton": "Polaris-VideoThumbnail__PlayButton_1336l",
+  "Timestamp": "Polaris-VideoThumbnail__Timestamp_1tkqb",
+  "PlayIcon": "Polaris-VideoThumbnail__PlayIcon_1moni",
+  "Progress": "Polaris-VideoThumbnail__Progress_ixe53",
+  "Indicator": "Polaris-VideoThumbnail__Indicator_dw7mr",
+  "ProgressBar": "Polaris-VideoThumbnail__ProgressBar_17609",
+  "Label": "Polaris-VideoThumbnail__Label_2vd36"
+};
+
+export { styles as default };

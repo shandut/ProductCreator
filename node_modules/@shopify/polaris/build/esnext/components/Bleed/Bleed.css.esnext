@@ -1,0 +1,7 @@
+import './Bleed.out.css';
+
+var styles = {
+  "Bleed": "Polaris-Bleed_2ppoe"
+};
+
+export { styles as default };

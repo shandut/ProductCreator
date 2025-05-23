@@ -1,0 +1,11 @@
+.Polaris-Modal-Section_1b1h1{
+  flex:0 0 auto;
+}
+
+.Polaris-Modal-Section_1b1h1:not(:last-of-type){
+    border-bottom:var(--p-border-width-025) solid var(--p-color-border-secondary);
+  }
+
+.Polaris-Modal-Section--titleHidden_14zrw{
+  padding-right:calc(var(--p-space-1200) + var(--p-space-100) + var(--p-space-100));
+}

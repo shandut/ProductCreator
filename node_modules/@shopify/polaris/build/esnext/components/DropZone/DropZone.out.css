@@ -1,0 +1,153 @@
+.Polaris-DropZone_1ehhx{
+  --pc-drop-zone-outline:29;
+  --pc-drop-zone-overlay:30;
+  --pc-drop-zone-border-style:dashed;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  background-color:var(--p-color-input-bg-surface);
+  border-radius:var(--p-border-radius-200);
+}
+
+.Polaris-DropZone_1ehhx::after{
+    content:'';
+    position:absolute;
+    z-index:var(--pc-drop-zone-outline);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    border:var(--p-border-width-0165) var(--pc-drop-zone-border-style) transparent;
+    border-radius:var(--p-border-radius-200);
+    pointer-events:none;
+  }
+
+.Polaris-DropZone_1ehhx:not(.Polaris-DropZone--focused_17w4h)::after{
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      opacity:1;
+      transform:scale(1);
+      border:var(--p-border-width-025) var(--pc-drop-zone-border-style) transparent;
+    }
+
+.Polaris-DropZone_1ehhx:hover{
+    outline:var(--p-border-width-025) solid transparent;
+  }
+
+.Polaris-DropZone_1ehhx.Polaris-DropZone--noOutline_1jyo9{
+    background-color:transparent;
+  }
+
+.Polaris-DropZone--hasOutline_1z0fh{
+  padding:var(--p-space-025);
+}
+
+.Polaris-DropZone--hasOutline_1z0fh:not(.Polaris-DropZone--isDisabled_7e21n)::after{
+      border-width:var(--p-border-width-0165);
+      border-color:var(--p-color-input-border);
+    }
+
+.Polaris-DropZone--hasOutline_1z0fh:not(.Polaris-DropZone--isDisabled_7e21n):hover{
+      cursor:pointer;
+      background-color:var(--p-color-input-bg-surface-hover);
+    }
+
+.Polaris-DropZone--hasOutline_1z0fh:not(.Polaris-DropZone--isDisabled_7e21n):hover::after{
+        border-color:var(--p-color-input-border-hover);
+      }
+
+.Polaris-DropZone--isDragging_yvz0y:not(.Polaris-DropZone--isDisabled_7e21n){
+    background-color:var(--p-color-bg-surface-hover);
+  }
+
+.Polaris-DropZone--isDisabled_7e21n{
+  cursor:not-allowed;
+  background-color:var(--p-color-bg-surface-disabled);
+  color:var(--p-color-text-disabled);
+}
+
+.Polaris-DropZone--isDisabled_7e21n::after{
+    border-color:var(--p-color-border-disabled);
+  }
+
+.Polaris-DropZone--sizeLarge_61dxo{
+  min-height:7.5rem;
+}
+
+.Polaris-DropZone--sizeMedium_5f35p{
+  min-height:6.25rem;
+  align-items:center;
+}
+
+.Polaris-DropZone--sizeSmall_7647q{
+  padding:0;
+  align-items:center;
+  min-height:2.5rem;
+}
+
+.Polaris-DropZone--sizeSmall_7647q::before{
+    content:'';
+    padding-top:100%;
+  }
+
+.Polaris-DropZone--measuring_wb2tw{
+  visibility:hidden;
+  min-height:0;
+}
+
+.Polaris-DropZone__Container_13mbo{
+  position: relative;
+  flex:1 1;
+}
+
+.Polaris-DropZone__Container_13mbo::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  right: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  bottom: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  left: calc(var(--p-border-width-025)*-1 + -0.0625rem);
+  display: block;
+  pointer-events: none;
+  box-shadow: 0 0 0 calc(var(--p-border-width-025)*-1 + -0.0625rem) var(--p-color-border-focus);
+  border-radius: var(--p-border-radius-200);
+}
+
+.Polaris-DropZone__Overlay_ib7rj{
+  position:absolute;
+  border-radius:var(--p-border-radius-200);
+  z-index:var(--pc-drop-zone-overlay);
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:var(--p-space-400);
+  border:var(--p-border-width-025) solid var(--p-color-input-border-active);
+  text-align:center;
+  color:var(--p-color-text);
+  background-color:var(--p-color-input-bg-surface-active);
+  pointer-events:none;
+}
+
+.Polaris-DropZone--sizeSmall_7647q .Polaris-DropZone__Overlay_ib7rj{
+    padding:0;
+  }
+
+.Polaris-DropZone--hasError_7q9ec > .Polaris-DropZone__Overlay_ib7rj{
+  border-color:var(--p-color-border-critical-secondary);
+  color:var(--p-color-text-critical);
+  border-style:var(--pc-drop-zone-border-style);
+  border-width:var(--p-border-width-0165);
+  background-color:var(--p-color-bg-surface-critical);
+}
+
+.Polaris-DropZone--focused_17w4h:not(.Polaris-DropZone--isDisabled_7e21n) .Polaris-DropZone__Container_13mbo::after {
+  box-shadow: 0 0 0 0.125rem var(--p-color-border-focus);
+  outline: var(--p-border-width-025) solid transparent;
+}

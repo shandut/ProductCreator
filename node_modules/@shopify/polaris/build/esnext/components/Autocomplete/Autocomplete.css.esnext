@@ -1,0 +1,8 @@
+import './Autocomplete.out.css';
+
+var styles = {
+  "Loading": "Polaris-Autocomplete__Loading_1brcv",
+  "SectionWrapper": "Polaris-Autocomplete__SectionWrapper_1b5l1"
+};
+
+export { styles as default };

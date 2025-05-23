@@ -1,0 +1,1 @@
+{"version":3,"file":"KeyboardKey.d.ts","sourceRoot":"","sources":["../../../../../src/components/KeyboardKey/KeyboardKey.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAM1B,KAAK,IAAI,GAAG,OAAO,CAAC;AAEpB,MAAM,WAAW,gBAAgB;IAC/B,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,IAAI,CAAC,EAAE,IAAI,CAAC;CACb;AACD,wBAAgB,WAAW,CAAC,EAAC,QAAa,EAAE,IAAI,EAAC,EAAE,gBAAgB,qBASlE"}

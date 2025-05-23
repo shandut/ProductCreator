@@ -1,0 +1,32 @@
+.Polaris-Collapsible_1dqql{
+  padding-top:0;
+  padding-bottom:0;
+  max-height:0;
+  overflow:hidden;
+  transition-property:max-height;
+  transition-duration:var(--p-motion-duration-100);
+  transition-timing-function:var(--p-motion-ease-out);
+}
+
+.Polaris-Collapsible--isFullyClosed_dljrt{
+  display:none;
+}
+
+@media print{
+
+.Polaris-Collapsible--expandOnPrint_1fkoz{
+    max-height:none !important;
+    max-width:none !important;
+    overflow:visible;
+    display:block;
+}
+  }
+
+.Polaris-Collapsible--inline_j8r4u{
+  max-height:none;
+  transition-property:max-width;
+}
+
+.Polaris-Collapsible--inline_j8r4u.Polaris-Collapsible--animateIn_11pzo{
+    max-width:0;
+  }

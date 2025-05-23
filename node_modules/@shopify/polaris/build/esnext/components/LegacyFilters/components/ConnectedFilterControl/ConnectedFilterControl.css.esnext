@@ -1,0 +1,19 @@
+import './ConnectedFilterControl.out.css';
+
+var styles = {
+  "ConnectedFilterControl": "Polaris-LegacyFilters-ConnectedFilterControl_32yio",
+  "CenterContainer": "Polaris-LegacyFilters-ConnectedFilterControl__CenterContainer_kh80i",
+  "right": "Polaris-LegacyFilters-ConnectedFilterControl--right_312wf",
+  "Item": "Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol",
+  "Item-focused": "Polaris-LegacyFilters-ConnectedFilterControl__Item--focused_1iwi4",
+  "ProxyButtonContainer": "Polaris-LegacyFilters-ConnectedFilterControl__ProxyButtonContainer_1ydjk",
+  "RightContainer": "Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5",
+  "MoreFiltersButtonContainer": "Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r",
+  "queryFieldHidden": "Polaris-LegacyFilters-ConnectedFilterControl--queryFieldHidden_12t4z",
+  "RightContainerWithoutMoreFilters": "Polaris-LegacyFilters-ConnectedFilterControl__RightContainerWithoutMoreFilters_iv9ld",
+  "onlyButtonVisible": "Polaris-LegacyFilters-ConnectedFilterControl--onlyButtonVisible_guncc",
+  "Wrapper": "Polaris-LegacyFilters-ConnectedFilterControl__Wrapper_mkrm3",
+  "AuxiliaryContainer": "Polaris-LegacyFilters-ConnectedFilterControl__AuxiliaryContainer_20w7m"
+};
+
+export { styles as default };

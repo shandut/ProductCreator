@@ -1,0 +1,282 @@
+.Polaris-LegacyCard_l5l93{
+  background-color:var(--p-color-bg-surface);
+  box-shadow:var(--p-shadow-300);
+  outline:var(--p-border-width-025) solid transparent;
+  overflow:clip;
+
+  position: relative;
+
+  box-shadow: var(--p-shadow-100);
+
+  border-radius: var(--p-border-radius-0);
+}
+
+.Polaris-LegacyCard_l5l93::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  box-shadow: var(--p-shadow-bevel-100);
+  border-radius: var(--p-border-radius-0);
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}
+
+.Polaris-LegacyCard_l5l93 + .Polaris-LegacyCard_l5l93{
+    margin-top:var(--p-space-400);
+  }
+
+@media print{
+
+.Polaris-LegacyCard_l5l93 + .Polaris-LegacyCard_l5l93{
+      margin-top:calc(var(--p-space-200)*-1);
+  }
+    }
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard_l5l93{
+    border-radius:var(--p-border-radius-200);
+
+    position: relative;
+
+    box-shadow: var(--p-shadow-100);
+
+    border-radius: var(--p-border-radius-300);
+}
+
+    .Polaris-LegacyCard_l5l93::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    box-shadow: var(--p-shadow-bevel-100);
+    border-radius: var(--p-border-radius-300);
+    pointer-events: none;
+    mix-blend-mode: luminosity;
+  }
+
+    .Polaris-LegacyCard_l5l93 .Polaris-LegacyCard__Section_1b1h1:first-child{
+      border-top-left-radius:var(--p-border-radius-300);
+      border-top-right-radius:var(--p-border-radius-300);
+    }
+
+    .Polaris-LegacyCard_l5l93 .Polaris-LegacyCard__Section_1b1h1:last-child{
+      border-bottom-left-radius:var(--p-border-radius-300);
+      border-bottom-right-radius:var(--p-border-radius-300);
+    }
+  }
+
+@media print{
+
+.Polaris-LegacyCard_l5l93{
+    box-shadow:none;
+
+    position: relative;
+
+    box-shadow: none;
+
+    border-radius: var(--p-border-radius-0);
+
+    border: none;
+}
+
+    .Polaris-LegacyCard_l5l93::before {
+    content: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    box-shadow: var(--p-shadow-bevel-100);
+    border-radius: var(--p-border-radius-0);
+    pointer-events: none;
+    mix-blend-mode: luminosity;
+  }
+  }
+
+.Polaris-LegacyCard--subdued_17vaa{
+  background-color:var(--p-color-bg-surface-secondary);
+}
+
+@media print{
+
+.Polaris-LegacyCard__Section--hideOnPrint_f883o,
+.Polaris-LegacyCard--hideOnPrint_1nslv{
+    display:none !important;
+}
+  }
+
+.Polaris-LegacyCard__Header_z4uwg{
+  padding:var(--p-space-400) var(--p-space-400) 0;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Header_z4uwg{
+    padding:var(--p-space-200) var(--p-space-400) 0;
+}
+  }
+
+@media print and (min-width: 30.625em){
+  .Polaris-LegacyCard__Header_z4uwg{
+    padding:var(--p-space-200) var(--p-space-400) 0;
+  }
+}
+
+.Polaris-LegacyCard__Section_1b1h1{
+  padding:var(--p-space-200) var(--p-space-400);
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Section_1b1h1{
+    padding:var(--p-space-200) var(--p-space-400);
+}
+  }
+
+.Polaris-LegacyCard__Section_1b1h1 + .Polaris-LegacyCard__Section_1b1h1{
+    border-top:0;
+  }
+
+@media print{
+
+.Polaris-LegacyCard__Section_1b1h1 + .Polaris-LegacyCard__Section_1b1h1{
+      border-top:0;
+  }
+    }
+
+@media print{
+
+.Polaris-LegacyCard__Section_1b1h1{
+    padding-top:var(--p-space-100);
+    padding-bottom:var(--p-space-100);
+}
+  }
+
+.Polaris-LegacyCard__Section--fullWidth_3l6fs{
+  padding:var(--p-space-400) 0;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Section--fullWidth_3l6fs{
+    padding:var(--p-space-400) 0;
+}
+  }
+
+.Polaris-LegacyCard__Section--flush_1tjqa{
+  padding:0;
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Section--flush_1tjqa{
+    padding:0;
+}
+  }
+
+.Polaris-LegacyCard__Section--subdued_3jppn{
+  background-color:var(--p-color-bg-surface-secondary);
+  padding:var(--p-space-300) var(--p-space-400);
+}
+
+@media (-ms-high-contrast: active){
+
+.Polaris-LegacyCard__Section--subdued_3jppn{
+    background-color:transparent;
+}
+  }
+
+.Polaris-LegacyCard__Header_z4uwg + .Polaris-LegacyCard__Section--subdued_3jppn{
+    border-top:0;
+    margin-top:0;
+  }
+
+.Polaris-LegacyCard__Section--subdued_3jppn:last-child{
+  padding:var(--p-space-400);
+}
+
+@media print{
+
+.Polaris-LegacyCard__Section--subdued_3jppn:last-child{
+    padding-top:var(--p-space-200);
+    padding-bottom:var(--p-space-200);
+}
+  }
+
+.Polaris-LegacyCard__SectionHeader_1aytf{
+  padding-bottom:var(--p-space-200);
+}
+
+.Polaris-LegacyCard__Section--fullWidth_3l6fs .Polaris-LegacyCard__SectionHeader_1aytf{
+    padding-left:var(--p-space-400);
+    padding-right:var(--p-space-400);
+  }
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Section--fullWidth_3l6fs .Polaris-LegacyCard__SectionHeader_1aytf{
+      padding-left:var(--p-space-400);
+      padding-right:var(--p-space-400);
+  }
+    }
+
+.Polaris-LegacyCard__Subsection_197ob + .Polaris-LegacyCard__Subsection_197ob{
+    border-top:0;
+    margin-top:0;
+    padding-top:var(--p-space-200);
+  }
+
+@media print{
+
+.Polaris-LegacyCard__Subsection_197ob + .Polaris-LegacyCard__Subsection_197ob{
+      border-top:0;
+  }
+    }
+
+@media print{
+
+.Polaris-LegacyCard__Subsection_197ob{
+    padding-top:var(--p-space-100);
+    padding-bottom:var(--p-space-100);
+}
+  }
+
+.Polaris-LegacyCard__Footer_z4ij5{
+  display:flex;
+  justify-content:flex-end;
+
+  padding:0 var(--p-space-400) var(--p-space-400);
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-LegacyCard__Footer_z4ij5{
+    padding:0 var(--p-space-400) var(--p-space-400);
+}
+  }
+
+.Polaris-LegacyCard__Footer_z4ij5.Polaris-LegacyCard__LeftJustified_1ldly{
+    justify-content:flex-start;
+  }
+
+.Polaris-LegacyCard__Section--subdued_3jppn + .Polaris-LegacyCard__Footer_z4ij5{
+    padding:var(--p-space-400);
+    border-top:0;
+  }
+
+.Polaris-LegacyCard__FirstSectionPadding_dq8kr{
+  padding-top:var(--p-space-400);
+}
+
+.Polaris-LegacyCard__LastSectionPadding_17gqq{
+  padding-bottom:var(--p-space-400);
+}

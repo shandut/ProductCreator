@@ -1,0 +1,14 @@
+.Polaris-Spinner_mzr5w svg{
+  animation:var(--p-motion-keyframes-spin) var(--p-motion-duration-500) linear infinite;
+  fill:var(--p-color-bg-fill-brand);
+}
+
+.Polaris-Spinner--sizeSmall_7647q svg{
+  height:1.25rem;
+  width:1.25rem;
+}
+
+.Polaris-Spinner--sizeLarge_61dxo svg{
+  height:2.75rem;
+  width:2.75rem;
+}

@@ -1,0 +1,85 @@
+import React, { PureComponent } from 'react';
+import styles from '../../ColorPicker.css.esnext';
+import { calculateDraggerY, hueForDraggerY } from './utilities.esnext';
+import { Slidable } from '../Slidable/Slidable.esnext';
+
+class HuePicker extends PureComponent {
+  state = {
+    sliderHeight: 0,
+    draggerHeight: 0
+  };
+  node = null;
+  componentWillUnmount() {
+    this.observer?.disconnect();
+  }
+  componentDidMount() {
+    if (!this.node) {
+      return;
+    }
+    this.observer = new ResizeObserver(this.setSliderHeight);
+    this.observer.observe(this.node);
+    this.setSliderHeight();
+  }
+  render() {
+    const {
+      hue
+    } = this.props;
+    const {
+      sliderHeight,
+      draggerHeight
+    } = this.state;
+    const draggerY = calculateDraggerY(hue, sliderHeight, draggerHeight);
+    return /*#__PURE__*/React.createElement("div", {
+      className: styles.HuePicker,
+      ref: this.setNode
+    }, /*#__PURE__*/React.createElement(Slidable, {
+      draggerY: draggerY,
+      draggerX: 0,
+      onChange: this.handleChange,
+      onDraggerHeight: this.setDraggerHeight
+    }));
+  }
+  setNode = node => {
+    if (!node) {
+      return;
+    }
+    this.node = node;
+  };
+  setSliderHeight = () => {
+    const {
+      node
+    } = this;
+    if (!node) {
+      return;
+    }
+    this.setState({
+      sliderHeight: node.clientHeight
+    });
+    if (process.env.NODE_ENV === 'development') {
+      setTimeout(() => {
+        this.setState({
+          sliderHeight: node.clientHeight
+        });
+      }, 0);
+    }
+  };
+  setDraggerHeight = height => {
+    this.setState({
+      draggerHeight: height
+    });
+  };
+  handleChange = ({
+    y
+  }) => {
+    const {
+      onChange
+    } = this.props;
+    const {
+      sliderHeight
+    } = this.state;
+    const hue = hueForDraggerY(y, sliderHeight);
+    onChange(hue);
+  };
+}
+
+export { HuePicker };

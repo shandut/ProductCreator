@@ -1,0 +1,7 @@
+import './Divider.out.css';
+
+var styles = {
+  "Divider": "Polaris-Divider_myoit"
+};
+
+export { styles as default };

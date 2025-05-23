@@ -1,0 +1,33 @@
+
+  .Polaris-Header-Title_2qj8j.Polaris-Header-Title__TitleWithSubtitle_1wspp{
+    margin-top:0;
+  }
+
+.Polaris-Header-Title__TitleWrapper_bejfn{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  row-gap:var(--p-space-200);
+  padding-block:var(--p-space-050);
+}
+
+.Polaris-Header-Title__TitleWrapper_bejfn .Polaris-Header-Title_2qj8j{
+    display:inline;
+    margin-right:var(--p-space-200);
+  }
+
+.Polaris-Header-Title__TitleWrapper_bejfn .Polaris-Header-Title_2qj8j > *{
+      display:inline;
+    }
+
+.Polaris-Header-Title__SubTitle_1j5vz{
+  margin-top:var(--p-space-050);
+}
+
+.Polaris-Header-Title__SubTitle_1j5vz.Polaris-Header-Title__SubtitleCompact_1fq2b{
+    margin-top:var(--p-space-050);
+  }
+
+.Polaris-Header-Title__SubTitle_1j5vz.Polaris-Header-Title__SubtitleMaxWidth_1jljn{
+    max-width:45ch;
+  }

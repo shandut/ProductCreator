@@ -1,0 +1,23 @@
+.Polaris-Autocomplete-MappedOption__Content_xd1mk{
+  display:flex;
+  flex:1 1;
+  word-wrap:break-word;
+  word-break:break-word;
+  overflow-wrap:break-word;
+}
+
+.Polaris-Autocomplete-MappedOption__Media_2t8qq{
+  padding:0 var(--p-space-200);
+}
+
+.Polaris-Autocomplete-MappedOption__Media_2t8qq svg{
+    fill:var(--p-color-icon);
+  }
+
+.Polaris-Autocomplete-MappedOption--singleSelectionMedia_1872h{
+  padding:0 var(--p-space-200) 0 0;
+}
+
+.Polaris-Autocomplete-MappedOption--disabledMedia_wfh7h svg{
+  fill:var(--p-color-icon-disabled);
+}

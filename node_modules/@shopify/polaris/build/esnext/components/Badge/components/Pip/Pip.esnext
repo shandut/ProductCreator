@@ -1,0 +1,24 @@
+import React from 'react';
+import { classNames, variationName } from '../../../../utilities/css.esnext';
+import { getDefaultAccessibilityLabel } from '../../utils.esnext';
+import styles from './Pip.css.esnext';
+import { useI18n } from '../../../../utilities/i18n/hooks.esnext';
+import { Text } from '../../../Text/Text.esnext';
+
+function Pip({
+  tone,
+  progress = 'complete',
+  accessibilityLabelOverride
+}) {
+  const i18n = useI18n();
+  const className = classNames(styles.Pip, tone && styles[variationName('tone', tone)], progress && styles[variationName('progress', progress)]);
+  const accessibilityLabel = accessibilityLabelOverride ? accessibilityLabelOverride : getDefaultAccessibilityLabel(i18n, progress, tone);
+  return /*#__PURE__*/React.createElement("span", {
+    className: className
+  }, /*#__PURE__*/React.createElement(Text, {
+    as: "span",
+    visuallyHidden: true
+  }, accessibilityLabel));
+}
+
+export { Pip };

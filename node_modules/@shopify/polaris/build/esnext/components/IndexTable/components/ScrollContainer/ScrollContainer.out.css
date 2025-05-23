@@ -1,0 +1,11 @@
+.Polaris-IndexTable-ScrollContainer_lf5n1{
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+  border-radius:inherit;
+}
+
+.Polaris-IndexTable-ScrollContainer_lf5n1::-webkit-scrollbar{
+  display:none;
+}

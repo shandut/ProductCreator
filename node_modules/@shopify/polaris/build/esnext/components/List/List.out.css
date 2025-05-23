@@ -1,0 +1,23 @@
+.Polaris-List_yj3nl{
+  padding-left:var(--p-space-500);
+  margin-top:0;
+  margin-bottom:0;
+  list-style:disc outside none;
+}
+
+.Polaris-List_yj3nl + .Polaris-List_yj3nl{
+    margin-top:var(--p-space-400);
+  }
+
+.Polaris-List--typeNumber_bbvwn{
+  padding-left:var(--p-space-800);
+  list-style:decimal outside none;
+}
+
+.Polaris-List__Item_yiyol .Polaris-List_yj3nl:first-child{
+    margin-top:var(--p-space-200);
+  }
+
+.Polaris-List--spacingLoose_yte7q .Polaris-List__Item_yiyol{
+    margin-bottom:var(--p-space-100);
+  }

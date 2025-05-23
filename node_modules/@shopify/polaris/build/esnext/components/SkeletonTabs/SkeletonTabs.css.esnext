@@ -1,0 +1,10 @@
+import './SkeletonTabs.out.css';
+
+var styles = {
+  "Tabs": "Polaris-SkeletonTabs__Tabs_yjc8o",
+  "Tab": "Polaris-SkeletonTabs__Tab_375k2",
+  "TabText": "Polaris-SkeletonTabs__TabText_lsfer",
+  "fitted": "Polaris-SkeletonTabs--fitted_ijluy"
+};
+
+export { styles as default };

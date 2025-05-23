@@ -1,0 +1,21 @@
+import './LegacyTabs.out.css';
+
+var styles = {
+  "LegacyTabs": "Polaris-LegacyTabs_qap71",
+  "fitted": "Polaris-LegacyTabs--fitted_ijluy",
+  "TabContainer": "Polaris-LegacyTabs__TabContainer_dsj6d",
+  "Title": "Polaris-LegacyTabs__Title_2qj8j",
+  "fillSpace": "Polaris-LegacyTabs--fillSpace_yc42y",
+  "Tab": "Polaris-LegacyTabs__Tab_375k2",
+  "Tab-selected": "Polaris-LegacyTabs__Tab--selected_11sap",
+  "titleWithIcon": "Polaris-LegacyTabs--titleWithIcon_11lkm",
+  "Panel": "Polaris-LegacyTabs__Panel_2vct4",
+  "Panel-hidden": "Polaris-LegacyTabs__Panel--hidden_1h4kj",
+  "Item": "Polaris-LegacyTabs__Item_yiyol",
+  "DisclosureTab": "Polaris-LegacyTabs__DisclosureTab_1qbhg",
+  "DisclosureTab-visible": "Polaris-LegacyTabs__DisclosureTab--visible_1v5xr",
+  "DisclosureActivator": "Polaris-LegacyTabs__DisclosureActivator_1mita",
+  "TabMeasurer": "Polaris-LegacyTabs__TabMeasurer_1aget"
+};
+
+export { styles as default };

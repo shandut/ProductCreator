@@ -1,0 +1,21 @@
+import React from 'react';
+import styles from './FooterHelp.css.js';
+import { Text } from '../Text/Text.js';
+
+function FooterHelp({
+  children,
+  align = 'center'
+}) {
+  const style = {
+    '--pc-footer-help-align': align
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: styles.FooterHelp,
+    style: style
+  }, /*#__PURE__*/React.createElement(Text, {
+    as: "p",
+    variant: "bodyLg"
+  }, children));
+}
+
+export { FooterHelp };

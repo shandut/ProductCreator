@@ -1,0 +1,11 @@
+:root{
+  --pc-skeleton-page-max-width:62.375rem;
+  --pc-skeleton-page-max-width-narrow:41.375rem;
+}
+
+@media screen and (-ms-high-contrast: active){
+
+.Polaris-SkeletonPage__SkeletonTitle_7v6f2{
+    background-color:grayText;
+}
+  }

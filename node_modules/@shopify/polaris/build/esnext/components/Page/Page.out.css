@@ -1,0 +1,42 @@
+html,
+body{
+  min-height:100%;
+  height:100%;
+}
+
+.Polaris-Page_yisnh{
+  margin:0 auto;
+  padding:0;
+  max-width:calc(var(--pg-layout-width-primary-max) + var(--pg-layout-width-secondary-max) + var(--pg-layout-width-inner-spacing-base));
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-Page_yisnh{
+    padding:0 var(--p-space-600);
+}
+  }
+
+.Polaris-Page_yisnh::after{
+    content:'';
+    display:table;
+  }
+
+.Polaris-Page--fullWidth_zyvh4{
+  max-width:none;
+}
+
+.Polaris-Page--narrowWidth_yaeah{
+  max-width:var(--pg-layout-width-primary-max);
+}
+
+.Polaris-Page__Content_xd1mk{
+  padding:var(--p-space-200) 0;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Page__Content_xd1mk{
+    padding-top:var(--p-space-500);
+}
+  }

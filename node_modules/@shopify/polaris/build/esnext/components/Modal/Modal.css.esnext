@@ -1,0 +1,9 @@
+import './Modal.out.css';
+
+var styles = {
+  "Body": "Polaris-Modal__Body_yjdx1",
+  "NoScrollBody": "Polaris-Modal__NoScrollBody_1cosb",
+  "IFrame": "Polaris-Modal__IFrame_j9n24"
+};
+
+export { styles as default };

@@ -1,0 +1,25 @@
+.Polaris-SkeletonBodyText__SkeletonBodyTextContainer_alhvc{
+  width:100%;
+}
+
+.Polaris-SkeletonBodyText_4hwgi{
+  height:var(--p-space-200);
+  display:flex;
+  background-color:var(--p-color-bg-fill-tertiary);
+  border-radius:var(--p-border-radius-100);
+}
+
+@media screen and (-ms-high-contrast: active){
+
+.Polaris-SkeletonBodyText_4hwgi{
+    background-color:grayText;
+}
+  }
+
+.Polaris-SkeletonBodyText_4hwgi:last-child:not(:first-child){
+    width:80%;
+  }
+
+.Polaris-SkeletonBodyText_4hwgi + .Polaris-SkeletonBodyText_4hwgi{
+    margin-top:var(--p-space-300);
+  }

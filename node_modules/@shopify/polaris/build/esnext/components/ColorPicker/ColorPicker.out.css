@@ -1,0 +1,156 @@
+.Polaris-ColorPicker_1ft7g{
+  --pc-color-picker-size:10rem;
+  --pc-color-picker-dragger-size:1.125rem;
+  --pc-color-picker-z-index:10;
+  --pc-color-picker-adjustments:20;
+  --pc-color-picker-dragger:30;
+  --pc-color-picker-inner-shadow:inset 0 0 0.125rem 0 rgba(0, 0, 0, 0.5);
+  --pc-color-picker-dragger-shadow:inset 0 0.0625rem 0.125rem 0 rgba(33, 43, 54, 0.32), 0 0.0625rem 0.125rem 0 rgba(33, 43, 54, 0.32);
+  --pc-color-picker-checkers:repeating-conic-gradient(
+      var(--p-color-bg-surface) 0% 25%,
+      var(--p-color-bg-surface-secondary) 0% 50%
+    ) 50% / var(--p-space-400) var(--p-space-400);
+  -webkit-user-select:none;
+          user-select:none;
+  display:flex;
+}
+
+.Polaris-ColorPicker__MainColor_1dlup{
+  background:var(--pc-color-picker-checkers);
+  position:relative;
+  overflow:hidden;
+  height:var(--pc-color-picker-size);
+  width:var(--pc-color-picker-size);
+  border-radius:var(--p-border-radius-100);
+  cursor:pointer;
+}
+
+.Polaris-ColorPicker--fullWidth_zyvh4 .Polaris-ColorPicker__MainColor_1dlup{
+    width:auto;
+    flex-grow:1;
+  }
+
+.Polaris-ColorPicker__MainColor_1dlup .Polaris-ColorPicker__Dragger_mz3rx{
+    right:calc(var(--pc-color-picker-dragger-size)*0.5);
+    margin:0;
+    box-shadow:var(--pc-color-picker-dragger-shadow);
+  }
+
+.Polaris-ColorPicker__MainColor_1dlup .Polaris-ColorPicker__ColorLayer_1ouio{
+    border-radius:var(--p-border-radius-100);
+  }
+
+.Polaris-ColorPicker__MainColor_1dlup::after,
+  .Polaris-ColorPicker__MainColor_1dlup::before{
+    content:'';
+    position:absolute;
+    z-index:var(--pc-color-picker-adjustments);
+    top:0;
+    left:0;
+    display:block;
+    height:100%;
+    width:100%;
+    pointer-events:none;
+    border-radius:var(--p-border-radius-100);
+  }
+
+.Polaris-ColorPicker__MainColor_1dlup::before{
+    background:linear-gradient(to right, white, transparent);
+  }
+
+.Polaris-ColorPicker__MainColor_1dlup::after{
+    background-image:linear-gradient(to top, black, transparent);
+    box-shadow:var(--pc-color-picker-inner-shadow);
+  }
+
+@media (-ms-high-contrast: active){
+
+.Polaris-ColorPicker__MainColor_1dlup{
+    outline:var(--p-border-width-025) solid windowText;
+}
+  }
+
+.Polaris-ColorPicker__Dragger_mz3rx{
+  position:relative;
+  z-index:var(--pc-color-picker-dragger);
+  bottom:calc(var(--pc-color-picker-dragger-size)*0.5);
+  transform:none;
+  height:var(--pc-color-picker-dragger-size);
+  width:var(--pc-color-picker-dragger-size);
+  margin:0 auto;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:transform;
+  background:transparent;
+  border:var(--p-border-radius-100) solid var(--p-color-bg-surface);
+  border-radius:var(--p-border-radius-full);
+  pointer-events:none;
+  box-shadow:var(--pc-color-picker-dragger-shadow);
+}
+
+.Polaris-ColorPicker__HuePicker_xwdsx,
+.Polaris-ColorPicker__AlphaPicker_1fh74{
+  --pc-color-picker-vertical-border-radius:calc(var(--pc-color-picker-size)*0.5);
+  position:relative;
+  overflow:hidden;
+  height:var(--pc-color-picker-size);
+  width:var(--p-space-600);
+  margin-left:var(--p-space-200);
+  border-width:var(--p-border-radius-100);
+  border-radius:var(--pc-color-picker-vertical-border-radius);
+}
+
+.Polaris-ColorPicker__HuePicker_xwdsx::after, .Polaris-ColorPicker__AlphaPicker_1fh74::after{
+    content:'';
+    position:absolute;
+    z-index:var(--pc-color-picker-adjustments);
+    top:0;
+    left:0;
+    display:block;
+    height:100%;
+    width:100%;
+    pointer-events:none;
+    border-radius:var(--pc-color-picker-vertical-border-radius);
+    box-shadow:var(--pc-color-picker-inner-shadow);
+  }
+
+@media (-ms-high-contrast: active){
+
+.Polaris-ColorPicker__HuePicker_xwdsx,
+.Polaris-ColorPicker__AlphaPicker_1fh74{
+    outline:var(--p-border-width-025) solid windowText;
+}
+  }
+
+.Polaris-ColorPicker__HuePicker_xwdsx{
+  background-image:linear-gradient(
+    to bottom,
+    red var(--pc-color-picker-dragger-size),
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red calc(var(--pc-color-picker-size) - var(--pc-color-picker-dragger-size))
+  );
+}
+
+.Polaris-ColorPicker__AlphaPicker_1fh74{
+  background:var(--pc-color-picker-checkers);
+}
+
+.Polaris-ColorPicker__ColorLayer_1ouio{
+  position:absolute;
+  z-index:var(--pc-color-picker-z-index);
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  pointer-events:none;
+}
+
+.Polaris-ColorPicker__Slidable_1fdsv{
+  height:100%;
+  width:100%;
+  cursor:pointer;
+}

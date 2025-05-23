@@ -1,0 +1,11 @@
+import './RadioButton.out.css';
+
+var styles = {
+  "RadioButton": "Polaris-RadioButton_bsatr",
+  "Input": "Polaris-RadioButton__Input_30ock",
+  "Backdrop": "Polaris-RadioButton__Backdrop_1x2i2",
+  "ChoiceLabel": "Polaris-RadioButton__ChoiceLabel_16hp3",
+  "toneMagic": "Polaris-RadioButton--toneMagic_tqodm"
+};
+
+export { styles as default };

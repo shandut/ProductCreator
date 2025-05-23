@@ -1,0 +1,29 @@
+.Polaris-Label_2vd36{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.Polaris-Label--hidden_riqie{
+  position: absolute !important;
+  top: 0;
+  width: 0.0625rem !important;
+  height: 0.0625rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.Polaris-Label__Text_yj3uv{
+  display:block;
+  flex:1 1 auto;
+  color:currentColor;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.Polaris-Label__RequiredIndicator_1homk::after{
+  content:'*';
+  color:var(--p-color-text-critical);
+  margin-left:var(--p-space-100);
+}

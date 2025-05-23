@@ -1,0 +1,16 @@
+.Polaris-InlineError_1g623{
+  display:flex;
+  color:var(--p-color-text-critical);
+  fill:var(--p-color-text-critical);
+}
+
+.Polaris-InlineError__Icon_yj27d{
+  fill:var(--p-color-text-critical);
+  margin-left:calc(var(--p-space-100)*-1);
+  margin-right:var(--p-space-200);
+}
+
+.Polaris-InlineError__Icon_yj27d svg{
+    margin-left:var(--p-space-050);
+    margin-right:var(--p-space-050);
+  }

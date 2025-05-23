@@ -1,0 +1,25 @@
+import React from 'react';
+
+var SvgPersonSegmentIcon = function SvgPersonSegmentIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M8.25 4.5c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2Zm-3.5 2c0-1.933 1.567-3.5 3.5-3.5s3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5-3.5-1.567-3.5-3.5Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M8.25 12.5c-1.734 0-3.33.94-4.173 2.455l-.302.545h6.435c.414 0 .75.336.75.75s-.336.75-.75.75h-6.711c-1.02 0-1.665-1.096-1.17-1.987l.437-.786c1.106-1.992 3.206-3.227 5.484-3.227v.75-.75h.053l.125.005c.103.004.248.013.414.03.321.034.775.106 1.184.268.386.153.574.588.421.973-.153.386-.589.574-.974.421-.22-.088-.517-.141-.788-.17-.13-.014-.242-.02-.321-.024l-.09-.003h-.024Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M11.5 11.75c0-.414.336-.75.75-.75h4.5c.414 0 .75.336.75.75s-.336.75-.75.75h-4.5c-.414 0-.75-.336-.75-.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M12.252 14c0-.414.335-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75h-3c-.415 0-.75-.336-.75-.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M13 16.25c0-.414.336-.75.75-.75h1.5c.414 0 .75.336.75.75s-.336.75-.75.75h-1.5c-.414 0-.75-.336-.75-.75Z"
+  }));
+};
+SvgPersonSegmentIcon.displayName = "PersonSegmentIcon";
+
+export { SvgPersonSegmentIcon as S };

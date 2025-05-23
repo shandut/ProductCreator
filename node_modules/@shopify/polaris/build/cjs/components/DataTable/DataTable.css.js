@@ -1,0 +1,49 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var styles = {
+  "DataTable": "Polaris-DataTable",
+  "condensed": "Polaris-DataTable--condensed",
+  "Navigation": "Polaris-DataTable__Navigation",
+  "Pip": "Polaris-DataTable__Pip",
+  "Pip-visible": "Polaris-DataTable__Pip--visible",
+  "ScrollContainer": "Polaris-DataTable__ScrollContainer",
+  "Table": "Polaris-DataTable__Table",
+  "TableRow": "Polaris-DataTable__TableRow",
+  "Cell": "Polaris-DataTable__Cell",
+  "IncreasedTableDensity": "Polaris-DataTable__IncreasedTableDensity",
+  "ZebraStripingOnData": "Polaris-DataTable__ZebraStripingOnData",
+  "RowCountIsEven": "Polaris-DataTable__RowCountIsEven",
+  "ShowTotalsInFooter": "Polaris-DataTable__ShowTotalsInFooter",
+  "Cell-separate": "Polaris-DataTable__Cell--separate",
+  "Cell-firstColumn": "Polaris-DataTable__Cell--firstColumn",
+  "Cell-numeric": "Polaris-DataTable__Cell--numeric",
+  "Cell-truncated": "Polaris-DataTable__Cell--truncated",
+  "Cell-header": "Polaris-DataTable__Cell--header",
+  "Cell-sortable": "Polaris-DataTable__Cell--sortable",
+  "Heading-left": "Polaris-DataTable__Heading--left",
+  "Cell-verticalAlignTop": "Polaris-DataTable__Cell--verticalAlignTop",
+  "Cell-verticalAlignBottom": "Polaris-DataTable__Cell--verticalAlignBottom",
+  "Cell-verticalAlignMiddle": "Polaris-DataTable__Cell--verticalAlignMiddle",
+  "Cell-verticalAlignBaseline": "Polaris-DataTable__Cell--verticalAlignBaseline",
+  "hoverable": "Polaris-DataTable--hoverable",
+  "Cell-hovered": "Polaris-DataTable__Cell--hovered",
+  "Icon": "Polaris-DataTable__Icon",
+  "Heading": "Polaris-DataTable__Heading",
+  "StickyHeaderEnabled": "Polaris-DataTable__StickyHeaderEnabled",
+  "StickyHeaderWrapper": "Polaris-DataTable__StickyHeaderWrapper",
+  "Cell-sorted": "Polaris-DataTable__Cell--sorted",
+  "Cell-total": "Polaris-DataTable__Cell--total",
+  "ShowTotals": "Polaris-DataTable__ShowTotals",
+  "Cell-total-footer": "Polaris-DataTable--cellTotalFooter",
+  "Footer": "Polaris-DataTable__Footer",
+  "StickyHeaderInner": "Polaris-DataTable__StickyHeaderInner",
+  "StickyHeaderInner-isSticky": "Polaris-DataTable__StickyHeaderInner--isSticky",
+  "StickyHeaderTable": "Polaris-DataTable__StickyHeaderTable",
+  "FixedFirstColumn": "Polaris-DataTable__FixedFirstColumn",
+  "StickyTableHeadingsRow": "Polaris-DataTable__StickyTableHeadingsRow",
+  "TooltipContent": "Polaris-DataTable__TooltipContent"
+};
+
+exports.default = styles;

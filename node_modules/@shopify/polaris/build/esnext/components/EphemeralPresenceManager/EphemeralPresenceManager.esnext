@@ -1,0 +1,41 @@
+import React, { useState, useCallback, useMemo } from 'react';
+import { EphemeralPresenceManagerContext } from '../../utilities/ephemeral-presence-manager/context.esnext';
+
+const defaultState = {
+  tooltip: 0,
+  hovercard: 0
+};
+function EphemeralPresenceManager({
+  children
+}) {
+  const [presenceCounter, setPresenceCounter] = useState(defaultState);
+  const addPresence = useCallback(key => {
+    setPresenceCounter(prevList => ({
+      ...prevList,
+      [key]: prevList[key] + 1
+    }));
+  }, []);
+  const removePresence = useCallback(key => {
+    setPresenceCounter(prevList => ({
+      ...prevList,
+      [key]: prevList[key] - 1
+    }));
+  }, []);
+  const value = useMemo(() => ({
+    presenceList: Object.entries(presenceCounter).reduce((previousValue, currentValue) => {
+      const [key, value] = currentValue;
+      return {
+        ...previousValue,
+        [key]: value >= 1
+      };
+    }, {}),
+    presenceCounter,
+    addPresence,
+    removePresence
+  }), [addPresence, removePresence, presenceCounter]);
+  return /*#__PURE__*/React.createElement(EphemeralPresenceManagerContext.Provider, {
+    value: value
+  }, children);
+}
+
+export { EphemeralPresenceManager };

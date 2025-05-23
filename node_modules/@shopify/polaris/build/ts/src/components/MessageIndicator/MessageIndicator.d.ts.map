@@ -1,0 +1,1 @@
+{"version":3,"file":"MessageIndicator.d.ts","sourceRoot":"","sources":["../../../../../src/components/MessageIndicator/MessageIndicator.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAI1B,MAAM,WAAW,qBAAqB;IACpC,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;IAC3B,MAAM,CAAC,EAAE,OAAO,CAAC;CAClB;AAED,wBAAgB,gBAAgB,CAAC,EAAC,QAAQ,EAAE,MAAM,EAAC,EAAE,qBAAqB,qBASzE"}

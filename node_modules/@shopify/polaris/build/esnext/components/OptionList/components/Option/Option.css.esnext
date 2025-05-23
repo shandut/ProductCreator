@@ -1,0 +1,21 @@
+import './Option.out.css';
+
+var styles = {
+  "Option": "Polaris-OptionList-Option_r96cc",
+  "SingleSelectOption": "Polaris-OptionList-Option__SingleSelectOption_gki7z",
+  "focused": "Polaris-OptionList-Option--focused_17w4h",
+  "active": "Polaris-OptionList-Option--active_jeq8y",
+  "disabled": "Polaris-OptionList-Option--disabled_hcuh9",
+  "select": "Polaris-OptionList-Option--select_ss8pl",
+  "Media": "Polaris-OptionList-Option__Media_2t8qq",
+  "Label": "Polaris-OptionList-Option__Label_2vd36",
+  "MultiSelectOption": "Polaris-OptionList-Option__MultiSelectOption_1xb85",
+  "CheckboxLabel": "Polaris-OptionList-Option__CheckboxLabel_13dcr",
+  "verticalAlignTop": "Polaris-OptionList-Option--verticalAlignTop_ckp14",
+  "verticalAlignCenter": "Polaris-OptionList-Option--verticalAlignCenter_1962m",
+  "verticalAlignBottom": "Polaris-OptionList-Option--verticalAlignBottom_1vhxo",
+  "Icon": "Polaris-OptionList-Option__Icon_yj27d",
+  "Checkbox": "Polaris-OptionList-Option__Checkbox_1d6zr"
+};
+
+export { styles as default };

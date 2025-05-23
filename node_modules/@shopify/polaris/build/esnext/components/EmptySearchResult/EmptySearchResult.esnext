@@ -1,0 +1,33 @@
+import React from 'react';
+import emptySearch from './illustrations/empty-search.svg.esnext';
+import { useI18n } from '../../utilities/i18n/hooks.esnext';
+import { LegacyStack } from '../LegacyStack/LegacyStack.esnext';
+import { Text } from '../Text/Text.esnext';
+import { Image } from '../Image/Image.esnext';
+
+function EmptySearchResult({
+  title,
+  description,
+  withIllustration
+}) {
+  const i18n = useI18n();
+  const altText = i18n.translate('Polaris.EmptySearchResult.altText');
+  const descriptionMarkup = description ? /*#__PURE__*/React.createElement("p", null, description) : null;
+  const illustrationMarkup = withIllustration ? /*#__PURE__*/React.createElement(Image, {
+    alt: altText,
+    source: emptySearch,
+    draggable: false
+  }) : null;
+  return /*#__PURE__*/React.createElement(LegacyStack, {
+    alignment: "center",
+    vertical: true
+  }, illustrationMarkup, /*#__PURE__*/React.createElement(Text, {
+    variant: "headingLg",
+    as: "p"
+  }, title), /*#__PURE__*/React.createElement(Text, {
+    tone: "subdued",
+    as: "span"
+  }, descriptionMarkup));
+}
+
+export { EmptySearchResult };

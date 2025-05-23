@@ -1,0 +1,7 @@
+import './InlineGrid.out.css';
+
+var styles = {
+  "InlineGrid": "Polaris-InlineGrid_m3wbk"
+};
+
+export { styles as default };

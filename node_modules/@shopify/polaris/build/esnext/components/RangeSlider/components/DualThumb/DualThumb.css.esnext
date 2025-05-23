@@ -1,0 +1,16 @@
+import './DualThumb.out.css';
+
+var styles = {
+  "DualThumb": "Polaris-RangeSlider-DualThumb_12the",
+  "TrackWrapper": "Polaris-RangeSlider-DualThumb__TrackWrapper_bilen",
+  "disabled": "Polaris-RangeSlider-DualThumb--disabled_hcuh9",
+  "Track": "Polaris-RangeSlider-DualThumb__Track_32wu4",
+  "error": "Polaris-RangeSlider-DualThumb--error_37uk1",
+  "Thumbs": "Polaris-RangeSlider-DualThumb__Thumbs_zormu",
+  "Prefix": "Polaris-RangeSlider-DualThumb__Prefix_10fbz",
+  "Suffix": "Polaris-RangeSlider-DualThumb__Suffix_10fbu",
+  "Output": "Polaris-RangeSlider-DualThumb__Output_sl6zf",
+  "OutputBubble": "Polaris-RangeSlider-DualThumb__OutputBubble_ji63m"
+};
+
+export { styles as default };

@@ -1,0 +1,91 @@
+.Polaris-Badge-Pip_375sr{
+  --pc-pip-size:var(--p-space-200);
+  --pc-pip-color:var(--p-color-text-secondary);
+  --pc-border-width:0.07813rem;
+  display:inline-block;
+  color:var(--pc-pip-color);
+  height:var(--pc-pip-size);
+  width:var(--pc-pip-size);
+  border:var(--p-border-width-050) solid var(--pc-pip-color);
+  flex-shrink:0;
+  border-radius:0.1875rem;
+  border-width:var(--pc-border-width);
+}
+
+.Polaris-Badge-Pip--toneInfo_888w9{
+  --pc-pip-color:var(--p-color-icon-info);
+}
+
+.Polaris-Badge-Pip--toneSuccess_15hst{
+  --pc-pip-color:var(--p-color-icon-success);
+}
+
+.Polaris-Badge-Pip--toneNew_vwxid{
+  --pc-pip-color:var(--p-color-text-secondary);
+}
+
+.Polaris-Badge-Pip--toneAttention_ff4zk{
+  --pc-pip-color:var(--p-color-icon-caution);
+}
+
+.Polaris-Badge-Pip--toneWarning_1phxg{
+  --pc-pip-color:var(--p-color-icon-warning);
+}
+
+.Polaris-Badge-Pip--toneCritical_jv6uf{
+  --pc-pip-color:var(--p-color-icon-critical);
+}
+
+.Polaris-Badge-Pip--progressIncomplete_1jg92{
+  background:transparent;
+}
+
+.Polaris-Badge-Pip--progressPartiallyComplete_11p0t{
+  background:linear-gradient(
+    to top,
+    currentColor,
+    currentColor 50%,
+    transparent 50%,
+    transparent
+  );
+}
+
+.Polaris-Badge-Pip--progressPartiallyComplete_11p0t.Polaris-Badge-Pip_375sr{
+    background:none;
+    position:relative;
+    overflow:hidden;
+  }
+
+.Polaris-Badge-Pip--progressPartiallyComplete_11p0t.Polaris-Badge-Pip_375sr::after{
+      content:'';
+      position:absolute;
+      top:calc(var(--pc-border-width)*-1);
+      left:calc(var(--pc-border-width)*-1);
+      width:0.25rem;
+      height:0.5rem;
+      margin:0 0.1275rem;
+      border-right:var(--pc-border-width) solid currentColor;
+      border-left:var(--pc-border-width) solid currentColor;
+      font-size:0;
+      transform:rotate(-45deg);
+    }
+
+@media print{
+
+.Polaris-Badge-Pip--progressPartiallyComplete_11p0t{
+    background:none;
+    box-shadow:0 -6.375rem 0 -6.25rem currentColor inset;
+}
+  }
+
+.Polaris-Badge-Pip--progressComplete_189p5{
+  background:currentColor;
+}
+
+@media print{
+
+.Polaris-Badge-Pip--progressComplete_189p5{
+    background:none;
+    box-shadow:0 0 0 6.25rem currentColor inset;
+}
+  }

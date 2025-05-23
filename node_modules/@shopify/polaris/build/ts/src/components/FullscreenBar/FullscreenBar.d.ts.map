@@ -1,0 +1,1 @@
+{"version":3,"file":"FullscreenBar.d.ts","sourceRoot":"","sources":["../../../../../src/components/FullscreenBar/FullscreenBar.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAS1B,MAAM,WAAW,kBAAkB;IACjC,2CAA2C;IAC3C,QAAQ,EAAE,MAAM,IAAI,CAAC;IACrB,4BAA4B;IAC5B,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B;AAED,wBAAgB,aAAa,CAAC,EAAC,QAAQ,EAAE,QAAQ,EAAC,EAAE,kBAAkB,qBAsBrE"}

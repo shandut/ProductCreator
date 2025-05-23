@@ -1,0 +1,29 @@
+import React from 'react';
+
+var SvgLayoutBuyButtonHorizontalIcon = function SvgLayoutBuyButtonHorizontalIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 6.25c0-1.519 1.231-2.75 2.75-2.75.414 0 .75.336.75.75s-.336.75-.75.75c-.69 0-1.25.56-1.25 1.25 0 .414-.336.75-.75.75s-.75-.336-.75-.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M6.5 7c-1.105 0-2 .895-2 2v2c0 1.105.895 2 2 2h2c1.105 0 2-.895 2-2v-2c0-1.105-.895-2-2-2h-2Zm2 1.5h-2c-.276 0-.5.224-.5.5v2c0 .276.224.5.5.5h2c.276 0 .5-.224.5-.5v-2c0-.276-.224-.5-.5-.5Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 8.5c0-.414.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75h-3c-.414 0-.75-.336-.75-.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.75 10.75c-.414 0-.75.336-.75.75s.336.75.75.75h1.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-1.5Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 13.75c0 1.519 1.231 2.75 2.75 2.75.414 0 .75-.336.75-.75s-.336-.75-.75-.75c-.69 0-1.25-.56-1.25-1.25 0-.414-.336-.75-.75-.75s-.75.336-.75.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.75 3.5c1.519 0 2.75 1.231 2.75 2.75 0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-.69-.56-1.25-1.25-1.25-.414 0-.75-.336-.75-.75s.336-.75.75-.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.75 16.5c1.519 0 2.75-1.231 2.75-2.75 0-.414-.336-.75-.75-.75s-.75.336-.75.75c0 .69-.56 1.25-1.25 1.25-.414 0-.75.336-.75.75s.336.75.75.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.75 4.25c0 .414-.336.75-.75.75h-2c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h2c.414 0 .75.336.75.75Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 16.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2c-.414 0-.75.336-.75.75s.336.75.75.75h2Z"
+  }));
+};
+SvgLayoutBuyButtonHorizontalIcon.displayName = "LayoutBuyButtonHorizontalIcon";
+
+export { SvgLayoutBuyButtonHorizontalIcon as S };

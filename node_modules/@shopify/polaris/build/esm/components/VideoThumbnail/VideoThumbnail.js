@@ -1,0 +1,108 @@
+import React from 'react';
+import { PlayIcon } from '@shopify/polaris-icons';
+import { secondsToTimeComponents, secondsToDurationTranslationKey, secondsToTimestamp } from '../../utilities/duration.js';
+import styles from './VideoThumbnail.css.js';
+import { useI18n } from '../../utilities/i18n/hooks.js';
+import { useMediaQuery } from '../../utilities/media-query/hooks.js';
+import { LegacyStack } from '../LegacyStack/LegacyStack.js';
+import { Icon } from '../Icon/Icon.js';
+import { Text } from '../Text/Text.js';
+
+function VideoThumbnail({
+  thumbnailUrl,
+  videoLength = 0,
+  videoProgress = 0,
+  showVideoProgress = false,
+  accessibilityLabel,
+  onClick,
+  onBeforeStartPlaying
+}) {
+  const i18n = useI18n();
+  const {
+    isNavigationCollapsed
+  } = useMediaQuery();
+  let buttonLabel;
+  if (accessibilityLabel) {
+    buttonLabel = accessibilityLabel;
+  } else if (videoLength) {
+    const {
+      hours,
+      minutes,
+      seconds
+    } = secondsToTimeComponents(videoLength);
+    buttonLabel = i18n.translate('Polaris.VideoThumbnail.playButtonA11yLabel.defaultWithDuration', {
+      duration: i18n.translate(secondsToDurationTranslationKey(videoLength), {
+        hourCount: hours,
+        minuteCount: minutes,
+        secondCount: seconds
+      })
+    });
+  } else {
+    buttonLabel = i18n.translate('Polaris.VideoThumbnail.playButtonA11yLabel.default');
+  }
+  const timeStampMarkup = videoLength ? /*#__PURE__*/React.createElement("div", {
+    className: styles.Timestamp
+  }, /*#__PURE__*/React.createElement(LegacyStack, {
+    alignment: "center",
+    spacing: "extraTight"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: styles.PlayIcon
+  }, /*#__PURE__*/React.createElement(Icon, {
+    source: PlayIcon
+  })), /*#__PURE__*/React.createElement(Text, {
+    variant: isNavigationCollapsed ? 'bodyLg' : 'bodyMd',
+    as: "p",
+    fontWeight: "semibold"
+  }, secondsToTimestamp(videoLength)))) : null;
+  let progressMarkup = null;
+  if (showVideoProgress) {
+    const progressValue = calculateProgress(videoLength, videoProgress);
+    const progressValuePercents = Math.round(progressValue * 100);
+
+    /* eslint-disable @shopify/jsx-no-hardcoded-content */
+    progressMarkup = /*#__PURE__*/React.createElement("div", {
+      className: styles.Progress
+    }, /*#__PURE__*/React.createElement("progress", {
+      className: styles.ProgressBar,
+      value: progressValuePercents,
+      max: "100"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: styles.Indicator,
+      style: {
+        transform: `scaleX(${progressValue})`
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      className: styles.Label
+    }, progressValuePercents, "%")));
+    /* eslint-enable @shopify/jsx-no-hardcoded-content */
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    className: styles.ThumbnailContainer
+  }, /*#__PURE__*/React.createElement("div", {
+    className: styles.Thumbnail,
+    style: {
+      backgroundImage: `url(${thumbnailUrl})`
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: styles.PlayButton,
+    "aria-label": buttonLabel,
+    onClick: onClick,
+    onMouseEnter: onBeforeStartPlaying,
+    onFocus: onBeforeStartPlaying,
+    onTouchStart: onBeforeStartPlaying
+  }, timeStampMarkup), progressMarkup);
+}
+function calculateProgress(videoLength, videoProgress) {
+  if (videoProgress > videoLength && process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-console
+    console.warn('Value passed to the video progress should not exceed video length. Resetting progress to 100%.');
+  }
+  if (videoProgress > 0 && videoLength > 0) {
+    const progress = parseFloat((videoProgress / videoLength).toFixed(2));
+    return progress > 1 ? 1 : progress;
+  }
+  return 0;
+}
+
+export { VideoThumbnail };

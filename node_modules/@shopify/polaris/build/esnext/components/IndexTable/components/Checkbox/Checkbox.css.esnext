@@ -1,0 +1,7 @@
+import './Checkbox.out.css';
+
+var styles = {
+  "Wrapper": "Polaris-IndexTable-Checkbox__Wrapper_mkrm3"
+};
+
+export { styles as default };

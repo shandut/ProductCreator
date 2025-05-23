@@ -1,0 +1,117 @@
+.Polaris-InlineGrid_m3wbk{
+  --pc-inline-grid-gap-xs: initial;
+  --pc-inline-grid-gap-sm: initial;
+  --pc-inline-grid-gap-md: initial;
+  --pc-inline-grid-gap-lg: initial;
+  --pc-inline-grid-gap-xl: initial;
+  gap: var(--pc-inline-grid-gap-xs);
+  --pc-inline-grid-grid-template-columns-xs: initial;
+  --pc-inline-grid-grid-template-columns-sm: initial;
+  --pc-inline-grid-grid-template-columns-md: initial;
+  --pc-inline-grid-grid-template-columns-lg: initial;
+  --pc-inline-grid-grid-template-columns-xl: initial;
+  grid-template-columns: var(--pc-inline-grid-grid-template-columns-xs);
+  --pc-inline-grid-align-items:initial;
+  display:grid;
+  align-items:var(--pc-inline-grid-align-items);
+}
+@media (min-width: 30.625em) {
+  .Polaris-InlineGrid_m3wbk{
+    gap: var(
+        --pc-inline-grid-gap-sm,
+        var(--pc-inline-grid-gap-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-InlineGrid_m3wbk{
+    gap: var(
+        --pc-inline-grid-gap-md,
+        var(
+          --pc-inline-grid-gap-sm,
+          var(--pc-inline-grid-gap-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-InlineGrid_m3wbk{
+    gap: var(
+        --pc-inline-grid-gap-lg,
+        var(
+          --pc-inline-grid-gap-md,
+          var(
+            --pc-inline-grid-gap-sm,
+            var(--pc-inline-grid-gap-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-InlineGrid_m3wbk{
+    gap: var(
+        --pc-inline-grid-gap-xl,
+        var(
+          --pc-inline-grid-gap-lg,
+          var(
+            --pc-inline-grid-gap-md,
+            var(
+              --pc-inline-grid-gap-sm,
+              var(--pc-inline-grid-gap-xs)
+            )
+          )
+        )
+      );
+}
+}
+@media (min-width: 30.625em) {
+  .Polaris-InlineGrid_m3wbk{
+    grid-template-columns: var(
+        --pc-inline-grid-grid-template-columns-sm,
+        var(--pc-inline-grid-grid-template-columns-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-InlineGrid_m3wbk{
+    grid-template-columns: var(
+        --pc-inline-grid-grid-template-columns-md,
+        var(
+          --pc-inline-grid-grid-template-columns-sm,
+          var(--pc-inline-grid-grid-template-columns-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-InlineGrid_m3wbk{
+    grid-template-columns: var(
+        --pc-inline-grid-grid-template-columns-lg,
+        var(
+          --pc-inline-grid-grid-template-columns-md,
+          var(
+            --pc-inline-grid-grid-template-columns-sm,
+            var(--pc-inline-grid-grid-template-columns-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-InlineGrid_m3wbk{
+    grid-template-columns: var(
+        --pc-inline-grid-grid-template-columns-xl,
+        var(
+          --pc-inline-grid-grid-template-columns-lg,
+          var(
+            --pc-inline-grid-grid-template-columns-md,
+            var(
+              --pc-inline-grid-grid-template-columns-sm,
+              var(--pc-inline-grid-grid-template-columns-xs)
+            )
+          )
+        )
+      );
+}
+}

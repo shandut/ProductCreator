@@ -1,0 +1,21 @@
+import './LegacyCard.out.css';
+
+var styles = {
+  "LegacyCard": "Polaris-LegacyCard_l5l93",
+  "Section": "Polaris-LegacyCard__Section_1b1h1",
+  "subdued": "Polaris-LegacyCard--subdued_17vaa",
+  "Section-hideOnPrint": "Polaris-LegacyCard__Section--hideOnPrint_f883o",
+  "hideOnPrint": "Polaris-LegacyCard--hideOnPrint_1nslv",
+  "Header": "Polaris-LegacyCard__Header_z4uwg",
+  "Section-fullWidth": "Polaris-LegacyCard__Section--fullWidth_3l6fs",
+  "Section-flush": "Polaris-LegacyCard__Section--flush_1tjqa",
+  "Section-subdued": "Polaris-LegacyCard__Section--subdued_3jppn",
+  "SectionHeader": "Polaris-LegacyCard__SectionHeader_1aytf",
+  "Subsection": "Polaris-LegacyCard__Subsection_197ob",
+  "Footer": "Polaris-LegacyCard__Footer_z4ij5",
+  "LeftJustified": "Polaris-LegacyCard__LeftJustified_1ldly",
+  "FirstSectionPadding": "Polaris-LegacyCard__FirstSectionPadding_dq8kr",
+  "LastSectionPadding": "Polaris-LegacyCard__LastSectionPadding_17gqq"
+};
+
+export { styles as default };

@@ -1,0 +1,29 @@
+import './Icon.out.css';
+
+var styles = {
+  "Icon": "Polaris-Icon_yj27d",
+  "toneInherit": "Polaris-Icon--toneInherit_si5nx",
+  "toneBase": "Polaris-Icon--toneBase_qk79r",
+  "toneSubdued": "Polaris-Icon--toneSubdued_1rjys",
+  "toneCaution": "Polaris-Icon--toneCaution_1unb3",
+  "toneWarning": "Polaris-Icon--toneWarning_1phxg",
+  "toneCritical": "Polaris-Icon--toneCritical_jv6uf",
+  "toneInteractive": "Polaris-Icon--toneInteractive_eznku",
+  "toneInfo": "Polaris-Icon--toneInfo_888w9",
+  "toneSuccess": "Polaris-Icon--toneSuccess_15hst",
+  "tonePrimary": "Polaris-Icon--tonePrimary_8qyly",
+  "toneEmphasis": "Polaris-Icon--toneEmphasis_hs4c2",
+  "toneMagic": "Polaris-Icon--toneMagic_tqodm",
+  "toneTextCaution": "Polaris-Icon--toneTextCaution_1q3ug",
+  "toneTextWarning": "Polaris-Icon--toneTextWarning_1ishd",
+  "toneTextCritical": "Polaris-Icon--toneTextCritical_4tiss",
+  "toneTextInfo": "Polaris-Icon--toneTextInfo_17zww",
+  "toneTextPrimary": "Polaris-Icon--toneTextPrimary_1dpg7",
+  "toneTextSuccess": "Polaris-Icon--toneTextSuccess_1tywg",
+  "toneTextMagic": "Polaris-Icon--toneTextMagic_vi2k8",
+  "Svg": "Polaris-Icon__Svg_375hu",
+  "Img": "Polaris-Icon__Img_375hq",
+  "Placeholder": "Polaris-Icon__Placeholder_w9ga3"
+};
+
+export { styles as default };

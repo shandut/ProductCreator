@@ -1,0 +1,7 @@
+import './Message.out.css';
+
+var styles = {
+  "Section": "Polaris-Menu-Message__Section_1b1h1"
+};
+
+export { styles as default };

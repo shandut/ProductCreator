@@ -1,0 +1,19 @@
+import React, { useEffect } from 'react';
+import { useIsAfterInitialMount } from '../../utilities/use-is-after-initial-mount.js';
+
+function AfterInitialMount({
+  children,
+  onMount,
+  fallback = null
+}) {
+  const isMounted = useIsAfterInitialMount();
+  const content = isMounted ? children : fallback;
+  useEffect(() => {
+    if (isMounted && onMount) {
+      onMount();
+    }
+  }, [isMounted, onMount]);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, content);
+}
+
+export { AfterInitialMount };

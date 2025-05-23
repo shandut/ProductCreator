@@ -1,0 +1,1 @@
+{"version":3,"file":"SettingAction.d.ts","sourceRoot":"","sources":["../../../../../src/components/SettingAction/SettingAction.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAI1B,MAAM,WAAW,kBAAkB;IACjC,MAAM,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;IACzB,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B;AAED,wBAAgB,aAAa,CAAC,EAAC,MAAM,EAAE,QAAQ,EAAC,EAAE,kBAAkB,qBAOnE"}

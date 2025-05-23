@@ -1,0 +1,13 @@
+import './TextOption.out.css';
+
+var styles = {
+  "TextOption": "Polaris-Listbox-TextOption_yqf1e",
+  "allowMultiple": "Polaris-Listbox-TextOption--allowMultiple_zywv7",
+  "isAction": "Polaris-Listbox-TextOption--isAction_1op9y",
+  "disabled": "Polaris-Listbox-TextOption--disabled_hcuh9",
+  "selected": "Polaris-Listbox-TextOption--selected_mijeo",
+  "Content": "Polaris-Listbox-TextOption__Content_xd1mk",
+  "Checkbox": "Polaris-Listbox-TextOption__Checkbox_1d6zr"
+};
+
+export { styles as default };

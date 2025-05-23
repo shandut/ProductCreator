@@ -1,0 +1,7 @@
+import './UserMenu.out.css';
+
+var styles = {
+  "Details": "Polaris-TopBar-UserMenu__Details_1bdkj"
+};
+
+export { styles as default };

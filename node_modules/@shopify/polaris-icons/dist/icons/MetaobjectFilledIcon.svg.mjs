@@ -1,0 +1,13 @@
+import React from 'react';
+
+var SvgMetaobjectFilledIcon = function SvgMetaobjectFilledIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M16 6.5v-1.5c0-.552-.448-1-1-1h-2.5c-.552 0-1 .448-1 1v1.5h-.5c-.552 0-1 .448-1 1v3.5h-1.5v-1.5c0-.552-.448-1-1-1h-2.5c-.552 0-1 .448-1 1v1.5h-.5c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1h13c.552 0 1-.448 1-1v-4c0-.086-.01-.17-.032-.25.021-.08.032-.164.032-.25v-4c0-.552-.448-1-1-1h-.5Z"
+  }));
+};
+SvgMetaobjectFilledIcon.displayName = "MetaobjectFilledIcon";
+
+export { SvgMetaobjectFilledIcon as S };

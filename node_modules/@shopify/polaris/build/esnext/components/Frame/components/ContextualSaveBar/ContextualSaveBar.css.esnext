@@ -1,0 +1,14 @@
+import './ContextualSaveBar.out.css';
+
+var styles = {
+  "ContextualSaveBar": "Polaris-Frame-ContextualSaveBar_14m7v",
+  "LogoContainer": "Polaris-Frame-ContextualSaveBar__LogoContainer_szav1",
+  "ContextControl": "Polaris-Frame-ContextualSaveBar__ContextControl_3di0f",
+  "Contents": "Polaris-Frame-ContextualSaveBar__Contents_1u1wn",
+  "fullWidth": "Polaris-Frame-ContextualSaveBar--fullWidth_zyvh4",
+  "MessageContainer": "Polaris-Frame-ContextualSaveBar__MessageContainer_kexmj",
+  "ActionContainer": "Polaris-Frame-ContextualSaveBar__ActionContainer_hk0rr",
+  "Action": "Polaris-Frame-ContextualSaveBar__Action_r96cs"
+};
+
+export { styles as default };

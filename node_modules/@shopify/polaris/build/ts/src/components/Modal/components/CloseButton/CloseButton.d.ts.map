@@ -1,0 +1,1 @@
+{"version":3,"file":"CloseButton.d.ts","sourceRoot":"","sources":["../../../../../../../src/components/Modal/components/CloseButton/CloseButton.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAM1B,MAAM,WAAW,gBAAgB;IAC/B,OAAO,CAAC,EAAE,OAAO,CAAC;IAClB,OAAO,IAAI,IAAI,CAAC;CACjB;AAED,wBAAgB,WAAW,CAAC,EAAC,OAAO,EAAE,OAAO,EAAC,EAAE,gBAAgB,qBAY/D"}

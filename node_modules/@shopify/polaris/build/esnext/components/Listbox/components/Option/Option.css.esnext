@@ -1,0 +1,8 @@
+import './Option.out.css';
+
+var styles = {
+  "Option": "Polaris-Listbox-Option_r96cc",
+  "divider": "Polaris-Listbox-Option--divider_myoiu"
+};
+
+export { styles as default };

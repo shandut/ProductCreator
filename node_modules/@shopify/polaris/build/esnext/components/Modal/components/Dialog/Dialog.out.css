@@ -1,0 +1,124 @@
+.Polaris-Modal-Dialog__Container_13mbo{
+  position:fixed;
+  z-index:var(--p-z-index-11);
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  pointer-events:none;
+}
+
+@media (min-width: 48em){
+
+.Polaris-Modal-Dialog__Container_13mbo{
+    justify-content:center;
+}
+  }
+
+.Polaris-Modal-Dialog_n3qgo:focus{
+  outline:0;
+}
+
+.Polaris-Modal-Dialog__Modal_2v9yc{
+  --pc-modal-dialog-vertical-spacing:3.75rem;
+  pointer-events:initial;
+  position:fixed;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-height:calc(100vh - var(--pc-modal-dialog-vertical-spacing));
+  background:var(--p-color-bg-surface);
+  box-shadow:var(--p-shadow-600);
+  overflow:hidden;
+}
+
+@media (forced-colors: active){
+
+.Polaris-Modal-Dialog__Modal_2v9yc{
+    border:var(--p-border-width-025) solid transparent;
+}
+  }
+
+@media (max-width: 47.9975em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc{
+    bottom:0;
+    max-height:100%;
+}
+  }
+
+@media (min-width: 48em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc{
+    position:relative;
+    max-width:38.75rem;
+    margin:0 auto;
+    border-radius:var(--p-border-radius-400);
+}
+  }
+
+@media (min-width: 48em) and (min-height: 41.25em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--limitHeight_1hum8{
+        max-height:37.5rem;
+  }
+      }
+
+@media (min-width: 48em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--sizeSmall_7647q{
+      max-width:23.75rem;
+  }
+    }
+
+@media (min-width: 48em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--sizeLarge_61dxo{
+      max-width:calc(100% - var(--p-space-1600));
+  }
+    }
+
+@media (min-width: 65em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--sizeLarge_61dxo{
+      max-width:61.25rem;
+  }
+    }
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--sizeFullScreen_qp8cf{
+    height:100%;
+  }
+
+@media (min-width: 48em){
+
+.Polaris-Modal-Dialog__Modal_2v9yc.Polaris-Modal-Dialog--sizeFullScreen_qp8cf{
+      height:unset;
+  }
+    }
+
+.Polaris-Modal-Dialog--animateFadeUp_1ok63{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  will-change:transform, opacity;
+  opacity:1;
+  transform:translateY(0);
+  transition:transform var(--p-motion-ease) var(--p-motion-duration-200), opacity var(--p-motion-ease) var(--p-motion-duration-200);
+}
+
+.Polaris-Modal-Dialog--animateFadeUp_1ok63.Polaris-Modal-Dialog--entering_dwhxg,
+  .Polaris-Modal-Dialog--animateFadeUp_1ok63.Polaris-Modal-Dialog--exiting_1brpc,
+  .Polaris-Modal-Dialog--animateFadeUp_1ok63.Polaris-Modal-Dialog--exited_ijm9z{
+    opacity:0;
+    transform:translateY(12.5rem);
+  }
+
+.Polaris-Modal-Dialog--animateFadeUp_1ok63.Polaris-Modal-Dialog--entered_17x8x{
+    opacity:1;
+    transform:translateY(0);
+  }

@@ -1,0 +1,8 @@
+.Polaris-InlineCode__Code_yisjj{
+  background-color:var(--p-color-bg-fill-tertiary);
+  border-radius:var(--p-border-radius-050);
+  font-family:var(--p-font-family-mono);
+  font-size:0.85em;
+  font-weight:var(--p-font-weight-medium);
+  padding:var(--p-space-025) var(--p-space-100);
+}

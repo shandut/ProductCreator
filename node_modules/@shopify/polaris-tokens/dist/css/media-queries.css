@@ -1,0 +1,24 @@
+@custom-media --p-breakpoints-xs-up (min-width: 0em);
+@custom-media --p-breakpoints-xs-down (max-width: -0.0025em);
+@custom-media --p-breakpoints-xs-only (min-width: 0em) and (max-width: 30.6225em);
+
+@custom-media --p-breakpoints-sm-up (min-width: 30.625em);
+@custom-media --p-breakpoints-sm-down (max-width: 30.6225em);
+@custom-media --p-breakpoints-sm-only (min-width: 30.625em) and (max-width: 47.9975em);
+
+@custom-media --p-breakpoints-md-up (min-width: 48em);
+@custom-media --p-breakpoints-md-down (max-width: 47.9975em);
+@custom-media --p-breakpoints-md-only (min-width: 48em) and (max-width: 64.9975em);
+
+@custom-media --p-breakpoints-lg-up (min-width: 65em);
+@custom-media --p-breakpoints-lg-down (max-width: 64.9975em);
+@custom-media --p-breakpoints-lg-only (min-width: 65em) and (max-width: 89.9975em);
+
+@custom-media --p-breakpoints-xl-up (min-width: 90em);
+@custom-media --p-breakpoints-xl-down (max-width: 89.9975em);
+@custom-media --p-breakpoints-xl-only (min-width: 90em);
+
+@custom-media --p-interaction-touch (hover: none) and (pointer: coarse);
+@custom-media --p-interaction-stylus (hover: none) and (pointer: fine);
+@custom-media --p-interaction-pointer (hover) and (pointer: coarse);
+@custom-media --p-interaction-mouse (hover) and (pointer: fine);

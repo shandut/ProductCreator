@@ -1,0 +1,36 @@
+import React from 'react';
+import { classNames } from '../../utilities/css.esnext';
+import styles from './Backdrop.css.esnext';
+import { ScrollLock } from '../ScrollLock/ScrollLock.esnext';
+
+function Backdrop(props) {
+  const {
+    onClick,
+    onTouchStart,
+    belowNavigation,
+    transparent,
+    setClosing
+  } = props;
+  const className = classNames(styles.Backdrop, belowNavigation && styles.belowNavigation, transparent && styles.transparent);
+  const handleMouseDown = () => {
+    if (setClosing) {
+      setClosing(true);
+    }
+  };
+  const handleClick = () => {
+    if (setClosing) {
+      setClosing(false);
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ScrollLock, null), /*#__PURE__*/React.createElement("div", {
+    className: className,
+    onClick: handleClick,
+    onTouchStart: onTouchStart,
+    onMouseDown: handleMouseDown
+  }));
+}
+
+export { Backdrop };

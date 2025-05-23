@@ -1,0 +1,25 @@
+import './Badge.out.css';
+
+var styles = {
+  "Badge": "Polaris-Badge_2qgie",
+  "toneSuccess": "Polaris-Badge--toneSuccess_15hst",
+  "toneSuccess-strong": "Polaris-Badge__toneSuccess--strong_dlrte",
+  "toneInfo": "Polaris-Badge--toneInfo_888w9",
+  "toneInfo-strong": "Polaris-Badge__toneInfo--strong_qq6hg",
+  "toneAttention": "Polaris-Badge--toneAttention_ff4zk",
+  "toneAttention-strong": "Polaris-Badge__toneAttention--strong_1lwee",
+  "toneWarning": "Polaris-Badge--toneWarning_1phxg",
+  "toneWarning-strong": "Polaris-Badge__toneWarning--strong_qjx5t",
+  "toneCritical": "Polaris-Badge--toneCritical_jv6uf",
+  "toneCritical-strong": "Polaris-Badge__toneCritical--strong_1ovge",
+  "toneNew": "Polaris-Badge--toneNew_vwxid",
+  "toneMagic": "Polaris-Badge--toneMagic_tqodm",
+  "toneRead-only": "Polaris-Badge__toneRead--only_cbkof",
+  "toneEnabled": "Polaris-Badge--toneEnabled_lm455",
+  "sizeLarge": "Polaris-Badge--sizeLarge_61dxo",
+  "withinFilter": "Polaris-Badge--withinFilter_11dcy",
+  "Icon": "Polaris-Badge__Icon_yj27d",
+  "PipContainer": "Polaris-Badge__PipContainer_dsjox"
+};
+
+export { styles as default };

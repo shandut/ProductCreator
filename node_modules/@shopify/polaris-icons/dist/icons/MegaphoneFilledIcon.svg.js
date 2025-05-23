@@ -1,0 +1,18 @@
+'use strict';
+
+var React = require('react');
+
+var SvgMegaphoneFilledIcon = function SvgMegaphoneFilledIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 9.75a2.11 2.11 0 0 0 1.982 2.105l4.056.246a.75.75 0 0 1 .4.146l3.068 2.272c.825.611 1.994.022 1.994-1.004v-7.608c0-1.032-1.18-1.62-2.004-.997l-3.097 2.341a.75.75 0 0 1-.407.15l-4.01.244a2.11 2.11 0 0 0-1.982 2.105Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.625 13.177v2.147a1.301 1.301 0 0 0 2.594.152l.238-2.023-.154-.114-2.678-.162Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 8.75a.75.75 0 0 0-1.5 0v2.5a.75.75 0 0 0 1.5 0v-2.5Z"
+  }));
+};
+SvgMegaphoneFilledIcon.displayName = "MegaphoneFilledIcon";
+
+exports.SvgMegaphoneFilledIcon = SvgMegaphoneFilledIcon;

@@ -1,0 +1,11 @@
+import './SkeletonThumbnail.out.css';
+
+var styles = {
+  "SkeletonThumbnail": "Polaris-SkeletonThumbnail_u7qua",
+  "sizeExtraSmall": "Polaris-SkeletonThumbnail--sizeExtraSmall_1twbb",
+  "sizeSmall": "Polaris-SkeletonThumbnail--sizeSmall_7647q",
+  "sizeMedium": "Polaris-SkeletonThumbnail--sizeMedium_5f35p",
+  "sizeLarge": "Polaris-SkeletonThumbnail--sizeLarge_61dxo"
+};
+
+export { styles as default };

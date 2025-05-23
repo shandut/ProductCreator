@@ -1,0 +1,118 @@
+.Polaris-InlineStack_bc7jt{
+  --pc-inline-stack-gap-xs: initial;
+  --pc-inline-stack-gap-sm: initial;
+  --pc-inline-stack-gap-md: initial;
+  --pc-inline-stack-gap-lg: initial;
+  --pc-inline-stack-gap-xl: initial;
+  gap: var(--pc-inline-stack-gap-xs);
+  --pc-inline-stack-flex-direction-xs: initial;
+  --pc-inline-stack-flex-direction-sm: initial;
+  --pc-inline-stack-flex-direction-md: initial;
+  --pc-inline-stack-flex-direction-lg: initial;
+  --pc-inline-stack-flex-direction-xl: initial;
+  flex-direction: var(--pc-inline-stack-flex-direction-xs);
+  display:flex;
+  flex-wrap:var(--pc-inline-stack-wrap);
+  align-items:var(--pc-inline-stack-block-align);
+  justify-content:var(--pc-inline-stack-align);
+}
+@media (min-width: 30.625em) {
+  .Polaris-InlineStack_bc7jt{
+    gap: var(
+        --pc-inline-stack-gap-sm,
+        var(--pc-inline-stack-gap-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-InlineStack_bc7jt{
+    gap: var(
+        --pc-inline-stack-gap-md,
+        var(
+          --pc-inline-stack-gap-sm,
+          var(--pc-inline-stack-gap-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-InlineStack_bc7jt{
+    gap: var(
+        --pc-inline-stack-gap-lg,
+        var(
+          --pc-inline-stack-gap-md,
+          var(
+            --pc-inline-stack-gap-sm,
+            var(--pc-inline-stack-gap-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-InlineStack_bc7jt{
+    gap: var(
+        --pc-inline-stack-gap-xl,
+        var(
+          --pc-inline-stack-gap-lg,
+          var(
+            --pc-inline-stack-gap-md,
+            var(
+              --pc-inline-stack-gap-sm,
+              var(--pc-inline-stack-gap-xs)
+            )
+          )
+        )
+      );
+}
+}
+@media (min-width: 30.625em) {
+  .Polaris-InlineStack_bc7jt{
+    flex-direction: var(
+        --pc-inline-stack-flex-direction-sm,
+        var(--pc-inline-stack-flex-direction-xs)
+      );
+}
+}
+@media (min-width: 48em) {
+  .Polaris-InlineStack_bc7jt{
+    flex-direction: var(
+        --pc-inline-stack-flex-direction-md,
+        var(
+          --pc-inline-stack-flex-direction-sm,
+          var(--pc-inline-stack-flex-direction-xs)
+        )
+      );
+}
+}
+@media (min-width: 65em) {
+  .Polaris-InlineStack_bc7jt{
+    flex-direction: var(
+        --pc-inline-stack-flex-direction-lg,
+        var(
+          --pc-inline-stack-flex-direction-md,
+          var(
+            --pc-inline-stack-flex-direction-sm,
+            var(--pc-inline-stack-flex-direction-xs)
+          )
+        )
+      );
+}
+}
+@media (min-width: 90em) {
+  .Polaris-InlineStack_bc7jt{
+    flex-direction: var(
+        --pc-inline-stack-flex-direction-xl,
+        var(
+          --pc-inline-stack-flex-direction-lg,
+          var(
+            --pc-inline-stack-flex-direction-md,
+            var(
+              --pc-inline-stack-flex-direction-sm,
+              var(--pc-inline-stack-flex-direction-xs)
+            )
+          )
+        )
+      );
+}
+}

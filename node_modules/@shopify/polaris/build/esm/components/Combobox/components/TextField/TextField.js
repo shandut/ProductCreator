@@ -1,0 +1,63 @@
+import React, { useId, useMemo, useEffect, useCallback } from 'react';
+import { useComboboxTextField } from '../../../../utilities/combobox/hooks.js';
+import { labelID } from '../../../Label/Label.js';
+import { TextField as TextField$1 } from '../../../TextField/TextField.js';
+
+function TextField({
+  value,
+  id: idProp,
+  type = 'text',
+  ariaAutocomplete = 'list',
+  onFocus,
+  onBlur,
+  onChange,
+  ...rest
+}) {
+  const comboboxTextFieldContext = useComboboxTextField();
+  const {
+    activeOptionId,
+    listboxId,
+    expanded,
+    setTextFieldFocused,
+    setTextFieldLabelId,
+    onTextFieldFocus,
+    onTextFieldChange,
+    onTextFieldBlur
+  } = comboboxTextFieldContext;
+  const uniqueId = useId();
+  const textFieldId = useMemo(() => idProp || uniqueId, [uniqueId, idProp]);
+  const labelId = useMemo(() => labelID(idProp || uniqueId), [uniqueId, idProp]);
+  useEffect(() => {
+    if (setTextFieldLabelId) setTextFieldLabelId(labelId);
+  }, [labelId, setTextFieldLabelId]);
+  const handleFocus = useCallback(event => {
+    if (onFocus) onFocus(event);
+    if (onTextFieldFocus) onTextFieldFocus();
+    if (setTextFieldFocused) setTextFieldFocused(true);
+  }, [onFocus, onTextFieldFocus, setTextFieldFocused]);
+  const handleBlur = useCallback(event => {
+    if (onBlur) onBlur(event);
+    if (onTextFieldBlur) onTextFieldBlur();
+    if (setTextFieldFocused) setTextFieldFocused(false);
+  }, [onBlur, onTextFieldBlur, setTextFieldFocused]);
+  const handleChange = useCallback((value, id) => {
+    if (onChange) onChange(value, id);
+    if (onTextFieldChange) onTextFieldChange(value);
+  }, [onChange, onTextFieldChange]);
+  return /*#__PURE__*/React.createElement(TextField$1, Object.assign({}, rest, {
+    value: value,
+    id: textFieldId,
+    type: type,
+    ariaAutocomplete: ariaAutocomplete,
+    "aria-haspopup": "listbox",
+    ariaActiveDescendant: activeOptionId,
+    ariaControls: listboxId,
+    role: "combobox",
+    ariaExpanded: expanded,
+    onFocus: handleFocus,
+    onBlur: handleBlur,
+    onChange: handleChange
+  }));
+}
+
+export { TextField };

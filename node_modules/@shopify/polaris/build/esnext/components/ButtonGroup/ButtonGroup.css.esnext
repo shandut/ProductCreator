@@ -1,0 +1,16 @@
+import './ButtonGroup.out.css';
+
+var styles = {
+  "ButtonGroup": "Polaris-ButtonGroup_yy85z",
+  "Item": "Polaris-ButtonGroup__Item_yiyol",
+  "Item-plain": "Polaris-ButtonGroup__Item--plain_1lavi",
+  "variantSegmented": "Polaris-ButtonGroup--variantSegmented_1lj17",
+  "Item-focused": "Polaris-ButtonGroup__Item--focused_1iwi4",
+  "fullWidth": "Polaris-ButtonGroup--fullWidth_zyvh4",
+  "extraTight": "Polaris-ButtonGroup--extraTight_1xh3x",
+  "tight": "Polaris-ButtonGroup--tight_312wf",
+  "loose": "Polaris-ButtonGroup--loose_2qq07",
+  "noWrap": "Polaris-ButtonGroup--noWrap_vecks"
+};
+
+export { styles as default };

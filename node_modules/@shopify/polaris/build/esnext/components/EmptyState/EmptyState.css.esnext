@@ -1,0 +1,12 @@
+import './EmptyState.out.css';
+
+var styles = {
+  "ImageContainer": "Polaris-EmptyState__ImageContainer_wrfol",
+  "Image": "Polaris-EmptyState__Image_2qgms",
+  "loaded": "Polaris-EmptyState--loaded_ij9so",
+  "imageContained": "Polaris-EmptyState--imageContained_z6t0k",
+  "SkeletonImageContainer": "Polaris-EmptyState__SkeletonImageContainer_qysq2",
+  "SkeletonImage": "Polaris-EmptyState__SkeletonImage_16agu"
+};
+
+export { styles as default };

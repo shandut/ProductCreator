@@ -1,0 +1,26 @@
+import React from 'react';
+import { classNames, variationName } from '../../utilities/css.esnext';
+import styles from './Thumbnail.css.esnext';
+import { Image } from '../Image/Image.esnext';
+import { Icon } from '../Icon/Icon.esnext';
+
+function Thumbnail({
+  source,
+  alt,
+  size = 'medium',
+  transparent
+}) {
+  const className = classNames(styles.Thumbnail, size && styles[variationName('size', size)], transparent && styles.transparent);
+  const content = typeof source === 'string' ? /*#__PURE__*/React.createElement(Image, {
+    alt: alt,
+    source: source
+  }) : /*#__PURE__*/React.createElement(Icon, {
+    accessibilityLabel: alt,
+    source: source
+  });
+  return /*#__PURE__*/React.createElement("span", {
+    className: className
+  }, content);
+}
+
+export { Thumbnail };

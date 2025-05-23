@@ -1,0 +1,9 @@
+import './FormLayout.out.css';
+
+var styles = {
+  "Item": "Polaris-FormLayout__Item_yiyol",
+  "grouped": "Polaris-FormLayout--grouped_17srt",
+  "condensed": "Polaris-FormLayout--condensed_b60cb"
+};
+
+export { styles as default };

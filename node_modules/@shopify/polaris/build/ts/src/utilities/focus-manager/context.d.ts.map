@@ -1,0 +1,1 @@
+{"version":3,"file":"context.d.ts","sourceRoot":"","sources":["../../../../../src/utilities/focus-manager/context.tsx"],"names":[],"mappings":";AAEA,MAAM,WAAW,uBAAuB;IACtC,aAAa,EAAE,MAAM,EAAE,CAAC;IACxB,GAAG,EAAE,CAAC,EAAE,EAAE,MAAM,KAAK,IAAI,CAAC;IAC1B,MAAM,EAAE,CAAC,EAAE,EAAE,MAAM,KAAK,OAAO,CAAC;CACjC;AAED,eAAO,MAAM,mBAAmB,8DAEpB,CAAC"}

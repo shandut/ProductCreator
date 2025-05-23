@@ -1,0 +1,25 @@
+import './DatePicker.out.css';
+
+var styles = {
+  "DatePicker": "Polaris-DatePicker_1h7yp",
+  "MonthLayout": "Polaris-DatePicker__MonthLayout_1rxud",
+  "MonthContainer": "Polaris-DatePicker__MonthContainer_wvj6b",
+  "Month": "Polaris-DatePicker__Month_2yc3r",
+  "DayCell": "Polaris-DatePicker__DayCell_1ufrd",
+  "DayCell-inRange": "Polaris-DatePicker__DayCell--inRange_bdklc",
+  "Day": "Polaris-DatePicker__Day_37600",
+  "Day-inRange": "Polaris-DatePicker__Day--inRange_8tlk9",
+  "Day-selected": "Polaris-DatePicker__Day--selected_11sb5",
+  "Day-disabled": "Polaris-DatePicker__Day--disabled_l152e",
+  "EmptyDayCell": "Polaris-DatePicker__EmptyDayCell_1g9oi",
+  "Weekday": "Polaris-DatePicker__Weekday_igvyt",
+  "Header": "Polaris-DatePicker__Header_z4uwg",
+  "Title": "Polaris-DatePicker__Title_2qj8j",
+  "Day-firstInRange": "Polaris-DatePicker__Day--firstInRange_sp8p9",
+  "Day-hasRange": "Polaris-DatePicker__Day--hasRange_742b2",
+  "Day-hoverRight": "Polaris-DatePicker__Day--hoverRight_1549s",
+  "Day-lastInRange": "Polaris-DatePicker__Day--lastInRange_1jdh1",
+  "Week": "Polaris-DatePicker__Week_yj63l"
+};
+
+export { styles as default };

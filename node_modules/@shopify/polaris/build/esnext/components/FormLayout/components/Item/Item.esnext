@@ -1,0 +1,15 @@
+import React from 'react';
+import { classNames } from '../../../../utilities/css.esnext';
+import styles from '../../FormLayout.css.esnext';
+
+function Item({
+  children,
+  condensed = false
+}) {
+  const className = classNames(styles.Item, condensed ? styles.condensed : styles.grouped);
+  return children ? /*#__PURE__*/React.createElement("div", {
+    className: className
+  }, children) : null;
+}
+
+export { Item };

@@ -1,0 +1,27 @@
+.Polaris-Connected_wopc9{
+  --pc-connected-item:10;
+  --pc-connected-primary:20;
+  --pc-connected-focused:30;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.Polaris-Connected__Item_yiyol{
+  position:relative;
+  z-index:var(--pc-connected-item);
+  flex:0 0 auto;
+}
+
+.Polaris-Connected__Item_yiyol:not(:first-child){
+    margin-left:var(--p-space-100);
+  }
+
+.Polaris-Connected__Item--primary_rmh5m{
+  z-index:var(--pc-connected-primary);
+  flex:1 1 auto;
+}
+
+.Polaris-Connected__Item--focused_1iwi4{
+  z-index:var(--pc-connected-focused);
+}

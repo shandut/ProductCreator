@@ -1,0 +1,7 @@
+import './SkeletonPage.out.css';
+
+var styles = {
+  "SkeletonTitle": "Polaris-SkeletonPage__SkeletonTitle_7v6f2"
+};
+
+export { styles as default };

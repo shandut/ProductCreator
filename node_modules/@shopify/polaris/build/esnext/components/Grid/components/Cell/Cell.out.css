@@ -1,0 +1,227 @@
+.Polaris-Grid-Cell_yixs7{
+  --pc-row-xs:initial;
+  --pc-row-sm:var(--pc-row-xs);
+  --pc-row-md:var(--pc-row-sm);
+  --pc-row-lg:var(--pc-row-md);
+  --pc-row-xl:var(--pc-row-lg);
+  --pc-column-xs:initial;
+  --pc-column-sm:var(--pc-column-xs);
+  --pc-column-md:var(--pc-column-sm);
+  --pc-column-lg:var(--pc-column-md);
+  --pc-column-xl:var(--pc-column-lg);
+  min-width:0;
+  grid-row:var(--pc-row-xs);
+  grid-column:var(--pc-column-xs);
+}
+
+@media (min-width: 30.625em){
+
+.Polaris-Grid-Cell_yixs7{
+    grid-row:var(--pc-row-sm);
+    grid-column:var(--pc-column-sm);
+}
+  }
+
+@media (min-width: 48em){
+
+.Polaris-Grid-Cell_yixs7{
+    grid-row:var(--pc-row-md);
+    grid-column:var(--pc-column-md);
+}
+  }
+
+@media (min-width: 65em){
+
+.Polaris-Grid-Cell_yixs7{
+    grid-row:var(--pc-row-lg);
+    grid-column:var(--pc-column-lg);
+}
+  }
+
+@media (min-width: 90em){
+
+.Polaris-Grid-Cell_yixs7{
+    grid-row:var(--pc-row-xl);
+    grid-column:var(--pc-column-xl);
+}
+  }
+
+.Polaris-Grid-Cell--cell_1ColumnXs_39ucp {
+  grid-column-end: span 1;
+}
+
+.Polaris-Grid-Cell--cell_2ColumnXs_2s2eo {
+  grid-column-end: span 2;
+}
+
+.Polaris-Grid-Cell--cell_3ColumnXs_4kcz6 {
+  grid-column-end: span 3;
+}
+
+.Polaris-Grid-Cell--cell_4ColumnXs_3x3ny {
+  grid-column-end: span 4;
+}
+
+.Polaris-Grid-Cell--cell_5ColumnXs_5pk7s {
+  grid-column-end: span 5;
+}
+
+.Polaris-Grid-Cell--cell_6ColumnXs_57s9q {
+  grid-column-end: span 6;
+}
+
+@media (min-width: 30.625em) {
+
+  .Polaris-Grid-Cell--cell_1ColumnSm_cgni7 {
+    grid-column-end: span 1;
+  }
+
+  .Polaris-Grid-Cell--cell_2ColumnSm_d6qhl {
+    grid-column-end: span 2;
+  }
+
+  .Polaris-Grid-Cell--cell_3ColumnSm_drc3s {
+    grid-column-end: span 3;
+  }
+
+  .Polaris-Grid-Cell--cell_4ColumnSm_9gc0y {
+    grid-column-end: span 4;
+  }
+
+  .Polaris-Grid-Cell--cell_5ColumnSm_a0xn5 {
+    grid-column-end: span 5;
+  }
+
+  .Polaris-Grid-Cell--cell_6ColumnSm_ar0mj {
+    grid-column-end: span 6;
+  }
+}
+
+@media (min-width: 48em) {
+
+  .Polaris-Grid-Cell--cell_1ColumnMd_1r5xx {
+    grid-column-end: span 1;
+  }
+
+  .Polaris-Grid-Cell--cell_2ColumnMd_1qlia {
+    grid-column-end: span 2;
+  }
+
+  .Polaris-Grid-Cell--cell_3ColumnMd_1pvfa {
+    grid-column-end: span 3;
+  }
+
+  .Polaris-Grid-Cell--cell_4ColumnMd_1ubqr {
+    grid-column-end: span 4;
+  }
+
+  .Polaris-Grid-Cell--cell_5ColumnMd_1tlns {
+    grid-column-end: span 5;
+  }
+
+  .Polaris-Grid-Cell--cell_6ColumnMd_1t185 {
+    grid-column-end: span 6;
+  }
+}
+
+@media (min-width: 65em) {
+
+  .Polaris-Grid-Cell--cell_1ColumnLg_1o9t3 {
+    grid-column-end: span 1;
+  }
+
+  .Polaris-Grid-Cell--cell_2ColumnLg_1ns15 {
+    grid-column-end: span 2;
+  }
+
+  .Polaris-Grid-Cell--cell_3ColumnLg_1pkbp {
+    grid-column-end: span 3;
+  }
+
+  .Polaris-Grid-Cell--cell_4ColumnLg_1ox2e {
+    grid-column-end: span 4;
+  }
+
+  .Polaris-Grid-Cell--cell_5ColumnLg_1qpiy {
+    grid-column-end: span 5;
+  }
+
+  .Polaris-Grid-Cell--cell_6ColumnLg_1q7r0 {
+    grid-column-end: span 6;
+  }
+
+  .Polaris-Grid-Cell--cell_7ColumnLg_1s01k {
+    grid-column-end: span 7;
+  }
+
+  .Polaris-Grid-Cell--cell_8ColumnLg_1hlwt {
+    grid-column-end: span 8;
+  }
+
+  .Polaris-Grid-Cell--cell_9ColumnLg_1jedd {
+    grid-column-end: span 9;
+  }
+
+  .Polaris-Grid-Cell--cell_10ColumnLg_np42c {
+    grid-column-end: span 10;
+  }
+
+  .Polaris-Grid-Cell--cell_11ColumnLg_e2wi1 {
+    grid-column-end: span 11;
+  }
+
+  .Polaris-Grid-Cell--cell_12ColumnLg_1uc6n {
+    grid-column-end: span 12;
+  }
+}
+
+@media (min-width: 90em) {
+
+  .Polaris-Grid-Cell--cell_1ColumnXl_mask6 {
+    grid-column-end: span 1;
+  }
+
+  .Polaris-Grid-Cell--cell_2ColumnXl_my1ve {
+    grid-column-end: span 2;
+  }
+
+  .Polaris-Grid-Cell--cell_3ColumnXl_l09xp {
+    grid-column-end: span 3;
+  }
+
+  .Polaris-Grid-Cell--cell_4ColumnXl_lt0m4 {
+    grid-column-end: span 4;
+  }
+
+  .Polaris-Grid-Cell--cell_5ColumnXl_jv2p3 {
+    grid-column-end: span 5;
+  }
+
+  .Polaris-Grid-Cell--cell_6ColumnXl_kic0c {
+    grid-column-end: span 6;
+  }
+
+  .Polaris-Grid-Cell--cell_7ColumnXl_ikk2m {
+    grid-column-end: span 7;
+  }
+
+  .Polaris-Grid-Cell--cell_8ColumnXl_t466w {
+    grid-column-end: span 8;
+  }
+
+  .Polaris-Grid-Cell--cell_9ColumnXl_r689w {
+    grid-column-end: span 9;
+  }
+
+  .Polaris-Grid-Cell--cell_10ColumnXl_4itte {
+    grid-column-end: span 10;
+  }
+
+  .Polaris-Grid-Cell--cell_11ColumnXl_e57cs {
+    grid-column-end: span 11;
+  }
+
+  .Polaris-Grid-Cell--cell_12ColumnXl_wwv9u {
+    grid-column-end: span 12;
+  }
+}

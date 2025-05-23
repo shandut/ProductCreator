@@ -1,0 +1,93 @@
+.Polaris-LegacyFilters-ConnectedFilterControl_32yio{
+  --pc-connceted-filter-control-item:10;
+  --pc-connceted-filter-control-focused:20;
+  display:flex;
+  flex-grow:1;
+  align-items:center;
+}
+.Polaris-LegacyFilters-ConnectedFilterControl_32yio .Polaris-LegacyFilters-ConnectedFilterControl__CenterContainer_kh80i{
+    flex:1 1 auto;
+    min-width:6.25rem;
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl_32yio.Polaris-LegacyFilters-ConnectedFilterControl--right_312wf .Polaris-LegacyFilters-ConnectedFilterControl__CenterContainer_kh80i *{
+      border-top-right-radius:var(--p-border-radius-200);
+      border-bottom-right-radius:var(--p-border-radius-200);
+    }
+.Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol{
+  position:relative;
+  z-index:var(--pc-connceted-filter-control-item);
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__Item--focused_1iwi4{
+  z-index:var(--pc-connceted-filter-control-focused);
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__ProxyButtonContainer_1ydjk{
+  position:absolute;
+  top:-62.5rem;
+  left:-62.5rem;
+  display:flex;
+  width:100%;
+  height:0;
+  visibility:hidden;
+  overflow:hidden;
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__ProxyButtonContainer_1ydjk > *{
+    flex-shrink:0;
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__CenterContainer_kh80i + .Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5,
+.Polaris-LegacyFilters-ConnectedFilterControl__CenterContainer_kh80i + .Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r{
+  margin-left:var(--p-space-200);
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5{
+  display:flex;
+  flex-shrink:0;
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5 .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol > div > button{
+    margin-right:calc(var(--p-space-025)*-1);
+    border-radius:0;
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5 .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol{
+    flex-shrink:0;
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5 .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol:first-of-type > div > button{
+    border-top-left-radius:var(--p-border-radius-200);
+    border-bottom-left-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5 .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol:last-of-type > div > button{
+    border-top-right-radius:var(--p-border-radius-200);
+    border-bottom-right-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainer_x3ra5.Polaris-LegacyFilters-ConnectedFilterControl--queryFieldHidden_12t4z .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol:first-of-type > div > button{
+    border-top-left-radius:var(--p-border-radius-200);
+    border-bottom-left-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__RightContainerWithoutMoreFilters_iv9ld .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol:last-child > div > button{
+    border-top-right-radius:var(--p-border-radius-200);
+    border-bottom-right-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r{
+  padding-left:var(--p-space-200);
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol > div > button{
+    white-space:nowrap;
+    border-top-left-radius:var(--p-border-radius-200);
+    border-bottom-left-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r.Polaris-LegacyFilters-ConnectedFilterControl--onlyButtonVisible_guncc{
+  padding-left:0;
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__MoreFiltersButtonContainer_2yy0r.Polaris-LegacyFilters-ConnectedFilterControl--onlyButtonVisible_guncc .Polaris-LegacyFilters-ConnectedFilterControl__Item_yiyol > div > button{
+    border-radius:var(--p-border-radius-200);
+  }
+.Polaris-LegacyFilters-ConnectedFilterControl__Wrapper_mkrm3{
+  display:flex;
+  align-items:center;
+}
+.Polaris-LegacyFilters-ConnectedFilterControl__AuxiliaryContainer_20w7m{
+  flex-grow:0;
+  margin-left:var(--p-space-200);
+}
+@media (min-width: 48em){
+.Polaris-LegacyFilters-ConnectedFilterControl__AuxiliaryContainer_20w7m{
+    margin-left:0;
+}
+  }

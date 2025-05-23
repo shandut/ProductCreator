@@ -1,0 +1,18 @@
+import './Checkbox.out.css';
+
+var styles = {
+  "Checkbox": "Polaris-Checkbox_1d6zr",
+  "ChoiceLabel": "Polaris-Checkbox__ChoiceLabel_16hp3",
+  "Backdrop": "Polaris-Checkbox__Backdrop_1x2i2",
+  "Input": "Polaris-Checkbox__Input_30ock",
+  "Input-indeterminate": "Polaris-Checkbox__Input--indeterminate_wtlpx",
+  "Icon": "Polaris-Checkbox__Icon_yj27d",
+  "animated": "Polaris-Checkbox--animated_mk14a",
+  "toneMagic": "Polaris-Checkbox--toneMagic_tqodm",
+  "hover": "Polaris-Checkbox--hover_37sww",
+  "error": "Polaris-Checkbox--error_37uk1",
+  "checked": "Polaris-Checkbox--checked_17qxt",
+  "pathAnimation": "Polaris-Checkbox--pathAnimation_xxdul"
+};
+
+export { styles as default };

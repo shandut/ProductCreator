@@ -1,0 +1,27 @@
+.Polaris-SettingAction_19djk{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:calc(var(--p-space-400)*-1);
+  margin-left:calc(var(--p-space-400)*-1);
+}
+
+.Polaris-SettingAction__Setting_1brov,
+.Polaris-SettingAction__Action_r96cs{
+  flex:0 0 auto;
+  margin-top:var(--p-space-400);
+  margin-left:var(--p-space-400);
+  max-width:calc(100% - var(--p-space-400));
+  min-width:0;
+}
+
+.Polaris-SettingAction__Setting_1brov{
+  flex:1 0 21.875rem;
+}
+
+@media (min-width: 48em){
+
+.Polaris-SettingAction__Action_r96cs{
+    margin-top:var(--p-space-600);
+}
+  }

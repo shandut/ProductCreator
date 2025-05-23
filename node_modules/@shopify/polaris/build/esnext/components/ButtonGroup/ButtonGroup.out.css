@@ -1,0 +1,87 @@
+.Polaris-ButtonGroup_yy85z{
+  --pc-button-group-item:10;
+  --pc-button-group-focused:20;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:calc(var(--p-space-200)*-1);
+  margin-left:calc(var(--p-space-200)*-1);
+}
+
+.Polaris-ButtonGroup__Item_yiyol{
+  margin-top:var(--p-space-200);
+  margin-left:var(--p-space-200);
+}
+
+.Polaris-ButtonGroup__Item--plain_1lavi:not(:first-child){
+    margin-left:var(--p-space-200);
+  }
+
+.Polaris-ButtonGroup__Item--plain_1lavi:not(:last-child){
+    margin-right:var(--p-space-200);
+  }
+
+.Polaris-ButtonGroup--variantSegmented_1lj17{
+  display:flex;
+  flex-wrap:nowrap;
+  margin-top:0;
+  margin-left:0;
+}
+
+.Polaris-ButtonGroup--variantSegmented_1lj17 .Polaris-ButtonGroup__Item_yiyol{
+    position:relative;
+    margin-top:0;
+    margin-left:0;
+    line-height:1;
+  }
+
+.Polaris-ButtonGroup--variantSegmented_1lj17 .Polaris-ButtonGroup__Item_yiyol:not(:first-child){
+      margin-left:calc(var(--p-space-025)*-1);
+    }
+
+.Polaris-ButtonGroup--variantSegmented_1lj17 [aria-pressed='true']{
+    z-index:var(--pc-button-group-item);
+  }
+
+.Polaris-ButtonGroup--variantSegmented_1lj17 .Polaris-ButtonGroup__Item--focused_1iwi4{
+    z-index:var(--pc-button-group-focused);
+  }
+
+.Polaris-ButtonGroup--fullWidth_zyvh4 .Polaris-ButtonGroup__Item_yiyol{
+    flex:1 1 auto;
+  }
+
+.Polaris-ButtonGroup--extraTight_1xh3x{
+  margin-top:calc(var(--p-space-100)*-1);
+  margin-left:calc(var(--p-space-100)*-1);
+}
+
+.Polaris-ButtonGroup--extraTight_1xh3x .Polaris-ButtonGroup__Item_yiyol{
+    margin-top:var(--p-space-100);
+    margin-left:var(--p-space-100);
+  }
+
+.Polaris-ButtonGroup--tight_312wf{
+  margin-top:calc(var(--p-space-200)*-1);
+  margin-left:calc(var(--p-space-200)*-1);
+}
+
+.Polaris-ButtonGroup--tight_312wf .Polaris-ButtonGroup__Item_yiyol{
+    margin-top:var(--p-space-200);
+    margin-left:var(--p-space-200);
+  }
+
+.Polaris-ButtonGroup--loose_2qq07{
+  margin-top:calc(var(--p-space-500)*-1);
+  margin-left:calc(var(--p-space-500)*-1);
+}
+
+.Polaris-ButtonGroup--loose_2qq07 .Polaris-ButtonGroup__Item_yiyol{
+    margin-top:var(--p-space-500);
+    margin-left:var(--p-space-500);
+  }
+
+.Polaris-ButtonGroup--noWrap_vecks{
+  display:flex;
+  flex-wrap:nowrap;
+}

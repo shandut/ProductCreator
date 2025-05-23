@@ -1,0 +1,9 @@
+import './BlockStack.out.css';
+
+var styles = {
+  "BlockStack": "Polaris-BlockStack_1wvut",
+  "listReset": "Polaris-BlockStack--listReset_1gz07",
+  "fieldsetReset": "Polaris-BlockStack--fieldsetReset_1w49p"
+};
+
+export { styles as default };

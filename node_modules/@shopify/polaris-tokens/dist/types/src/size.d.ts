@@ -1,0 +1,32 @@
+export declare const size: {
+    readonly '0': "0px";
+    readonly '0165': "0.66px";
+    readonly '025': "1px";
+    readonly '050': "2px";
+    readonly '100': "4px";
+    readonly '150': "6px";
+    readonly '200': "8px";
+    readonly '275': "11px";
+    readonly '300': "12px";
+    readonly '325': "13px";
+    readonly '350': "14px";
+    readonly '400': "16px";
+    readonly '450': "18px";
+    readonly '500': "20px";
+    readonly '550': "22px";
+    readonly '600': "24px";
+    readonly '700': "28px";
+    readonly '750': "30px";
+    readonly '800': "32px";
+    readonly '900': "36px";
+    readonly '1000': "40px";
+    readonly '1200': "48px";
+    readonly '1600': "64px";
+    readonly '2000': "80px";
+    readonly '2400': "96px";
+    readonly '2800': "112px";
+    readonly '3200': "128px";
+};
+export type Size = typeof size;
+export type SizeScale = keyof Size;
+//# sourceMappingURL=size.d.ts.map

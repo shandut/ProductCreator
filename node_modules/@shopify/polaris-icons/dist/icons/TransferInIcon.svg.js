@@ -1,0 +1,15 @@
+'use strict';
+
+var React = require('react');
+
+var SvgTransferInIcon = function SvgTransferInIcon(props) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    viewBox: "0 0 20 20"
+  }, props), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M16.5 4.25a.75.75 0 0 0-1.5 0v11.5a.75.75 0 0 0 1.5 0v-11.5Zm-12.25 6.5a.75.75 0 0 1 0-1.5h6.94l-1.72-1.72a.75.75 0 0 1 1.06-1.06l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72h-6.94Z"
+  }));
+};
+SvgTransferInIcon.displayName = "TransferInIcon";
+
+exports.SvgTransferInIcon = SvgTransferInIcon;
