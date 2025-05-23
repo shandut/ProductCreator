@@ -1,26 +1,51 @@
 {
-  "name": "shopify-bulk-app",
+  "name": "shopify-product-creator",
   "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@shopify/polaris": "^13.9.5",
-    "@shopify/react-i18n": "^7.14.0",
-    "axios": "^1.6.7",
-    "cors": "^2.8.5",
-    "csv-parse": "^5.6.0",
-    "dotenv": "^16.5.0",
-    "express": "^4.18.2",
-    "form-data": "^4.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1"
-  },
+  "description": "Professional Shopify bulk product and inventory management system",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "react-scripts start",
+    "start": "node backend/server.js",
+    "start:frontend": "react-scripts start",
     "build": "react-scripts build",
+    "build:frontend": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "backend": "node shopifyBulkCreate.js"
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "shopify",
+    "bulk-operations",
+    "inventory",
+    "products",
+    "graphql",
+    "nodejs",
+    "express",
+    "react",
+    "polaris"
+  ],
+  "author": "Shannon Dutton",
+  "license": "ISC",
+  "dependencies": {
+    "@shopify/polaris": "^12.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.5.0",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "browserslist": {
     "production": [
@@ -33,5 +58,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:4000"
 }
